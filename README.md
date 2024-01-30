@@ -49,7 +49,7 @@ project/nba_game_time/nba_game_time/
 To isolate project dependencies, create a virtual environment:
 
 ```bash
-python -m venv venv
+python3 -m venv venv
 ```
 
 Activate the virtual environment:
