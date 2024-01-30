@@ -69,6 +69,9 @@ def create_events(response):
 
 
 if __name__ == '__main__':
+    # To do:
+    # Remove the old calendar
+
     # Create a calendar
     response = create_calendar()
     # Create events
