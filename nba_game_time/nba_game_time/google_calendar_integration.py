@@ -3,13 +3,13 @@ from google_apis import create_service
 from datetime import datetime, timedelta
 import json
 
-
+# Define the Google Calendar API credentials
 CLIENT_SECRET_FILE = 'client_secret.json'
 API_NAME = 'calendar'
 API_VERSION = 'v3'
 SCOPE = ['https://www.googleapis.com/auth/calendar']
 
-
+# Create a Google Calendar API service
 service = create_service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPE)
 
 
@@ -42,6 +42,7 @@ def create_events(response):
         end_time_est = game_datetime_est + timedelta(hours=2)
         end_time_str = end_time_est.isoformat()
 
+        # Define the event request body
         event_request_body = {
             'start': {
                 'dateTime': game_date_time_est,
@@ -59,7 +60,7 @@ def create_events(response):
             'transparency': 'transparent',
 
         }
-
+        # Insert the event into the calendar
         service.events().insert(
             calendarId=response['id'],
             sendUpdates='all',

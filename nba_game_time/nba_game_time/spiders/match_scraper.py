@@ -9,7 +9,7 @@ class MatchScraperSpider(scrapy.Spider):
     name = "match_scraper"
     start_urls = ["https://www.nba.com/schedule"]
 
-    # Here are some fake user agent strings that I found online
+    # Define a list of fake user agent strings
     user_agent_list = [
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36",
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36",
@@ -18,9 +18,10 @@ class MatchScraperSpider(scrapy.Spider):
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36"
     ]
 
-    # Set random user agent
+    # Randomly select a user agent from the list
     random_user_agent = random.choice(user_agent_list)
 
+    # Define HTTP headers for the request
     headers = {
         ':authority': 'cdn.nba.com',
         ':method': 'GET',
@@ -44,6 +45,7 @@ class MatchScraperSpider(scrapy.Spider):
     def parse(self, response):
         url = "https://cdn.nba.com/static/json/staticData/scheduleLeagueV2_1.json"
 
+        # Send a request to the schedule data URL and specify the callback function
         yield scrapy.Request(
             url=url, callback=self.parse_schedule, headers=self.headers)
 
