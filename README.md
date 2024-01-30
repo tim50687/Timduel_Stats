@@ -32,7 +32,7 @@ To access the Google Calendar API, you need to set up OAuth 2.0 credentials. Her
 5. Create credentials of type "OAuth client ID."
 6. Download the credentials as a JSON file (usually named `credentials.json`).
 
-Or you can follow this amazing video tutorial by [Jie Jenn](https://www.youtube.com/watch?v=6bzzpda63H0)
+Or you can follow this amazing video tutorial by Jie Jenn to [configure consent screen, get credentials](https://www.youtube.com/watch?v=6bzzpda63H0) and [enable Google Calendar API](https://www.youtube.com/watch?v=1JkKtGFnua8&list=PL3JVwFmb_BnTO_sppfTh3VkPhfDWRY5on&index=1).
 
 ### 2. Create `client_secret.json`
 
