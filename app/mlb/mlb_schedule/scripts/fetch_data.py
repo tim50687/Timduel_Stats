@@ -1,5 +1,5 @@
-from mlb.api import MLBAPI
-from mlb.schedule import ScheduleProcessor
+from app.mlb.mlb_schedule.api import MLBAPI
+from app.mlb.mlb_schedule.schedule import ScheduleProcessor
 
 def main():
     # Get the schedule for MLB
@@ -13,6 +13,9 @@ def main():
         print(f"Home Team: {game_info['home_team']}")
         print(f"Venue: {game_info['venue']}")
         print('-' * 40)
+
+    # Save the data
+    ScheduleProcessor.save_schedule(schedules)
 
 if __name__ == "__main__":
     main()

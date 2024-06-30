@@ -2,7 +2,7 @@ import json
 
 class ScheduleProcessor:
     @staticmethod
-    def save_schedule(data, filename="data/mlb_schedule.json"):
+    def save_schedule(data, filename="../../../data/mlb_schedule.json"):
         with open(filename, "w") as f:
             # Save the data to a JSON file, set the indent to 4 for better readability
             json.dump(data, f, indent = 4)
