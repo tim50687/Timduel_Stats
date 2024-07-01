@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MLB Schedule</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>MLB Schedule</h1>
+        <p class="date">{{ today_date }}</p>
+      </header>
+      <main>
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Away Team</th>
+              <th>Home Team</th>
+              <th>Venue</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for game in schedule %}
+            <tr>
+              <td>{{ game['time'] }}</td>
+              <td>{{ game['away_team'] }}</td>
+              <td>{{ game['home_team'] }}</td>
+              <td>{{ game['venue'] }}</td>
+              <td>
+                <a href="#" class="btn btn-info">Player Stats</a>
+                <a href="#" class="btn btn-warning">Odds Movement</a>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </main>
+    </div>
+  </body>
+</html>

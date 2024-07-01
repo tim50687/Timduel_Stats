@@ -3,14 +3,14 @@
     "totalItems": 15,
     "totalEvents": 0,
     "totalGames": 15,
-    "totalGamesInProgress": 3,
+    "totalGamesInProgress": 1,
     "dates": [
         {
             "date": "2024-06-30",
             "totalItems": 15,
             "totalEvents": 0,
             "totalGames": 15,
-            "totalGamesInProgress": 3,
+            "totalGamesInProgress": 1,
             "games": [
                 {
                     "gamePk": 747101,
@@ -329,42 +329,43 @@
                     "gameDate": "2024-06-30T17:40:00Z",
                     "officialDate": "2024-06-30",
                     "status": {
-                        "abstractGameState": "Live",
-                        "codedGameState": "I",
-                        "detailedState": "Delayed",
-                        "statusCode": "IR",
+                        "abstractGameState": "Final",
+                        "codedGameState": "F",
+                        "detailedState": "Final",
+                        "statusCode": "F",
                         "startTimeTBD": false,
-                        "reason": "Rain",
-                        "abstractGameCode": "L"
+                        "abstractGameCode": "F"
                     },
                     "teams": {
                         "away": {
                             "leagueRecord": {
-                                "wins": 41,
+                                "wins": 42,
                                 "losses": 41,
-                                "pct": ".500"
+                                "pct": ".506"
                             },
-                            "score": 4,
+                            "score": 10,
                             "team": {
                                 "id": 117,
                                 "name": "Houston Astros",
                                 "link": "/api/v1/teams/117"
                             },
+                            "isWinner": true,
                             "splitSquad": false,
                             "seriesNumber": 27
                         },
                         "home": {
                             "leagueRecord": {
                                 "wins": 40,
-                                "losses": 40,
-                                "pct": ".500"
+                                "losses": 41,
+                                "pct": ".494"
                             },
-                            "score": 4,
+                            "score": 5,
                             "team": {
                                 "id": 121,
                                 "name": "New York Mets",
                                 "link": "/api/v1/teams/121"
                             },
+                            "isWinner": false,
                             "splitSquad": false,
                             "seriesNumber": 27
                         }
@@ -377,6 +378,7 @@
                     "content": {
                         "link": "/api/v1/game/745802/content"
                     },
+                    "isTie": false,
                     "gameNumber": 1,
                     "publicFacing": true,
                     "doubleHeader": "N",
@@ -790,9 +792,9 @@
                     "officialDate": "2024-06-30",
                     "status": {
                         "abstractGameState": "Final",
-                        "codedGameState": "O",
-                        "detailedState": "Game Over",
-                        "statusCode": "O",
+                        "codedGameState": "F",
+                        "detailedState": "Final",
+                        "statusCode": "F",
                         "startTimeTBD": false,
                         "abstractGameCode": "F"
                     },
@@ -866,19 +868,19 @@
                     "gameDate": "2024-06-30T20:07:00Z",
                     "officialDate": "2024-06-30",
                     "status": {
-                        "abstractGameState": "Live",
-                        "codedGameState": "I",
-                        "detailedState": "In Progress",
-                        "statusCode": "I",
+                        "abstractGameState": "Final",
+                        "codedGameState": "F",
+                        "detailedState": "Final",
+                        "statusCode": "F",
                         "startTimeTBD": false,
-                        "abstractGameCode": "L"
+                        "abstractGameCode": "F"
                     },
                     "teams": {
                         "away": {
                             "leagueRecord": {
-                                "wins": 37,
+                                "wins": 38,
                                 "losses": 46,
-                                "pct": ".446"
+                                "pct": ".452"
                             },
                             "score": 7,
                             "team": {
@@ -886,21 +888,23 @@
                                 "name": "Detroit Tigers",
                                 "link": "/api/v1/teams/116"
                             },
+                            "isWinner": true,
                             "splitSquad": false,
                             "seriesNumber": 27
                         },
                         "home": {
                             "leagueRecord": {
                                 "wins": 36,
-                                "losses": 46,
-                                "pct": ".439"
+                                "losses": 47,
+                                "pct": ".434"
                             },
-                            "score": 1,
+                            "score": 6,
                             "team": {
                                 "id": 108,
                                 "name": "Los Angeles Angels",
                                 "link": "/api/v1/teams/108"
                             },
+                            "isWinner": false,
                             "splitSquad": false,
                             "seriesNumber": 27
                         }
@@ -913,6 +917,7 @@
                     "content": {
                         "link": "/api/v1/game/746209/content"
                     },
+                    "isTie": false,
                     "gameNumber": 1,
                     "publicFacing": true,
                     "doubleHeader": "N",
@@ -1017,19 +1022,19 @@
                     "gameDate": "2024-06-30T20:10:00Z",
                     "officialDate": "2024-06-30",
                     "status": {
-                        "abstractGameState": "Live",
-                        "codedGameState": "I",
-                        "detailedState": "In Progress",
-                        "statusCode": "I",
+                        "abstractGameState": "Final",
+                        "codedGameState": "F",
+                        "detailedState": "Final",
+                        "statusCode": "F",
                         "startTimeTBD": false,
-                        "abstractGameCode": "L"
+                        "abstractGameCode": "F"
                     },
                     "teams": {
                         "away": {
                             "leagueRecord": {
-                                "wins": 46,
+                                "wins": 47,
                                 "losses": 37,
-                                "pct": ".554"
+                                "pct": ".560"
                             },
                             "score": 5,
                             "team": {
@@ -1037,14 +1042,15 @@
                                 "name": "Minnesota Twins",
                                 "link": "/api/v1/teams/142"
                             },
+                            "isWinner": true,
                             "splitSquad": false,
                             "seriesNumber": 27
                         },
                         "home": {
                             "leagueRecord": {
                                 "wins": 47,
-                                "losses": 38,
-                                "pct": ".553"
+                                "losses": 39,
+                                "pct": ".547"
                             },
                             "score": 3,
                             "team": {
@@ -1052,6 +1058,7 @@
                                 "name": "Seattle Mariners",
                                 "link": "/api/v1/teams/136"
                             },
+                            "isWinner": false,
                             "splitSquad": false,
                             "seriesNumber": 27
                         }
@@ -1064,6 +1071,7 @@
                     "content": {
                         "link": "/api/v1/game/745243/content"
                     },
+                    "isTie": false,
                     "gameNumber": 1,
                     "publicFacing": true,
                     "doubleHeader": "N",
@@ -1091,12 +1099,12 @@
                     "gameDate": "2024-06-30T23:10:00Z",
                     "officialDate": "2024-06-30",
                     "status": {
-                        "abstractGameState": "Preview",
-                        "codedGameState": "P",
-                        "detailedState": "Pre-Game",
-                        "statusCode": "P",
+                        "abstractGameState": "Live",
+                        "codedGameState": "I",
+                        "detailedState": "In Progress",
+                        "statusCode": "I",
                         "startTimeTBD": false,
-                        "abstractGameCode": "P"
+                        "abstractGameCode": "L"
                     },
                     "teams": {
                         "away": {
@@ -1105,7 +1113,7 @@
                                 "losses": 46,
                                 "pct": ".446"
                             },
-                            "score": 0,
+                            "score": 11,
                             "team": {
                                 "id": 140,
                                 "name": "Texas Rangers",
@@ -1120,7 +1128,7 @@
                                 "losses": 30,
                                 "pct": ".639"
                             },
-                            "score": 0,
+                            "score": 2,
                             "team": {
                                 "id": 110,
                                 "name": "Baltimore Orioles",
