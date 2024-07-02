@@ -40,7 +40,8 @@
                       <ul>
                         {% for outcome in market['outcomes'] %}
                         <li>
-                          {{ outcome['description']}} : {{outcome['price']}}
+                          {{ outcome['description']}} ({{outcome['name']}}
+                          {{outcome['point']}}) : {{outcome['price']}}
                         </li>
                         {% endfor %}
                       </ul>
