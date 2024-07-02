@@ -14,9 +14,6 @@
         <table>
           <thead>
             <tr>
-              <th>Commence Time</th>
-              <th>Away Team</th>
-              <th>Home Team</th>
               <th>Bookmaker</th>
               <th>Market</th>
               <th>Outcomes</th>
@@ -27,9 +24,6 @@
             event['odds']['bookmakers'] %} {% if bookmaker['key'] in ['fanduel',
             'draftkings', 'betmgm'] %}
             <tr>
-              <td>{{event['commence_time']}}</td>
-              <td>{{event['away_team']}}</td>
-              <td>{{event['home_team']}}</td>
               <td>{{bookmaker['title']}}</td>
               <td>
                 <table>

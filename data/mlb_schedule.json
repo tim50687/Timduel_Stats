@@ -910,9 +910,9 @@
                     "officialDate": "2024-07-02",
                     "status": {
                         "abstractGameState": "Preview",
-                        "codedGameState": "S",
-                        "detailedState": "Scheduled",
-                        "statusCode": "S",
+                        "codedGameState": "P",
+                        "detailedState": "Pre-Game",
+                        "statusCode": "P",
                         "startTimeTBD": false,
                         "abstractGameCode": "P"
                     },
@@ -923,6 +923,7 @@
                                 "losses": 47,
                                 "pct": ".434"
                             },
+                            "score": 0,
                             "team": {
                                 "id": 108,
                                 "name": "Los Angeles Angels",
@@ -937,6 +938,7 @@
                                 "losses": 56,
                                 "pct": ".349"
                             },
+                            "score": 0,
                             "team": {
                                 "id": 133,
                                 "name": "Oakland Athletics",

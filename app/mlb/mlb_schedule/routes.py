@@ -40,6 +40,9 @@ def get_odds():
                 'odds': odds
             })
 
-        return render_template('odds.html', events=event_odds)
+        # Get today's date and format it
+        today_date = datetime.now().strftime("%A, %B %d, %Y")
+
+        return render_template('odds.html', events=event_odds, today_date=today_date)
     except Exception as e:
         return jsonify({'error' : str(e)})
