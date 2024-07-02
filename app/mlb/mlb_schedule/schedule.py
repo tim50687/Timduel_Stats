@@ -16,8 +16,7 @@ class ScheduleProcessor:
         est = pytz.timezone('US/Eastern')
         # extract each game's information
         for game in games:
-            game_time = datetime.strptime(game["gameDate"], "%Y-%m-%dT%H:%M:%SZ")
-            game_time_est = game_time.astimezone(est).strftime("EST %H:%M")
+            game_time_est = ScheduleProcessor.convert_utc_to_est(game['gameDate'])
             game_info = {
                 'date': game["gameDate"],
                 'time': game_time_est,
@@ -27,3 +26,15 @@ class ScheduleProcessor:
             }
             game_info_list.append(game_info)
         return game_info_list
+    
+    @staticmethod
+    def convert_utc_to_est(utc_time_str):
+        est = pytz.timezone('US/Eastern')
+        # Parse the UTC time string to a datatime object
+        utc_time = datetime.strptime(utc_time_str, '%Y-%m-%dT%H:%M:%SZ')
+        # Set the timezone information for naive datetime object
+        utc_time = pytz.utc.localize(utc_time)
+        # Convert to EST
+        est_time = utc_time.astimezone(est)
+
+        return est_time.strftime("EST %H:%M")
