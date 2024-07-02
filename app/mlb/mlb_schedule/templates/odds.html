@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MLB Odds</title>
+  </head>
+  <body>
+    <div>
+      <header>
+        <h1>MLB Batter Home Runs Odds</h1>
+      </header>
+      <main>
+        <table>
+          <thead>
+            <tr>
+              <th>Commence Time</th>
+              <th>Away Team</th>
+              <th>Home Team</th>
+              <th>Bookmaker</th>
+              <th>Market</th>
+              <th>Outcomes</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for event in events %} {% for bookmaker in
+            event['odds']['bookmakers'] %} {% if bookmaker['key'] in ['fanduel',
+            'draftkings', 'betmgm'] %}
+            <tr>
+              <td>{{event['commence_time']}}</td>
+              <td>{{event['away_team']}}</td>
+              <td>{{event['home_team']}}</td>
+              <td>{{bookmaker['title']}}</td>
+              <td>
+                <table>
+                  {% for market in bookmaker['markets'] %}
+                  <tr>
+                    <td>{{market['key']}}</td>
+                    <td>
+                      <ul>
+                        {% for outcome in market['outcomes'] %}
+                        <li>
+                          {{ outcome['description']}} : {{outcome['price']}}
+                        </li>
+                        {% endfor %}
+                      </ul>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                </table>
+              </td>
+            </tr>
+            {% endif %} {% endfor %} {% endfor %}
+          </tbody>
+        </table>
+      </main>
+    </div>
+  </body>
+</html>
