@@ -1,0 +1,6 @@
+API_KEY = '71c09670b9780cebcbc9eef579f15c20'
+SPORT = 'baseball_mlb'
+REGIONS = 'us'
+MARKETS = 'batter_home-runs'
+ODDS_FORMAT = 'decimal'
+DATE_FORMAT = 'iso'
