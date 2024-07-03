@@ -13,7 +13,6 @@ class ScheduleProcessor:
     def extract_game_info(data):
         games = data.get("dates", [])[0].get("games", [])
         game_info_list = []
-        est = pytz.timezone('US/Eastern')
         # extract each game's information
         for game in games:
             game_time_est = ScheduleProcessor.convert_utc_to_est(game['gameDate'])

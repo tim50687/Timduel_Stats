@@ -1,7 +1,8 @@
-from flask import Blueprint, render_template, jsonify
+from flask import Blueprint, render_template, jsonify, request
 from app.mlb.mlb_schedule.schedule_api import MLBAPI
 from app.mlb.mlb_schedule.odds_api import fetch_events, fetch_homerun_odds
 from app.mlb.mlb_schedule.schedule import ScheduleProcessor
+from app.mlb.mlb_schedule.odds_process import OddsProcessor
 from datetime import datetime  # Import datetime to handle date formatting
 import json
 
@@ -28,21 +29,18 @@ def show_schedule():
 @mlb_schedule_bp.route('/odds', methods=['GET'])
 def get_odds():
     try:
-        events = fetch_events()
-        event_odds  = []
+        # Get the game id 
+        game_id = request.args.get('game_id')
+        if not game_id:
+            # Redirect to error page
+            return render_template('error.html')
 
-        for event in events:
-            odds = fetch_homerun_odds(event['id'])
-            event_odds.append({
-                'commence_time': event['commence_time'],
-                'home_team': event['home_team'],
-                'away_team': event['away_team'],
-                'odds': odds
-            })
+        odds_data = fetch_homerun_odds(game_id)
+        processed_odds_data = OddsProcessor.sort_homerun_odd_by_booker(odds_data)
 
         # Get today's date and format it
         today_date = datetime.now().strftime("%A, %B %d, %Y")
 
-        return render_template('odds.html', events=event_odds, today_date=today_date)
+        return render_template('odds.html', events=processed_odds_data, today_date=today_date)
     except Exception as e:
         return jsonify({'error' : str(e)})
