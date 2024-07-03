@@ -1,5 +1,6 @@
 import json
 from datetime import datetime
+from app.mlb.mlb_schedule.odds_api import fetch_events
 import pytz
 
 class ScheduleProcessor:
@@ -13,7 +14,8 @@ class ScheduleProcessor:
     def extract_game_info(data):
         games = data.get("dates", [])[0].get("games", [])
         game_info_list = []
-        est = pytz.timezone('US/Eastern')
+        # Get the events from odds api in order to get extract id
+        events = fetch_events()
         # extract each game's information
         for game in games:
             game_time_est = ScheduleProcessor.convert_utc_to_est(game['gameDate'])
@@ -24,6 +26,11 @@ class ScheduleProcessor:
                 'home_team': game["teams"]["home"]["team"]["name"], 
                 'venue': game["venue"]["name"],
             }
+            # Extract game id and add to game_info
+            for event in events:
+                if event['home_team'].lower() == game_info['home_team'].lower():
+                    game_info['id'] = event['id']
+
             game_info_list.append(game_info)
         return game_info_list
     

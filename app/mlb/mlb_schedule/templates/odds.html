@@ -8,46 +8,33 @@
   <body>
     <div>
       <header>
-        <h1>MLB Batter Home Runs Odds</h1>
+        <h1>MLB Home Run Odds</h1>
+        <p>{{today_date}}</p>
       </header>
       <main>
         <table>
           <thead>
             <tr>
-              <th>Bookmaker</th>
-              <th>Market</th>
-              <th>Outcomes</th>
+              <th>Player</th>
+              <th>Fanduel</th>
+              <th>DraftKings</th>
+              <th>BetMGM</th>
             </tr>
           </thead>
           <tbody>
-            {% for event in events %} {% for bookmaker in
-            event['odds']['bookmakers'] %} {% if bookmaker['key'] in ['fanduel',
-            'draftkings', 'betmgm'] %}
+            {% for player in events['fanduel'].keys() %}
             <tr>
-              <td>{{bookmaker['title']}}</td>
-              <td>
-                <table>
-                  {% for market in bookmaker['markets'] %}
-                  <tr>
-                    <td>{{market['key']}}</td>
-                    <td>
-                      <ul>
-                        {% for outcome in market['outcomes'] %}
-                        <li>
-                          {{ outcome['description']}} ({{outcome['name']}}
-                          {{outcome['point']}}) : {{outcome['price']}}
-                        </li>
-                        {% endfor %}
-                      </ul>
-                    </td>
-                  </tr>
-                  {% endfor %}
-                </table>
-              </td>
+              <td>{{ player }}</td>
+              <td>{{ events['fanduel'].get(player, 'N/A')}}</td>
+              <td>{{ events['draftkings'].get(player, 'N/A')}}</td>
+              <td>{{ events['betmgm'].get(player, 'N/A')}}</td>
             </tr>
-            {% endif %} {% endfor %} {% endfor %}
+            {% endfor %}
           </tbody>
         </table>
+        <a href="{{ url_for('mlb_schedule.show_schedule') }}"
+          >Go back to the schedule</a
+        >
       </main>
     </div>
   </body>
