@@ -3,14 +3,14 @@
     "totalItems": 15,
     "totalEvents": 0,
     "totalGames": 15,
-    "totalGamesInProgress": 7,
+    "totalGamesInProgress": 5,
     "dates": [
         {
             "date": "2024-07-02",
             "totalItems": 15,
             "totalEvents": 0,
             "totalGames": 15,
-            "totalGamesInProgress": 7,
+            "totalGamesInProgress": 5,
             "games": [
                 {
                     "gamePk": 745482,
@@ -637,19 +637,19 @@
                     "gameDate": "2024-07-03T00:05:00Z",
                     "officialDate": "2024-07-02",
                     "status": {
-                        "abstractGameState": "Live",
-                        "codedGameState": "I",
-                        "detailedState": "In Progress",
-                        "statusCode": "I",
+                        "abstractGameState": "Final",
+                        "codedGameState": "F",
+                        "detailedState": "Final",
+                        "statusCode": "F",
                         "startTimeTBD": false,
-                        "abstractGameCode": "L"
+                        "abstractGameCode": "F"
                     },
                     "teams": {
                         "away": {
                             "leagueRecord": {
                                 "wins": 46,
-                                "losses": 42,
-                                "pct": ".523"
+                                "losses": 43,
+                                "pct": ".517"
                             },
                             "score": 0,
                             "team": {
@@ -657,14 +657,15 @@
                                 "name": "San Diego Padres",
                                 "link": "/api/v1/teams/135"
                             },
+                            "isWinner": false,
                             "splitSquad": false,
                             "seriesNumber": 29
                         },
                         "home": {
                             "leagueRecord": {
-                                "wins": 38,
+                                "wins": 39,
                                 "losses": 46,
-                                "pct": ".452"
+                                "pct": ".459"
                             },
                             "score": 7,
                             "team": {
@@ -672,6 +673,7 @@
                                 "name": "Texas Rangers",
                                 "link": "/api/v1/teams/140"
                             },
+                            "isWinner": true,
                             "splitSquad": false,
                             "seriesNumber": 28
                         }
@@ -684,6 +686,7 @@
                     "content": {
                         "link": "/api/v1/game/744999/content"
                     },
+                    "isTie": false,
                     "gameNumber": 1,
                     "publicFacing": true,
                     "doubleHeader": "N",
@@ -711,19 +714,19 @@
                     "gameDate": "2024-07-03T00:05:00Z",
                     "officialDate": "2024-07-02",
                     "status": {
-                        "abstractGameState": "Live",
-                        "codedGameState": "I",
-                        "detailedState": "In Progress",
-                        "statusCode": "I",
+                        "abstractGameState": "Final",
+                        "codedGameState": "O",
+                        "detailedState": "Game Over",
+                        "statusCode": "O",
                         "startTimeTBD": false,
-                        "abstractGameCode": "L"
+                        "abstractGameCode": "F"
                     },
                     "teams": {
                         "away": {
                             "leagueRecord": {
-                                "wins": 55,
+                                "wins": 56,
                                 "losses": 29,
-                                "pct": ".655"
+                                "pct": ".659"
                             },
                             "score": 6,
                             "team": {
@@ -731,21 +734,23 @@
                                 "name": "Philadelphia Phillies",
                                 "link": "/api/v1/teams/143"
                             },
+                            "isWinner": true,
                             "splitSquad": false,
                             "seriesNumber": 28
                         },
                         "home": {
                             "leagueRecord": {
                                 "wins": 39,
-                                "losses": 46,
-                                "pct": ".459"
+                                "losses": 47,
+                                "pct": ".453"
                             },
-                            "score": 1,
+                            "score": 4,
                             "team": {
                                 "id": 112,
                                 "name": "Chicago Cubs",
                                 "link": "/api/v1/teams/112"
                             },
+                            "isWinner": false,
                             "splitSquad": false,
                             "seriesNumber": 28
                         }
@@ -758,6 +763,7 @@
                     "content": {
                         "link": "/api/v1/game/746860/content"
                     },
+                    "isTie": false,
                     "gameNumber": 1,
                     "publicFacing": true,
                     "doubleHeader": "N",
@@ -874,7 +880,7 @@
                                 "losses": 35,
                                 "pct": ".588"
                             },
-                            "score": 1,
+                            "score": 2,
                             "team": {
                                 "id": 158,
                                 "name": "Milwaukee Brewers",
@@ -963,7 +969,7 @@
                                 "losses": 56,
                                 "pct": ".349"
                             },
-                            "score": 0,
+                            "score": 4,
                             "team": {
                                 "id": 133,
                                 "name": "Oakland Athletics",
@@ -1022,7 +1028,7 @@
                                 "losses": 31,
                                 "pct": ".631"
                             },
-                            "score": 0,
+                            "score": 1,
                             "team": {
                                 "id": 110,
                                 "name": "Baltimore Orioles",
@@ -1111,7 +1117,7 @@
                                 "losses": 33,
                                 "pct": ".612"
                             },
-                            "score": 0,
+                            "score": 1,
                             "team": {
                                 "id": 119,
                                 "name": "Los Angeles Dodgers",
