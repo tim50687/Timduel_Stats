@@ -21,8 +21,8 @@ def show_schedule():
     Returns:
         Rendered HTML template for the schedule page.
     """
-    # Fetch the schedule using MLBAPI
-    data = MLBAPI.get_schedule()
+     # Get the schedule data, either from file or API
+    data = ScheduleProcessor.get_or_fetch_schedule()
 
     # Process the schedule data
     games = ScheduleProcessor.extract_game_info(data)

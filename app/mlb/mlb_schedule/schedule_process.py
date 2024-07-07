@@ -1,7 +1,9 @@
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 from app.mlb.mlb_schedule.odds_api import fetch_events
+from app.mlb.mlb_schedule.schedule_api import MLBAPI
 import pytz
+import os
 
 class ScheduleProcessor:
     @staticmethod
@@ -74,3 +76,36 @@ class ScheduleProcessor:
         est_time = utc_time.astimezone(est)
 
         return est_time.strftime("EST %H:%M")
+
+    @staticmethod
+    def get_or_fetch_schedule(file_path="data/mlb_schedule.json"):
+        """
+        Get the schedule data from a JSON file if it exists and is from today,
+        otherwise fetch it from the API and save it to the file.
+
+        Args:
+            file_path (str): The path to the schedule JSON file.
+
+        Returns:
+            dict: The schedule data.
+        """
+        est = pytz.timezone('US/Eastern')
+        now_est = datetime.now(est)
+
+        # Check if the schedule file exists and is not empty
+        if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
+            file_mtime = datetime.fromtimestamp(os.path.getmtime(file_path), tz=est)
+            file_date = file_mtime.date()
+            today_date = now_est.date()
+            
+            if file_date == today_date:
+                # Read the schedule data from the file
+                with open(file_path, "r") as f:
+                    return json.load(f)
+        
+        # Fetch the schedule using MLBAPI
+        data = MLBAPI.get_schedule()
+        # Save the schedule data to the file
+        ScheduleProcessor.save_schedule(data)
+        print("fetch new")
+        return data
