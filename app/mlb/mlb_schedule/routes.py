@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, jsonify, request
 from app.mlb.mlb_schedule.schedule_api import MLBAPI
 from app.mlb.mlb_schedule.odds_api import fetch_homerun_odds
-from app.mlb.mlb_schedule.schedule import ScheduleProcessor
+from app.mlb.mlb_schedule.schedule_process import ScheduleProcessor
 from app.mlb.mlb_schedule.odds_process import OddsProcessor
 from datetime import datetime  # Import datetime to handle date formatting
 import json
