@@ -28,7 +28,7 @@ class FangraphsScraper:
         # Use Selenium to fetch the data
         options = webdriver.ChromeOptions()
         options.add_argument("--headless")  # Run in headless mode
-        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
 
         driver.get(url)
         # Wait for the page to load
@@ -55,7 +55,6 @@ class FangraphsScraper:
         # Find the table div by its class
         table_div = soup.find('div', {'class': 'fg-data-grid table-type'})
         rows = table_div.find('table').find_all('tr', class_=True)
-        print(rows)
         data = []
         for row in rows:
             columns = row.find_all('td')
@@ -68,7 +67,7 @@ class FangraphsScraper:
 
     
     @staticmethod
-    def save_data(data, file_path="../../../data/fangraphs_data.json"):
+    def save_data(data, file_path="../../../../data/fangraphs_data.json"):
         """
         Saves the data to a JSON file.
 
@@ -80,7 +79,7 @@ class FangraphsScraper:
             json.dump(data, f, indent=4)
 
     @staticmethod
-    def load_data(file_path="../../../data/fangraphs_data.json"):
+    def load_data(file_path="../../../../data/fangraphs_data.json"):
         """
         Loads the data from a JSON file.
 
@@ -98,7 +97,7 @@ class FangraphsScraper:
             return None
         
     @staticmethod
-    def get_or_fetch_data(urls, file_path="../../../data/fangraphs_data.json"):
+    def get_or_fetch_data(urls, file_path="../../../../data/fangraphs_data.json"):
         """
         Get the data from a JSON file if it exists and is not outdated,
         otherwise fetch it from the URLs and save it to the file.
@@ -114,13 +113,13 @@ class FangraphsScraper:
         now_est = datetime.now(est)
 
         # Check if the file exists and is not outdated
-        # if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
-        #     file_mtime = datetime.fromtimestamp(os.path.getmtime(file_path), tz=est)
-        #     file_date = file_mtime.date()
-        #     today_date = now_est.date()
+        if os.path.exists(file_path) and os.path.getsize(file_path) > 0:
+            file_mtime = datetime.fromtimestamp(os.path.getmtime(file_path), tz=est)
+            file_date = file_mtime.date()
+            today_date = now_est.date()
 
-        #     if file_date == today_date:
-        #         return FangraphsScraper.load_data(file_path)
+            if file_date == today_date:
+                return FangraphsScraper.load_data(file_path)
         
         # Fetch the data
         data = {}
