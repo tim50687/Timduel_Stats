@@ -66,3 +66,20 @@ def get_odds():
     except Exception as e:
         # Return a JSON error message if an exception occurs
         return jsonify({'error': str(e)})
+    
+
+@mlb_schedule_bp.route('/player_stats', methods=['GET'])
+def show_player_stats():
+    team1 = request.args.get('team1')
+    team2 = request.args.get('team2')
+    if not team1 or not team2:
+        return render_template('error.html')
+
+    # Get player stats
+    combined_data = PlayerStatsProcessor.combine_player_stats(barrel_hh_data, fb_data)
+
+    # Filter the data for the specified teams
+    team1_stats = combined_data.get(team1, {})
+    team2_stats = combined_data.get(team2, {})
+
+    return render_template('player_stats.html', team1=team1, team2=team2, team1_stats=team1_stats, team2_stats=team2_stats)
