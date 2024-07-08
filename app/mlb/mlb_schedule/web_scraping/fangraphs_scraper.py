@@ -61,14 +61,20 @@ class FangraphsScraper:
             # Get FB data
             if type == "fb":
                 name = columns[1].text.strip()
+                team = columns[2].text.strip()
                 fb = columns[18].text.strip()
-                data[name] = fb
+                data[name] = {
+                    'Team': team,
+                    'FB': fb
+                }
             # Get Barrel and HardHit data
             elif type == "barrel_hh":
                 name = columns[1].text.strip()
+                team = columns[2].text.strip()
                 barrels = columns[9].text.strip()
                 hard_hit = columns[11].text.strip()
                 data[name] = {
+                    'Team': team,
                     'Barrels': barrels,
                     'HardHit': hard_hit
                 }
@@ -85,7 +91,7 @@ class FangraphsScraper:
             data (dict): The data to save.
             file_path (str): The path to the JSON file.
         """
-        with open(file_path, "w") as f:
+        with open(file_path, "w", encoding='utf-8') as f:
             json.dump(data, f, indent=4)
 
     @staticmethod
@@ -100,7 +106,7 @@ class FangraphsScraper:
             dict: The loaded data.
         """
         try:
-            with open(file_path, "r") as f:
+            with open(file_path, "r", encoding='utf-8') as f:
                 data = json.load(f)
             return data
         except FileNotFoundError:
