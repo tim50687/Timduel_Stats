@@ -62,9 +62,12 @@ class FangraphsScraper:
             if type == "fb":
                 name = columns[1].text.strip()
                 team = columns[2].text.strip()
+                ld = columns[16].text.strip()
                 fb = columns[18].text.strip()
-                data[name] = {
-                    'Team': team,
+                if team not in data:
+                    data[team] = {}
+                data[team][name] = {
+                    'LD': ld,
                     'FB': fb
                 }
             # Get Barrel and HardHit data
@@ -73,8 +76,9 @@ class FangraphsScraper:
                 team = columns[2].text.strip()
                 barrels = columns[9].text.strip()
                 hard_hit = columns[11].text.strip()
-                data[name] = {
-                    'Team': team,
+                if team not in data:
+                    data[team] = {}
+                data[team][name] = {
                     'Barrels': barrels,
                     'HardHit': hard_hit
                 }
@@ -138,15 +142,12 @@ class FangraphsScraper:
                 return FangraphsScraper.load_data(file_path)
         
         # Fetch the data
-        data = {}
         html_content = FangraphsScraper.fetch_data(url)
         if html_content:
             parsed_data = FangraphsScraper.parse_data(html_content, type)
-            # Process and store the parsed data
-            data[url] = str(parsed_data)  # Placeholder for actual data processing
-        FangraphsScraper.save_data(data, file_path)
+        FangraphsScraper.save_data(parsed_data, file_path)
         
-        return data
+        return parsed_data
     
     @staticmethod
     def get_past_six_days_dates():
