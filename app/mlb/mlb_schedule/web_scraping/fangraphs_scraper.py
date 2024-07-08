@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 import pytz
 import os
 # Selenium imports
@@ -33,7 +33,7 @@ class FangraphsScraper:
         driver.get(url)
         # Wait for the page to load
         WebDriverWait(driver, 5).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, ".fg-data-grid.table-type"))
+            EC.presence_of_element_located((By.CSS_SELECTOR, ".fg-data-grid.table-type tbody tr"))
         )
 
         html_content = driver.page_source
@@ -41,7 +41,7 @@ class FangraphsScraper:
         return html_content
         
     @staticmethod
-    def parse_data(html_content):
+    def parse_data(html_content, type):
         """
         Parses the data from the Fangraphs website.
 
@@ -55,14 +55,24 @@ class FangraphsScraper:
         # Find the table div by its class
         table_div = soup.find('div', {'class': 'fg-data-grid table-type'})
         rows = table_div.find('table').find_all('tr', class_=True)
-        data = []
+        data = {}
         for row in rows:
             columns = row.find_all('td')
-            row_data = {
-                'name': columns[1].text.strip(),
-                'FB+': columns[18].text.strip()
-            }
-            data.append(row_data)
+            # Get FB data
+            if type == "fb":
+                name = columns[1].text.strip()
+                fb = columns[18].text.strip()
+                data[name] = fb
+            # Get Barrel and HardHit data
+            elif type == "barrel_hh":
+                name = columns[1].text.strip()
+                barrels = columns[9].text.strip()
+                hard_hit = columns[11].text.strip()
+                data[name] = {
+                    'Barrels': barrels,
+                    'HardHit': hard_hit
+                }
+
         return data
 
     
@@ -97,7 +107,7 @@ class FangraphsScraper:
             return None
         
     @staticmethod
-    def get_or_fetch_data(urls, file_path="../../../../data/fangraphs_data.json"):
+    def get_or_fetch_data(url, type, file_path):
         """
         Get the data from a JSON file if it exists and is not outdated,
         otherwise fetch it from the URLs and save it to the file.
@@ -123,20 +133,55 @@ class FangraphsScraper:
         
         # Fetch the data
         data = {}
-        for url in urls:
-            html_content = FangraphsScraper.fetch_data(url)
-            if html_content:
-                parsed_data = FangraphsScraper.parse_data(html_content)
-                # Process and store the parsed data
-                data[url] = str(parsed_data)  # Placeholder for actual data processing
-        FangraphsScraper.save_data(data)
+        html_content = FangraphsScraper.fetch_data(url)
+        if html_content:
+            parsed_data = FangraphsScraper.parse_data(html_content, type)
+            # Process and store the parsed data
+            data[url] = str(parsed_data)  # Placeholder for actual data processing
+        FangraphsScraper.save_data(data, file_path)
         
         return data
     
+    @staticmethod
+    def get_past_six_days_dates():
+        """
+        Get the dates for the past six days in ISO format.
+
+        Returns:
+            tuple: Start date and end date in ISO format.
+        """
+        end_date = datetime.now() - timedelta(days=1)
+        start_date = end_date - timedelta(days=5)
+        return start_date.strftime('%Y-%m-%d'), end_date.strftime('%Y-%m-%d')
+
+    @staticmethod
+    def generate_url(base_url, type):
+        """
+        Generate the URL with the date range for the past six days.
+
+        Args:
+            base_url (str): The base URL to append the date range to.
+            type (str): The type of data to fetch ("fb" or "barrel_hh").
+
+        Returns:
+            str: The generated URL.
+        """
+        start_date, end_date = FangraphsScraper.get_past_six_days_dates()
+        if type == "fb":
+            return f"{base_url}?pos=all&stats=bat&lg=all&season=2024&season1=2024&ind=0&team=0&pageitems=2000000000&qual=5&sortcol=1&sortdir=asc&type=23&month=1000&startdate={start_date}&enddate={end_date}"
+        elif type == "barrel_hh":
+            return f"{base_url}?pos=all&stats=bat&lg=all&season=2024&season1=2024&ind=0&team=0&pageitems=2000000000&qual=5&sortcol=1&sortdir=asc&type=24&month=1000&startdate={start_date}&enddate={end_date}"
+
+    
 
 if __name__ == "__main__":
-    urls = ["https://www.fangraphs.com/leaders/major-league/robot.txt?pageitems=2000000000&startdate=2024-07-02&enddate=2024-07-06&season=2024&season1=2024&month=1000&ind=0&team=0&type=23"]
-    data = FangraphsScraper.get_or_fetch_data(urls)
-    # print(data)
+    base_url_fb = "https://www.fangraphs.com/leaders/major-league"
+    url_fb = FangraphsScraper.generate_url(base_url_fb, "fb")
+    data_fb = FangraphsScraper.get_or_fetch_data(url_fb, "fb", file_path="../../../../data/fangraphs_fb_data.json")
+
+    base_url_barrel_hh = "https://www.fangraphs.com/leaders/major-league"
+    url_barrel_hh = FangraphsScraper.generate_url(base_url_barrel_hh, "barrel_hh")
+    data_barrel_hh = FangraphsScraper.get_or_fetch_data(url_barrel_hh, "barrel_hh", file_path="../../../../data/fangraphs_barrel_hh_data.json")
+
 
 
