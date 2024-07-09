@@ -3,6 +3,7 @@ from app.mlb.mlb_schedule.schedule_api import MLBAPI
 from app.mlb.mlb_schedule.odds_api import fetch_homerun_odds
 from app.mlb.mlb_schedule.schedule_process import ScheduleProcessor
 from app.mlb.mlb_schedule.odds_process import OddsProcessor
+from app.mlb.mlb_schedule.stats_process import PlayerStatsProcessor
 from datetime import datetime  # Import datetime to handle date formatting
 import json
 
@@ -70,16 +71,36 @@ def get_odds():
 
 @mlb_schedule_bp.route('/player_stats', methods=['GET'])
 def show_player_stats():
-    team1 = request.args.get('team1')
-    team2 = request.args.get('team2')
-    if not team1 or not team2:
-        return render_template('error.html')
+    """
+    Route to display player stats for two teams.
+    
+    This route fetches player stats from the provided JSON files and displays them.
+    
+    Returns:
+        Rendered HTML template for the player stats page.
+    """
+    try:
+        # Get the team names from the request parameters
+        team1 = request.args.get('team1')
+        team2 = request.args.get('team2')
+        
+        if not team1 or not team2:
+            return render_template('error.html', message="Both team1 and team2 parameters are required.")
 
-    # Get player stats
-    combined_data = PlayerStatsProcessor.combine_player_stats(barrel_hh_data, fb_data)
+        # File paths for the JSON data
+        statcast_file = "data/fangraphs_barrel_hh_data.json"
+        stats_file = "data/fangraphs_fb_data.json"
+        
+        # Get the complete player stats data
+        complete_data = PlayerStatsProcessor.get_complete_data(statcast_file, stats_file)
+        
+        # Filter the data for the selected teams
+        team1_stats = complete_data.get(team1)
+        team2_stats = complete_data.get(team2)
 
-    # Filter the data for the specified teams
-    team1_stats = combined_data.get(team1, {})
-    team2_stats = combined_data.get(team2, {})
-
-    return render_template('player_stats.html', team1=team1, team2=team2, team1_stats=team1_stats, team2_stats=team2_stats)
+        # Get today's date and format it
+        today_date = datetime.now().strftime("%A, %B %d, %Y")
+        
+        return render_template('player_stats.html', team1=team1_stats, team2=team2_stats, team1_name=team1, team2_name=team2, today_date=today_date)
+    except Exception as e:
+        return render_template('error.html', message=str(e))

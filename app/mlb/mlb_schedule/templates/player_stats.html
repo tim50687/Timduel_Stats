@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player Stats</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Player Stats</h1>
+        <p class="date">{{ today_date }}</p>
+      </header>
+      <main>
+        <h2>Team: {{ team1_name }}</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Player</th>
+              <th>Barrels</th>
+              <th>HardHit</th>
+              <th>LD</th>
+              <th>FB</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for player, stats in team1.items() %}
+            <tr>
+              <td>{{ player }}</td>
+              <td>{{ stats["Barrels"] }}</td>
+              <td>{{ stats["HardHit"] }}</td>
+              <td>{{ stats["LD"] }}</td>
+              <td>{{ stats["FB"] }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+
+        <h2>Team: {{ team2_name }}</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Player</th>
+              <th>Barrels</th>
+              <th>HardHit</th>
+              <th>LD</th>
+              <th>FB</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for player, stats in team2.items() %}
+            <tr>
+              <td>{{ player }}</td>
+              <td>{{ stats["Barrels"] }}</td>
+              <td>{{ stats["HardHit"] }}</td>
+              <td>{{ stats["LD"] }}</td>
+              <td>{{ stats["FB"] }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </main>
+    </div>
+  </body>
+</html>
