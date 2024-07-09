@@ -186,11 +186,11 @@ class FangraphsScraper:
 if __name__ == "__main__":
     base_url_fb = "https://www.fangraphs.com/leaders/major-league"
     url_fb = FangraphsScraper.generate_url(base_url_fb, "fb")
-    data_fb = FangraphsScraper.get_or_fetch_data(url_fb, "fb", file_path="../../../../data/fangraphs_fb_data.json")
+    data_fb = FangraphsScraper.get_or_fetch_data(url_fb, "fb", file_path="./data/fangraphs_fb_data.json")
 
     base_url_barrel_hh = "https://www.fangraphs.com/leaders/major-league"
     url_barrel_hh = FangraphsScraper.generate_url(base_url_barrel_hh, "barrel_hh")
-    data_barrel_hh = FangraphsScraper.get_or_fetch_data(url_barrel_hh, "barrel_hh", file_path="../../../../data/fangraphs_barrel_hh_data.json")
+    data_barrel_hh = FangraphsScraper.get_or_fetch_data(url_barrel_hh, "barrel_hh", file_path="./data/fangraphs_barrel_hh_data.json")
 
 
 

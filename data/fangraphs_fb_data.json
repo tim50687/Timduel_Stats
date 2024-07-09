@@ -1,0 +1,1558 @@
+{
+    "ARI": {
+        "Randal Grichuk": {
+            "LD": "0",
+            "FB": "135"
+        },
+        "Joc Pederson": {
+            "LD": "77",
+            "FB": "187"
+        },
+        "Eugenio Su\u00e1rez": {
+            "LD": "251",
+            "FB": "90"
+        },
+        "Christian Walker": {
+            "LD": "53",
+            "FB": "142"
+        },
+        "Ketel Marte": {
+            "LD": "143",
+            "FB": "97"
+        },
+        "Kevin Newman": {
+            "LD": "188",
+            "FB": "34"
+        },
+        "Lourdes Gurriel Jr.": {
+            "LD": "132",
+            "FB": "114"
+        },
+        "Jake McCarthy": {
+            "LD": "126",
+            "FB": "135"
+        },
+        "Gabriel Moreno": {
+            "LD": "106",
+            "FB": "85"
+        },
+        "Geraldo Perdomo": {
+            "LD": "59",
+            "FB": "111"
+        },
+        "Alek Thomas": {
+            "LD": "84",
+            "FB": "135"
+        },
+        "Corbin Carroll": {
+            "LD": "75",
+            "FB": "68"
+        }
+    },
+    "ATL": {
+        "Travis d'Arnaud": {
+            "LD": "188",
+            "FB": "68"
+        },
+        "Marcell Ozuna": {
+            "LD": "143",
+            "FB": "116"
+        },
+        "Adam Duvall": {
+            "LD": "148",
+            "FB": "96"
+        },
+        "Orlando Arcia": {
+            "LD": "0",
+            "FB": "77"
+        },
+        "Matt Olson": {
+            "LD": "84",
+            "FB": "113"
+        },
+        "Forrest Wall": {
+            "LD": "84",
+            "FB": "135"
+        },
+        "Ozzie Albies": {
+            "LD": "75",
+            "FB": "149"
+        },
+        "Austin Riley": {
+            "LD": "100",
+            "FB": "162"
+        },
+        "Eli White": {
+            "LD": "0",
+            "FB": "116"
+        },
+        "Sean Murphy": {
+            "LD": "84",
+            "FB": "90"
+        },
+        "Zack Short": {
+            "LD": "0",
+            "FB": "180"
+        },
+        "Jarred Kelenic": {
+            "LD": "155",
+            "FB": "62"
+        }
+    },
+    "BAL": {
+        "James McCann": {
+            "LD": "102",
+            "FB": "52"
+        },
+        "Anthony Santander": {
+            "LD": "107",
+            "FB": "136"
+        },
+        "Ryan O'Hearn": {
+            "LD": "73",
+            "FB": "166"
+        },
+        "Jorge Mateo": {
+            "LD": "57",
+            "FB": "86"
+        },
+        "Cedric Mullins": {
+            "LD": "109",
+            "FB": "166"
+        },
+        "Ryan Mountcastle": {
+            "LD": "39",
+            "FB": "99"
+        },
+        "Ram\u00f3n Ur\u00edas": {
+            "LD": "57",
+            "FB": "115"
+        },
+        "Austin Hays": {
+            "LD": "232",
+            "FB": "70"
+        },
+        "Adley Rutschman": {
+            "LD": "27",
+            "FB": "163"
+        },
+        "Gunnar Henderson": {
+            "LD": "161",
+            "FB": "41"
+        },
+        "Jordan Westburg": {
+            "LD": "49",
+            "FB": "98"
+        },
+        "Colton Cowser": {
+            "LD": "73",
+            "FB": "74"
+        },
+        "Heston Kjerstad": {
+            "LD": "128",
+            "FB": "161"
+        }
+    },
+    "BOS": {
+        "Rob Refsnyder": {
+            "LD": "73",
+            "FB": "111"
+        },
+        "Dominic Smith": {
+            "LD": "93",
+            "FB": "94"
+        },
+        "Reese McGuire": {
+            "LD": "102",
+            "FB": "103"
+        },
+        "Tyler O'Neill": {
+            "LD": "223",
+            "FB": "16"
+        },
+        "Rafael Devers": {
+            "LD": "160",
+            "FB": "48"
+        },
+        "Connor Wong": {
+            "LD": "34",
+            "FB": "69"
+        },
+        "Romy Gonzalez": {
+            "LD": "0",
+            "FB": "111"
+        },
+        "Enmanuel Valdez": {
+            "LD": "57",
+            "FB": "115"
+        },
+        "Wilyer Abreu": {
+            "LD": "0",
+            "FB": "207"
+        },
+        "Ceddanne Rafaela": {
+            "LD": "32",
+            "FB": "129"
+        },
+        "Jarren Duran": {
+            "LD": "49",
+            "FB": "123"
+        },
+        "David Hamilton": {
+            "LD": "64",
+            "FB": "97"
+        },
+        "Masataka Yoshida": {
+            "LD": "142",
+            "FB": "72"
+        }
+    },
+    "CHC": {
+        "Patrick Wisdom": {
+            "LD": "0",
+            "FB": "108"
+        },
+        "Tom\u00e1s Nido": {
+            "LD": "0",
+            "FB": "90"
+        },
+        "David Bote": {
+            "LD": "251",
+            "FB": "0"
+        },
+        "Cody Bellinger": {
+            "LD": "28",
+            "FB": "105"
+        },
+        "Ian Happ": {
+            "LD": "157",
+            "FB": "118"
+        },
+        "Dansby Swanson": {
+            "LD": "84",
+            "FB": "135"
+        },
+        "Miles Mastrobuoni": {
+            "LD": "63",
+            "FB": "135"
+        },
+        "Nico Hoerner": {
+            "LD": "201",
+            "FB": "54"
+        },
+        "Miguel Amaya": {
+            "LD": "126",
+            "FB": "0"
+        },
+        "Christopher Morel": {
+            "LD": "223",
+            "FB": "60"
+        },
+        "Michael Busch": {
+            "LD": "108",
+            "FB": "97"
+        },
+        "Pete Crow-Armstrong": {
+            "LD": "167",
+            "FB": "135"
+        },
+        "Seiya Suzuki": {
+            "LD": "33",
+            "FB": "144"
+        }
+    },
+    "CHW": {
+        "Tommy Pham": {
+            "LD": "182",
+            "FB": "111"
+        },
+        "Mart\u00edn Maldonado": {
+            "LD": "219",
+            "FB": "111"
+        },
+        "Eloy Jim\u00e9nez": {
+            "LD": "39",
+            "FB": "79"
+        },
+        "Andrew Benintendi": {
+            "LD": "64",
+            "FB": "65"
+        },
+        "Paul DeJong": {
+            "LD": "139",
+            "FB": "117"
+        },
+        "Danny Mendick": {
+            "LD": "0",
+            "FB": "129"
+        },
+        "Nicky Lopez": {
+            "LD": "43",
+            "FB": "86"
+        },
+        "Gavin Sheets": {
+            "LD": "79",
+            "FB": "99"
+        },
+        "Luis Robert Jr.": {
+            "LD": "128",
+            "FB": "97"
+        },
+        "Lenyn Sosa": {
+            "LD": "116",
+            "FB": "106"
+        },
+        "Korey Lee": {
+            "LD": "191",
+            "FB": "32"
+        },
+        "Andrew Vaughn": {
+            "LD": "157",
+            "FB": "139"
+        }
+    },
+    "CIN": {
+        "Nick Martini": {
+            "LD": "151",
+            "FB": "108"
+        },
+        "Jeimer Candelario": {
+            "LD": "157",
+            "FB": "68"
+        },
+        "Tyler Stephenson": {
+            "LD": "77",
+            "FB": "62"
+        },
+        "Santiago Espinal": {
+            "LD": "84",
+            "FB": "90"
+        },
+        "Stuart Fairchild": {
+            "LD": "0",
+            "FB": "135"
+        },
+        "Jonathan India": {
+            "LD": "84",
+            "FB": "90"
+        },
+        "Will Benson": {
+            "LD": "167",
+            "FB": "45"
+        },
+        "Spencer Steer": {
+            "LD": "89",
+            "FB": "127"
+        },
+        "Noelvi Marte": {
+            "LD": "77",
+            "FB": "62"
+        },
+        "Elly De La Cruz": {
+            "LD": "84",
+            "FB": "45"
+        },
+        "Blake Dunn": {
+            "LD": "0",
+            "FB": "90"
+        }
+    },
+    "CLE": {
+        "Austin Hedges": {
+            "LD": "0",
+            "FB": "0"
+        },
+        "Jos\u00e9 Ram\u00edrez": {
+            "LD": "49",
+            "FB": "98"
+        },
+        "Josh Naylor": {
+            "LD": "46",
+            "FB": "106"
+        },
+        "Andr\u00e9s Gim\u00e9nez": {
+            "LD": "81",
+            "FB": "82"
+        },
+        "Bo Naylor": {
+            "LD": "109",
+            "FB": "92"
+        },
+        "Tyler Freeman": {
+            "LD": "113",
+            "FB": "57"
+        },
+        "Gabriel Arias": {
+            "LD": "0",
+            "FB": "86"
+        },
+        "Brayan Rocchio": {
+            "LD": "196",
+            "FB": "40"
+        },
+        "Jhonkensy Noel": {
+            "LD": "64",
+            "FB": "161"
+        },
+        "Steven Kwan": {
+            "LD": "70",
+            "FB": "106"
+        },
+        "David Fry": {
+            "LD": "102",
+            "FB": "103"
+        },
+        "Daniel Schneemann": {
+            "LD": "191",
+            "FB": "97"
+        },
+        "Angel Mart\u00ednez": {
+            "LD": "191",
+            "FB": "65"
+        }
+    },
+    "COL": {
+        "Charlie Blackmon": {
+            "LD": "137",
+            "FB": "123"
+        },
+        "Elias D\u00edaz": {
+            "LD": "84",
+            "FB": "105"
+        },
+        "Jacob Stallings": {
+            "LD": "0",
+            "FB": "217"
+        },
+        "Jake Cave": {
+            "LD": "193",
+            "FB": "83"
+        },
+        "Ryan McMahon": {
+            "LD": "132",
+            "FB": "57"
+        },
+        "Brendan Rodgers": {
+            "LD": "63",
+            "FB": "68"
+        },
+        "Sam Hilliard": {
+            "LD": "502",
+            "FB": "0"
+        },
+        "Nolan Jones": {
+            "LD": "63",
+            "FB": "0"
+        },
+        "Ezequiel Tovar": {
+            "LD": "50",
+            "FB": "108"
+        },
+        "Brenton Doyle": {
+            "LD": "179",
+            "FB": "116"
+        },
+        "Aaron Schunk": {
+            "LD": "201",
+            "FB": "108"
+        },
+        "Michael Toglia": {
+            "LD": "84",
+            "FB": "113"
+        },
+        "Hunter Goodman": {
+            "LD": "0",
+            "FB": "108"
+        }
+    },
+    "DET": {
+        "Gio Urshela": {
+            "LD": "188",
+            "FB": "54"
+        },
+        "Mark Canha": {
+            "LD": "0",
+            "FB": "69"
+        },
+        "Carson Kelly": {
+            "LD": "64",
+            "FB": "161"
+        },
+        "Andy Ib\u00e1\u00f1ez": {
+            "LD": "",
+            "FB": ""
+        },
+        "Zach McKinstry": {
+            "LD": "219",
+            "FB": "148"
+        },
+        "Jake Rogers": {
+            "LD": "219",
+            "FB": "74"
+        },
+        "Matt Vierling": {
+            "LD": "73",
+            "FB": "92"
+        },
+        "Akil Baddoo": {
+            "LD": "204",
+            "FB": "155"
+        },
+        "Wenceel P\u00e9rez": {
+            "LD": "0",
+            "FB": "109"
+        },
+        "Parker Meadows": {
+            "LD": "170",
+            "FB": "57"
+        },
+        "Ryan Kreidler": {
+            "LD": "0",
+            "FB": "215"
+        },
+        "Riley Greene": {
+            "LD": "157",
+            "FB": "99"
+        },
+        "Colt Keith": {
+            "LD": "120",
+            "FB": "91"
+        },
+        "Justyn-Henry Malloy": {
+            "LD": "153",
+            "FB": "129"
+        }
+    },
+    "HOU": {
+        "Jose Altuve": {
+            "LD": "128",
+            "FB": "97"
+        },
+        "Jon Singleton": {
+            "LD": "170",
+            "FB": "120"
+        },
+        "Mauricio Dub\u00f3n": {
+            "LD": "213",
+            "FB": "108"
+        },
+        "Alex Bregman": {
+            "LD": "102",
+            "FB": "129"
+        },
+        "Yordan Alvarez": {
+            "LD": "73",
+            "FB": "129"
+        },
+        "Chas McCormick": {
+            "LD": "64",
+            "FB": "65"
+        },
+        "Jake Meyers": {
+            "LD": "68",
+            "FB": "138"
+        },
+        "Trey Cabbage": {
+            "LD": "0",
+            "FB": "129"
+        },
+        "C\u00e9sar Salazar": {
+            "LD": "255",
+            "FB": "86"
+        },
+        "Jeremy Pe\u00f1a": {
+            "LD": "89",
+            "FB": "123"
+        },
+        "Yainer Diaz": {
+            "LD": "146",
+            "FB": "61"
+        },
+        "Joey Loperfido": {
+            "LD": "186",
+            "FB": "94"
+        }
+    },
+    "KCR": {
+        "Salvador Perez": {
+            "LD": "199",
+            "FB": "43"
+        },
+        "Hunter Renfroe": {
+            "LD": "109",
+            "FB": "92"
+        },
+        "Garrett Hampson": {
+            "LD": "64",
+            "FB": "194"
+        },
+        "Kyle Isbel": {
+            "LD": "51",
+            "FB": "52"
+        },
+        "Freddy Fermin": {
+            "LD": "255",
+            "FB": "52"
+        },
+        "MJ Melendez": {
+            "LD": "170",
+            "FB": "129"
+        },
+        "Maikel Garcia": {
+            "LD": "81",
+            "FB": "82"
+        },
+        "Bobby Witt Jr.": {
+            "LD": "162",
+            "FB": "117"
+        },
+        "Nick Loftin": {
+            "LD": "73",
+            "FB": "55"
+        },
+        "Vinnie Pasquantino": {
+            "LD": "155",
+            "FB": "45"
+        },
+        "Michael Massey": {
+            "LD": "0",
+            "FB": "145"
+        }
+    },
+    "LAA": {
+        "Brandon Drury": {
+            "LD": "39",
+            "FB": "99"
+        },
+        "Miguel San\u00f3": {
+            "LD": "128",
+            "FB": "65"
+        },
+        "Kevin Pillar": {
+            "LD": "0",
+            "FB": "86"
+        },
+        "Luis Guillorme": {
+            "LD": "64",
+            "FB": "129"
+        },
+        "Taylor Ward": {
+            "LD": "136",
+            "FB": "86"
+        },
+        "Willie Calhoun": {
+            "LD": "93",
+            "FB": "23"
+        },
+        "Luis Rengifo": {
+            "LD": "219",
+            "FB": "37"
+        },
+        "Mickey Moniak": {
+            "LD": "39",
+            "FB": "139"
+        },
+        "Keston Hiura": {
+            "LD": "292",
+            "FB": "0"
+        },
+        "Jo Adell": {
+            "LD": "0",
+            "FB": "179"
+        },
+        "Logan O'Hoppe": {
+            "LD": "128",
+            "FB": "81"
+        },
+        "Zach Neto": {
+            "LD": "24",
+            "FB": "135"
+        },
+        "Nolan Schanuel": {
+            "LD": "230",
+            "FB": "77"
+        }
+    },
+    "LAD": {
+        "Jason Heyward": {
+            "LD": "0",
+            "FB": "108"
+        },
+        "Freddie Freeman": {
+            "LD": "157",
+            "FB": "85"
+        },
+        "Miguel Rojas": {
+            "LD": "89",
+            "FB": "96"
+        },
+        "Enrique Hern\u00e1ndez": {
+            "LD": "84",
+            "FB": "45"
+        },
+        "Teoscar Hern\u00e1ndez": {
+            "LD": "91",
+            "FB": "62"
+        },
+        "Chris Taylor": {
+            "LD": "0",
+            "FB": "74"
+        },
+        "Will Smith": {
+            "LD": "36",
+            "FB": "213"
+        },
+        "Shohei Ohtani": {
+            "LD": "155",
+            "FB": "104"
+        },
+        "Gavin Lux": {
+            "LD": "126",
+            "FB": "23"
+        },
+        "Miguel Vargas": {
+            "LD": "151",
+            "FB": "108"
+        },
+        "James Outman": {
+            "LD": "377",
+            "FB": "68"
+        },
+        "Andy Pages": {
+            "LD": "0",
+            "FB": "180"
+        }
+    },
+    "MIA": {
+        "Josh Bell": {
+            "LD": "31",
+            "FB": "135"
+        },
+        "Ali S\u00e1nchez": {
+            "LD": "100",
+            "FB": "108"
+        },
+        "Bryan De La Cruz": {
+            "LD": "100",
+            "FB": "126"
+        },
+        "Emmanuel Rivera": {
+            "LD": "137",
+            "FB": "49"
+        },
+        "Jes\u00fas S\u00e1nchez": {
+            "LD": "89",
+            "FB": "96"
+        },
+        "Jazz Chisholm Jr.": {
+            "LD": "53",
+            "FB": "100"
+        },
+        "Vidal Bruj\u00e1n": {
+            "LD": "72",
+            "FB": "97"
+        },
+        "Nick Fortes": {
+            "LD": "155",
+            "FB": "125"
+        },
+        "Dane Myers": {
+            "LD": "0",
+            "FB": "77"
+        },
+        "Xavier Edwards": {
+            "LD": "79",
+            "FB": "114"
+        },
+        "Jake Burger": {
+            "LD": "33",
+            "FB": "126"
+        },
+        "Jonah Bride": {
+            "LD": "0",
+            "FB": "90"
+        }
+    },
+    "MIL": {
+        "Christian Yelich": {
+            "LD": "106",
+            "FB": "100"
+        },
+        "Eric Haase": {
+            "LD": "0",
+            "FB": "162"
+        },
+        "Jake Bauers": {
+            "LD": "84",
+            "FB": "90"
+        },
+        "Willy Adames": {
+            "LD": "100",
+            "FB": "108"
+        },
+        "Rhys Hoskins": {
+            "LD": "0",
+            "FB": "150"
+        },
+        "Andruw Monasterio": {
+            "LD": "67",
+            "FB": "108"
+        },
+        "Blake Perkins": {
+            "LD": "0",
+            "FB": "169"
+        },
+        "William Contreras": {
+            "LD": "157",
+            "FB": "51"
+        },
+        "Brice Turang": {
+            "LD": "197",
+            "FB": "59"
+        },
+        "Vinny Capra": {
+            "LD": "0",
+            "FB": "162"
+        },
+        "Garrett Mitchell": {
+            "LD": "46",
+            "FB": "25"
+        },
+        "Jackson Chourio": {
+            "LD": "167",
+            "FB": "113"
+        },
+        "Sal Frelick": {
+            "LD": "72",
+            "FB": "77"
+        }
+    },
+    "MIN": {
+        "Carlos Santana": {
+            "LD": "118",
+            "FB": "99"
+        },
+        "Christian V\u00e1zquez": {
+            "LD": "93",
+            "FB": "141"
+        },
+        "Max Kepler": {
+            "LD": "170",
+            "FB": "43"
+        },
+        "Byron Buxton": {
+            "LD": "196",
+            "FB": "119"
+        },
+        "Carlos Correa": {
+            "LD": "0",
+            "FB": "100"
+        },
+        "Manuel Margot": {
+            "LD": "85",
+            "FB": "108"
+        },
+        "Kyle Farmer": {
+            "LD": "128",
+            "FB": "194"
+        },
+        "Willi Castro": {
+            "LD": "85",
+            "FB": "86"
+        },
+        "Jose Miranda": {
+            "LD": "242",
+            "FB": "68"
+        },
+        "Trevor Larnach": {
+            "LD": "0",
+            "FB": "43"
+        },
+        "Ryan Jeffers": {
+            "LD": "64",
+            "FB": "129"
+        },
+        "Austin Martin": {
+            "LD": "128",
+            "FB": "65"
+        },
+        "Brooks Lee": {
+            "LD": "170",
+            "FB": "57"
+        }
+    },
+    "NYM": {
+        "J.D. Martinez": {
+            "LD": "100",
+            "FB": "81"
+        },
+        "Jose Iglesias": {
+            "LD": "112",
+            "FB": "90"
+        },
+        "Ben Gamel": {
+            "LD": "167",
+            "FB": "90"
+        },
+        "Francisco Lindor": {
+            "LD": "48",
+            "FB": "155"
+        },
+        "Brandon Nimmo": {
+            "LD": "155",
+            "FB": "83"
+        },
+        "Tyrone Taylor": {
+            "LD": "50",
+            "FB": "162"
+        },
+        "Jeff McNeil": {
+            "LD": "126",
+            "FB": "102"
+        },
+        "Luis Torrens": {
+            "LD": "201",
+            "FB": "81"
+        },
+        "DJ Stewart": {
+            "LD": "84",
+            "FB": "226"
+        },
+        "Harrison Bader": {
+            "LD": "301",
+            "FB": "108"
+        },
+        "Pete Alonso": {
+            "LD": "94",
+            "FB": "118"
+        },
+        "Mark Vientos": {
+            "LD": "137",
+            "FB": "123"
+        },
+        "Francisco Alvarez": {
+            "LD": "167",
+            "FB": "30"
+        }
+    },
+    "NYY": {
+        "DJ LeMahieu": {
+            "LD": "90",
+            "FB": "61"
+        },
+        "Aaron Judge": {
+            "LD": "60",
+            "FB": "121"
+        },
+        "Jose Trevino": {
+            "LD": "128",
+            "FB": "129"
+        },
+        "Gleyber Torres": {
+            "LD": "128",
+            "FB": "86"
+        },
+        "Alex Verdugo": {
+            "LD": "54",
+            "FB": "122"
+        },
+        "Trent Grisham": {
+            "LD": "113",
+            "FB": "86"
+        },
+        "Juan Soto": {
+            "LD": "26",
+            "FB": "155"
+        },
+        "Oswaldo Cabrera": {
+            "LD": "153",
+            "FB": "103"
+        },
+        "Austin Wells": {
+            "LD": "118",
+            "FB": "99"
+        },
+        "Anthony Volpe": {
+            "LD": "116",
+            "FB": "94"
+        },
+        "Ben Rice": {
+            "LD": "64",
+            "FB": "129"
+        }
+    },
+    "OAK": {
+        "Miguel Andujar": {
+            "LD": "102",
+            "FB": "142"
+        },
+        "Tyler Nevin": {
+            "LD": "0",
+            "FB": "194"
+        },
+        "Daz Cameron": {
+            "LD": "0",
+            "FB": "172"
+        },
+        "Armando Alvarez": {
+            "LD": "0",
+            "FB": "207"
+        },
+        "Brent Rooker": {
+            "LD": "113",
+            "FB": "143"
+        },
+        "Lawrence Butler": {
+            "LD": "43",
+            "FB": "194"
+        },
+        "Max Schuemann": {
+            "LD": "85",
+            "FB": "129"
+        },
+        "Kyle McCann": {
+            "LD": "0",
+            "FB": "172"
+        },
+        "Shea Langeliers": {
+            "LD": "43",
+            "FB": "151"
+        },
+        "JJ Bleday": {
+            "LD": "85",
+            "FB": "100"
+        },
+        "Tyler Soderstrom": {
+            "LD": "30",
+            "FB": "61"
+        },
+        "Zack Gelof": {
+            "LD": "170",
+            "FB": "86"
+        },
+        "Brett Harris": {
+            "LD": "28",
+            "FB": "100"
+        }
+    },
+    "PHI": {
+        "Whit Merrifield": {
+            "LD": "116",
+            "FB": "62"
+        },
+        "Nick Castellanos": {
+            "LD": "195",
+            "FB": "105"
+        },
+        "David Dahl": {
+            "LD": "0",
+            "FB": "0"
+        },
+        "Trea Turner": {
+            "LD": "79",
+            "FB": "128"
+        },
+        "Edmundo Sosa": {
+            "LD": "72",
+            "FB": "116"
+        },
+        "Garrett Stubbs": {
+            "LD": "167",
+            "FB": "90"
+        },
+        "Cristian Pache": {
+            "LD": "84",
+            "FB": "90"
+        },
+        "Brandon Marsh": {
+            "LD": "287",
+            "FB": "39"
+        },
+        "Kody Clemens": {
+            "LD": "91",
+            "FB": "74"
+        },
+        "Alec Bohm": {
+            "LD": "56",
+            "FB": "120"
+        },
+        "Rafael March\u00e1n": {
+            "LD": "188",
+            "FB": "68"
+        },
+        "Johan Rojas": {
+            "LD": "33",
+            "FB": "90"
+        },
+        "Bryson Stott": {
+            "LD": "100",
+            "FB": "95"
+        }
+    },
+    "PIT": {
+        "Andrew McCutchen": {
+            "LD": "91",
+            "FB": "98"
+        },
+        "Yasmani Grandal": {
+            "LD": "56",
+            "FB": "90"
+        },
+        "Michael A. Taylor": {
+            "LD": "301",
+            "FB": "54"
+        },
+        "Rowdy Tellez": {
+            "LD": "100",
+            "FB": "108"
+        },
+        "Connor Joe": {
+            "LD": "50",
+            "FB": "108"
+        },
+        "Ke'Bryan Hayes": {
+            "LD": "176",
+            "FB": "68"
+        },
+        "Bryan Reynolds": {
+            "LD": "137",
+            "FB": "98"
+        },
+        "Edward Olivares": {
+            "LD": "0",
+            "FB": "135"
+        },
+        "Joshua Palacios": {
+            "LD": "0",
+            "FB": "45"
+        },
+        "Joey Bart": {
+            "LD": "100",
+            "FB": "54"
+        },
+        "Oneil Cruz": {
+            "LD": "116",
+            "FB": "104"
+        },
+        "Jack Suwinski": {
+            "LD": "91",
+            "FB": "98"
+        },
+        "Nick Gonzales": {
+            "LD": "30",
+            "FB": "127"
+        }
+    },
+    "SDP": {
+        "David Peralta": {
+            "LD": "84",
+            "FB": "68"
+        },
+        "Kyle Higashioka": {
+            "LD": "42",
+            "FB": "113"
+        },
+        "Donovan Solano": {
+            "LD": "132",
+            "FB": "85"
+        },
+        "Jurickson Profar": {
+            "LD": "157",
+            "FB": "118"
+        },
+        "Manny Machado": {
+            "LD": "84",
+            "FB": "135"
+        },
+        "Tyler Wade": {
+            "LD": "100",
+            "FB": "54"
+        },
+        "Jake Cronenworth": {
+            "LD": "94",
+            "FB": "85"
+        },
+        "Luis Arraez": {
+            "LD": "197",
+            "FB": "71"
+        },
+        "Bryce Johnson": {
+            "LD": "167",
+            "FB": "135"
+        },
+        "Ha-Seong Kim": {
+            "LD": "148",
+            "FB": "96"
+        },
+        "Jackson Merrill": {
+            "LD": "157",
+            "FB": "85"
+        }
+    },
+    "SEA": {
+        "Jorge Polanco": {
+            "LD": "128",
+            "FB": "65"
+        },
+        "Mitch Haniger": {
+            "LD": "0",
+            "FB": "129"
+        },
+        "Mitch Garver": {
+            "LD": "85",
+            "FB": "151"
+        },
+        "J.P. Crawford": {
+            "LD": "120",
+            "FB": "106"
+        },
+        "Ty France": {
+            "LD": "96",
+            "FB": "145"
+        },
+        "Dylan Moore": {
+            "LD": "128",
+            "FB": "129"
+        },
+        "Luke Raley": {
+            "LD": "102",
+            "FB": "86"
+        },
+        "Josh Rojas": {
+            "LD": "219",
+            "FB": "37"
+        },
+        "Cal Raleigh": {
+            "LD": "85",
+            "FB": "151"
+        },
+        "Julio Rodr\u00edguez": {
+            "LD": "93",
+            "FB": "141"
+        },
+        "Dominic Canzone": {
+            "LD": "73",
+            "FB": "111"
+        }
+    },
+    "SFG": {
+        "Nick Ahmed": {
+            "LD": "42",
+            "FB": "135"
+        },
+        "Curt Casali": {
+            "LD": "502",
+            "FB": "0"
+        },
+        "Jorge Soler": {
+            "LD": "63",
+            "FB": "135"
+        },
+        "Mike Yastrzemski": {
+            "LD": "126",
+            "FB": "68"
+        },
+        "Austin Slater": {
+            "LD": "100",
+            "FB": "0"
+        },
+        "Michael Conforto": {
+            "LD": "151",
+            "FB": "54"
+        },
+        "Matt Chapman": {
+            "LD": "112",
+            "FB": "120"
+        },
+        "LaMonte Wade Jr.": {
+            "LD": "46",
+            "FB": "148"
+        },
+        "Heliot Ramos": {
+            "LD": "177",
+            "FB": "96"
+        },
+        "Tyler Fitzgerald": {
+            "LD": "167",
+            "FB": "180"
+        },
+        "Luis Matos": {
+            "LD": "72",
+            "FB": "77"
+        },
+        "Patrick Bailey": {
+            "LD": "201",
+            "FB": "81"
+        },
+        "Brett Wisely": {
+            "LD": "116",
+            "FB": "62"
+        }
+    },
+    "STL": {
+        "Matt Carpenter": {
+            "LD": "0",
+            "FB": "135"
+        },
+        "Paul Goldschmidt": {
+            "LD": "91",
+            "FB": "74"
+        },
+        "Nolan Arenado": {
+            "LD": "131",
+            "FB": "59"
+        },
+        "Willson Contreras": {
+            "LD": "195",
+            "FB": "75"
+        },
+        "Dylan Carlson": {
+            "LD": "50",
+            "FB": "135"
+        },
+        "Jos\u00e9 Ferm\u00edn": {
+            "LD": "0",
+            "FB": "108"
+        },
+        "Nolan Gorman": {
+            "LD": "84",
+            "FB": "135"
+        },
+        "Michael Siani": {
+            "LD": "91",
+            "FB": "25"
+        },
+        "Brendan Donovan": {
+            "LD": "109",
+            "FB": "82"
+        },
+        "Pedro Pag\u00e9s": {
+            "LD": "56",
+            "FB": "150"
+        },
+        "Masyn Winn": {
+            "LD": "20",
+            "FB": "87"
+        },
+        "Alec Burleson": {
+            "LD": "87",
+            "FB": "118"
+        }
+    },
+    "TBR": {
+        "Amed Rosario": {
+            "LD": "64",
+            "FB": "65"
+        },
+        "Yandy D\u00edaz": {
+            "LD": "90",
+            "FB": "76"
+        },
+        "Alex Jackson": {
+            "LD": "0",
+            "FB": "65"
+        },
+        "Jose Siri": {
+            "LD": "93",
+            "FB": "117"
+        },
+        "Brandon Lowe": {
+            "LD": "73",
+            "FB": "129"
+        },
+        "Randy Arozarena": {
+            "LD": "60",
+            "FB": "137"
+        },
+        "Josh Lowe": {
+            "LD": "46",
+            "FB": "117"
+        },
+        "Isaac Paredes": {
+            "LD": "30",
+            "FB": "121"
+        },
+        "Ben Rortvedt": {
+            "LD": "85",
+            "FB": "43"
+        },
+        "Taylor Walls": {
+            "LD": "51",
+            "FB": "155"
+        },
+        "Jos\u00e9 Caballero": {
+            "LD": "153",
+            "FB": "77"
+        },
+        "Richie Palacios": {
+            "LD": "118",
+            "FB": "60"
+        },
+        "Jonny DeLuca": {
+            "LD": "64",
+            "FB": "129"
+        }
+    },
+    "TEX": {
+        "Marcus Semien": {
+            "LD": "30",
+            "FB": "106"
+        },
+        "Corey Seager": {
+            "LD": "136",
+            "FB": "138"
+        },
+        "Travis Jankowski": {
+            "LD": "73",
+            "FB": "37"
+        },
+        "Jonah Heim": {
+            "LD": "199",
+            "FB": "86"
+        },
+        "Derek Hill": {
+            "LD": "113",
+            "FB": "143"
+        },
+        "Leody Taveras": {
+            "LD": "153",
+            "FB": "90"
+        },
+        "Adolis Garc\u00eda": {
+            "LD": "0",
+            "FB": "164"
+        },
+        "Andrew Knizner": {
+            "LD": "0",
+            "FB": "103"
+        },
+        "Nathaniel Lowe": {
+            "LD": "109",
+            "FB": "111"
+        },
+        "Jonathan Ornelas": {
+            "LD": "219",
+            "FB": "74"
+        },
+        "Josh Smith": {
+            "LD": "93",
+            "FB": "70"
+        },
+        "Wyatt Langford": {
+            "LD": "204",
+            "FB": "69"
+        }
+    },
+    "TOR": {
+        "Justin Turner": {
+            "LD": "128",
+            "FB": "194"
+        },
+        "Kevin Kiermaier": {
+            "LD": "0",
+            "FB": "148"
+        },
+        "George Springer": {
+            "LD": "73",
+            "FB": "111"
+        },
+        "Danny Jansen": {
+            "LD": "113",
+            "FB": "86"
+        },
+        "Vladimir Guerrero Jr.": {
+            "LD": "134",
+            "FB": "68"
+        },
+        "Bo Bichette": {
+            "LD": "118",
+            "FB": "99"
+        },
+        "Daulton Varsho": {
+            "LD": "306",
+            "FB": "52"
+        },
+        "Ernie Clement": {
+            "LD": "90",
+            "FB": "106"
+        },
+        "Alejandro Kirk": {
+            "LD": "213",
+            "FB": "65"
+        },
+        "Davis Schneider": {
+            "LD": "146",
+            "FB": "148"
+        },
+        "Leo Jim\u00e9nez": {
+            "LD": "340",
+            "FB": "0"
+        },
+        "Addison Barger": {
+            "LD": "0",
+            "FB": "148"
+        },
+        "Spencer Horwitz": {
+            "LD": "180",
+            "FB": "76"
+        }
+    },
+    "WSN": {
+        "Ildemaro Vargas": {
+            "LD": "0",
+            "FB": "135"
+        },
+        "Jesse Winker": {
+            "LD": "188",
+            "FB": "85"
+        },
+        "Joey Meneses": {
+            "LD": "126",
+            "FB": "102"
+        },
+        "Harold Ram\u00edrez": {
+            "LD": "0",
+            "FB": "90"
+        },
+        "Lane Thomas": {
+            "LD": "159",
+            "FB": "71"
+        },
+        "Juan Yepez": {
+            "LD": "167",
+            "FB": "60"
+        },
+        "Nick Senzel": {
+            "LD": "56",
+            "FB": "90"
+        },
+        "Keibert Ruiz": {
+            "LD": "126",
+            "FB": "118"
+        },
+        "Riley Adams": {
+            "LD": "100",
+            "FB": "0"
+        },
+        "Luis Garc\u00eda Jr.": {
+            "LD": "188",
+            "FB": "68"
+        },
+        "CJ Abrams": {
+            "LD": "134",
+            "FB": "90"
+        },
+        "James Wood": {
+            "LD": "33",
+            "FB": "54"
+        },
+        "Jacob Young": {
+            "LD": "94",
+            "FB": "118"
+        },
+        "Trey Lipscomb": {
+            "LD": "215",
+            "FB": "0"
+        }
+    }
+}

@@ -1,0 +1,1932 @@
+{
+    "ARI": {
+        "Randal Grichuk": {
+            "Event": "6",
+            "Barrels": "1",
+            "HardHit": "5"
+        },
+        "Joc Pederson": {
+            "Event": "13",
+            "Barrels": "3",
+            "HardHit": "4"
+        },
+        "Eugenio Su\u00e1rez": {
+            "Event": "12",
+            "Barrels": "1",
+            "HardHit": "6"
+        },
+        "Christian Walker": {
+            "Event": "19",
+            "Barrels": "6",
+            "HardHit": "11"
+        },
+        "Ketel Marte": {
+            "Event": "14",
+            "Barrels": "1",
+            "HardHit": "9"
+        },
+        "Kevin Newman": {
+            "Event": "9",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Lourdes Gurriel Jr.": {
+            "Event": "19",
+            "Barrels": "1",
+            "HardHit": "6"
+        },
+        "Jake McCarthy": {
+            "Event": "13",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Gabriel Moreno": {
+            "Event": "19",
+            "Barrels": "4",
+            "HardHit": "9"
+        },
+        "Geraldo Perdomo": {
+            "Event": "19",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Alek Thomas": {
+            "Event": "12",
+            "Barrels": "3",
+            "HardHit": "9"
+        },
+        "Corbin Carroll": {
+            "Event": "23",
+            "Barrels": "1",
+            "HardHit": "9"
+        }
+    },
+    "ATL": {
+        "Travis d'Arnaud": {
+            "Event": "8",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Marcell Ozuna": {
+            "Event": "14",
+            "Barrels": "2",
+            "HardHit": "8"
+        },
+        "Adam Duvall": {
+            "Event": "17",
+            "Barrels": "2",
+            "HardHit": "6"
+        },
+        "Orlando Arcia": {
+            "Event": "7",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Matt Olson": {
+            "Event": "12",
+            "Barrels": "1",
+            "HardHit": "5"
+        },
+        "Forrest Wall": {
+            "Event": "8",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Ozzie Albies": {
+            "Event": "20",
+            "Barrels": "3",
+            "HardHit": "6"
+        },
+        "Austin Riley": {
+            "Event": "15",
+            "Barrels": "6",
+            "HardHit": "9"
+        },
+        "Eli White": {
+            "Event": "7",
+            "Barrels": "1",
+            "HardHit": "2"
+        },
+        "Sean Murphy": {
+            "Event": "6",
+            "Barrels": "1",
+            "HardHit": "3"
+        },
+        "Zack Short": {
+            "Event": "7",
+            "Barrels": "0",
+            "HardHit": "0"
+        },
+        "Jarred Kelenic": {
+            "Event": "13",
+            "Barrels": "2",
+            "HardHit": "5"
+        }
+    },
+    "BAL": {
+        "James McCann": {
+            "Event": "5",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Anthony Santander": {
+            "Event": "19",
+            "Barrels": "2",
+            "HardHit": "11"
+        },
+        "Ryan O'Hearn": {
+            "Event": "14",
+            "Barrels": "1",
+            "HardHit": "5"
+        },
+        "Jorge Mateo": {
+            "Event": "9",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Cedric Mullins": {
+            "Event": "14",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Ryan Mountcastle": {
+            "Event": "13",
+            "Barrels": "2",
+            "HardHit": "6"
+        },
+        "Ram\u00f3n Ur\u00edas": {
+            "Event": "9",
+            "Barrels": "1",
+            "HardHit": "6"
+        },
+        "Austin Hays": {
+            "Event": "11",
+            "Barrels": "1",
+            "HardHit": "8"
+        },
+        "Adley Rutschman": {
+            "Event": "19",
+            "Barrels": "1",
+            "HardHit": "4"
+        },
+        "Gunnar Henderson": {
+            "Event": "19",
+            "Barrels": "4",
+            "HardHit": "12"
+        },
+        "Jordan Westburg": {
+            "Event": "21",
+            "Barrels": "4",
+            "HardHit": "10"
+        },
+        "Colton Cowser": {
+            "Event": "7",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Heston Kjerstad": {
+            "Event": "8",
+            "Barrels": "1",
+            "HardHit": "6"
+        }
+    },
+    "BOS": {
+        "Rob Refsnyder": {
+            "Event": "7",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Dominic Smith": {
+            "Event": "11",
+            "Barrels": "2",
+            "HardHit": "6"
+        },
+        "Reese McGuire": {
+            "Event": "5",
+            "Barrels": "0",
+            "HardHit": "0"
+        },
+        "Tyler O'Neill": {
+            "Event": "16",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Rafael Devers": {
+            "Event": "16",
+            "Barrels": "3",
+            "HardHit": "9"
+        },
+        "Connor Wong": {
+            "Event": "15",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Romy Gonzalez": {
+            "Event": "8",
+            "Barrels": "1",
+            "HardHit": "4"
+        },
+        "Enmanuel Valdez": {
+            "Event": "9",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Wilyer Abreu": {
+            "Event": "5",
+            "Barrels": "1",
+            "HardHit": "1"
+        },
+        "Ceddanne Rafaela": {
+            "Event": "16",
+            "Barrels": "5",
+            "HardHit": "6"
+        },
+        "Jarren Duran": {
+            "Event": "21",
+            "Barrels": "1",
+            "HardHit": "6"
+        },
+        "David Hamilton": {
+            "Event": "8",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Masataka Yoshida": {
+            "Event": "18",
+            "Barrels": "2",
+            "HardHit": "4"
+        }
+    },
+    "CHC": {
+        "Patrick Wisdom": {
+            "Event": "5",
+            "Barrels": "0",
+            "HardHit": "0"
+        },
+        "Tom\u00e1s Nido": {
+            "Event": "9",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "David Bote": {
+            "Event": "6",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Cody Bellinger": {
+            "Event": "18",
+            "Barrels": "0",
+            "HardHit": "6"
+        },
+        "Ian Happ": {
+            "Event": "16",
+            "Barrels": "2",
+            "HardHit": "6"
+        },
+        "Dansby Swanson": {
+            "Event": "12",
+            "Barrels": "1",
+            "HardHit": "5"
+        },
+        "Miles Mastrobuoni": {
+            "Event": "8",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Nico Hoerner": {
+            "Event": "20",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Miguel Amaya": {
+            "Event": "4",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Christopher Morel": {
+            "Event": "9",
+            "Barrels": "2",
+            "HardHit": "5"
+        },
+        "Michael Busch": {
+            "Event": "14",
+            "Barrels": "2",
+            "HardHit": "7"
+        },
+        "Pete Crow-Armstrong": {
+            "Event": "6",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Seiya Suzuki": {
+            "Event": "15",
+            "Barrels": "3",
+            "HardHit": "5"
+        }
+    },
+    "CHW": {
+        "Tommy Pham": {
+            "Event": "14",
+            "Barrels": "0",
+            "HardHit": "6"
+        },
+        "Mart\u00edn Maldonado": {
+            "Event": "7",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Eloy Jim\u00e9nez": {
+            "Event": "13",
+            "Barrels": "1",
+            "HardHit": "8"
+        },
+        "Andrew Benintendi": {
+            "Event": "16",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Paul DeJong": {
+            "Event": "11",
+            "Barrels": "2",
+            "HardHit": "3"
+        },
+        "Danny Mendick": {
+            "Event": "5",
+            "Barrels": "1",
+            "HardHit": "2"
+        },
+        "Nicky Lopez": {
+            "Event": "13",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Gavin Sheets": {
+            "Event": "13",
+            "Barrels": "0",
+            "HardHit": "6"
+        },
+        "Luis Robert Jr.": {
+            "Event": "16",
+            "Barrels": "1",
+            "HardHit": "8"
+        },
+        "Lenyn Sosa": {
+            "Event": "22",
+            "Barrels": "3",
+            "HardHit": "11"
+        },
+        "Korey Lee": {
+            "Event": "8",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Andrew Vaughn": {
+            "Event": "13",
+            "Barrels": "3",
+            "HardHit": "8"
+        }
+    },
+    "CIN": {
+        "Nick Martini": {
+            "Event": "10",
+            "Barrels": "2",
+            "HardHit": "7"
+        },
+        "Jeimer Candelario": {
+            "Event": "16",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Tyler Stephenson": {
+            "Event": "13",
+            "Barrels": "0",
+            "HardHit": "5"
+        },
+        "Santiago Espinal": {
+            "Event": "6",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Stuart Fairchild": {
+            "Event": "6",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Jonathan India": {
+            "Event": "18",
+            "Barrels": "1",
+            "HardHit": "4"
+        },
+        "Will Benson": {
+            "Event": "6",
+            "Barrels": "1",
+            "HardHit": "2"
+        },
+        "Spencer Steer": {
+            "Event": "17",
+            "Barrels": "2",
+            "HardHit": "8"
+        },
+        "Noelvi Marte": {
+            "Event": "13",
+            "Barrels": "1",
+            "HardHit": "4"
+        },
+        "Elly De La Cruz": {
+            "Event": "12",
+            "Barrels": "1",
+            "HardHit": "4"
+        },
+        "Blake Dunn": {
+            "Event": "3",
+            "Barrels": "0",
+            "HardHit": "0"
+        }
+    },
+    "CLE": {
+        "Austin Hedges": {
+            "Event": "1",
+            "Barrels": "0",
+            "HardHit": "0"
+        },
+        "Jos\u00e9 Ram\u00edrez": {
+            "Event": "21",
+            "Barrels": "0",
+            "HardHit": "8"
+        },
+        "Josh Naylor": {
+            "Event": "23",
+            "Barrels": "2",
+            "HardHit": "9"
+        },
+        "Andr\u00e9s Gim\u00e9nez": {
+            "Event": "19",
+            "Barrels": "0",
+            "HardHit": "6"
+        },
+        "Bo Naylor": {
+            "Event": "14",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Tyler Freeman": {
+            "Event": "9",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Gabriel Arias": {
+            "Event": "3",
+            "Barrels": "0",
+            "HardHit": "0"
+        },
+        "Brayan Rocchio": {
+            "Event": "13",
+            "Barrels": "1",
+            "HardHit": "3"
+        },
+        "Jhonkensy Noel": {
+            "Event": "8",
+            "Barrels": "2",
+            "HardHit": "4"
+        },
+        "Steven Kwan": {
+            "Event": "22",
+            "Barrels": "1",
+            "HardHit": "8"
+        },
+        "David Fry": {
+            "Event": "10",
+            "Barrels": "1",
+            "HardHit": "4"
+        },
+        "Daniel Schneemann": {
+            "Event": "8",
+            "Barrels": "1",
+            "HardHit": "3"
+        },
+        "Angel Mart\u00ednez": {
+            "Event": "9",
+            "Barrels": "0",
+            "HardHit": "4"
+        }
+    },
+    "COL": {
+        "Charlie Blackmon": {
+            "Event": "11",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Elias D\u00edaz": {
+            "Event": "18",
+            "Barrels": "1",
+            "HardHit": "3"
+        },
+        "Jacob Stallings": {
+            "Event": "5",
+            "Barrels": "1",
+            "HardHit": "1"
+        },
+        "Jake Cave": {
+            "Event": "13",
+            "Barrels": "1",
+            "HardHit": "4"
+        },
+        "Ryan McMahon": {
+            "Event": "19",
+            "Barrels": "2",
+            "HardHit": "13"
+        },
+        "Brendan Rodgers": {
+            "Event": "16",
+            "Barrels": "0",
+            "HardHit": "8"
+        },
+        "Sam Hilliard": {
+            "Event": "2",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Nolan Jones": {
+            "Event": "9",
+            "Barrels": "0",
+            "HardHit": "5"
+        },
+        "Ezequiel Tovar": {
+            "Event": "12",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Brenton Doyle": {
+            "Event": "14",
+            "Barrels": "4",
+            "HardHit": "7"
+        },
+        "Aaron Schunk": {
+            "Event": "5",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Michael Toglia": {
+            "Event": "12",
+            "Barrels": "2",
+            "HardHit": "6"
+        },
+        "Hunter Goodman": {
+            "Event": "5",
+            "Barrels": "0",
+            "HardHit": "1"
+        }
+    },
+    "DET": {
+        "Gio Urshela": {
+            "Event": "19",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Mark Canha": {
+            "Event": "15",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Carson Kelly": {
+            "Event": "8",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Andy Ib\u00e1\u00f1ez": {
+            "Event": "0",
+            "Barrels": "0",
+            "HardHit": "0"
+        },
+        "Zach McKinstry": {
+            "Event": "7",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Jake Rogers": {
+            "Event": "7",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Matt Vierling": {
+            "Event": "15",
+            "Barrels": "2",
+            "HardHit": "5"
+        },
+        "Akil Baddoo": {
+            "Event": "5",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Wenceel P\u00e9rez": {
+            "Event": "19",
+            "Barrels": "2",
+            "HardHit": "3"
+        },
+        "Parker Meadows": {
+            "Event": "9",
+            "Barrels": "2",
+            "HardHit": "6"
+        },
+        "Ryan Kreidler": {
+            "Event": "6",
+            "Barrels": "1",
+            "HardHit": "3"
+        },
+        "Riley Greene": {
+            "Event": "13",
+            "Barrels": "2",
+            "HardHit": "5"
+        },
+        "Colt Keith": {
+            "Event": "17",
+            "Barrels": "4",
+            "HardHit": "5"
+        },
+        "Justyn-Henry Malloy": {
+            "Event": "10",
+            "Barrels": "1",
+            "HardHit": "4"
+        }
+    },
+    "HOU": {
+        "Jose Altuve": {
+            "Event": "16",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Jon Singleton": {
+            "Event": "15",
+            "Barrels": "1",
+            "HardHit": "6"
+        },
+        "Mauricio Dub\u00f3n": {
+            "Event": "13",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Alex Bregman": {
+            "Event": "20",
+            "Barrels": "1",
+            "HardHit": "11"
+        },
+        "Yordan Alvarez": {
+            "Event": "14",
+            "Barrels": "3",
+            "HardHit": "6"
+        },
+        "Chas McCormick": {
+            "Event": "8",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Jake Meyers": {
+            "Event": "15",
+            "Barrels": "2",
+            "HardHit": "5"
+        },
+        "Trey Cabbage": {
+            "Event": "2",
+            "Barrels": "1",
+            "HardHit": "2"
+        },
+        "C\u00e9sar Salazar": {
+            "Event": "6",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Jeremy Pe\u00f1a": {
+            "Event": "23",
+            "Barrels": "3",
+            "HardHit": "8"
+        },
+        "Yainer Diaz": {
+            "Event": "21",
+            "Barrels": "0",
+            "HardHit": "6"
+        },
+        "Joey Loperfido": {
+            "Event": "11",
+            "Barrels": "0",
+            "HardHit": "2"
+        }
+    },
+    "KCR": {
+        "Salvador Perez": {
+            "Event": "18",
+            "Barrels": "0",
+            "HardHit": "6"
+        },
+        "Hunter Renfroe": {
+            "Event": "14",
+            "Barrels": "0",
+            "HardHit": "6"
+        },
+        "Garrett Hampson": {
+            "Event": "8",
+            "Barrels": "2",
+            "HardHit": "4"
+        },
+        "Kyle Isbel": {
+            "Event": "10",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Freddy Fermin": {
+            "Event": "11",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "MJ Melendez": {
+            "Event": "12",
+            "Barrels": "0",
+            "HardHit": "6"
+        },
+        "Maikel Garcia": {
+            "Event": "20",
+            "Barrels": "1",
+            "HardHit": "6"
+        },
+        "Bobby Witt Jr.": {
+            "Event": "22",
+            "Barrels": "5",
+            "HardHit": "13"
+        },
+        "Nick Loftin": {
+            "Event": "14",
+            "Barrels": "1",
+            "HardHit": "7"
+        },
+        "Vinnie Pasquantino": {
+            "Event": "23",
+            "Barrels": "2",
+            "HardHit": "12"
+        },
+        "Michael Massey": {
+            "Event": "16",
+            "Barrels": "2",
+            "HardHit": "5"
+        }
+    },
+    "LAA": {
+        "Brandon Drury": {
+            "Event": "13",
+            "Barrels": "0",
+            "HardHit": "5"
+        },
+        "Miguel San\u00f3": {
+            "Event": "4",
+            "Barrels": "0",
+            "HardHit": "0"
+        },
+        "Kevin Pillar": {
+            "Event": "6",
+            "Barrels": "0",
+            "HardHit": "0"
+        },
+        "Luis Guillorme": {
+            "Event": "8",
+            "Barrels": "0",
+            "HardHit": "0"
+        },
+        "Taylor Ward": {
+            "Event": "15",
+            "Barrels": "0",
+            "HardHit": "9"
+        },
+        "Willie Calhoun": {
+            "Event": "11",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Luis Rengifo": {
+            "Event": "7",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Mickey Moniak": {
+            "Event": "13",
+            "Barrels": "1",
+            "HardHit": "4"
+        },
+        "Keston Hiura": {
+            "Event": "7",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Jo Adell": {
+            "Event": "13",
+            "Barrels": "1",
+            "HardHit": "4"
+        },
+        "Logan O'Hoppe": {
+            "Event": "16",
+            "Barrels": "0",
+            "HardHit": "7"
+        },
+        "Zach Neto": {
+            "Event": "21",
+            "Barrels": "0",
+            "HardHit": "5"
+        },
+        "Nolan Schanuel": {
+            "Event": "20",
+            "Barrels": "0",
+            "HardHit": "5"
+        }
+    },
+    "LAD": {
+        "Jason Heyward": {
+            "Event": "5",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Freddie Freeman": {
+            "Event": "16",
+            "Barrels": "1",
+            "HardHit": "9"
+        },
+        "Miguel Rojas": {
+            "Event": "18",
+            "Barrels": "1",
+            "HardHit": "6"
+        },
+        "Enrique Hern\u00e1ndez": {
+            "Event": "6",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Teoscar Hern\u00e1ndez": {
+            "Event": "22",
+            "Barrels": "1",
+            "HardHit": "8"
+        },
+        "Chris Taylor": {
+            "Event": "11",
+            "Barrels": "1",
+            "HardHit": "2"
+        },
+        "Will Smith": {
+            "Event": "15",
+            "Barrels": "4",
+            "HardHit": "7"
+        },
+        "Shohei Ohtani": {
+            "Event": "13",
+            "Barrels": "4",
+            "HardHit": "8"
+        },
+        "Gavin Lux": {
+            "Event": "12",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Miguel Vargas": {
+            "Event": "10",
+            "Barrels": "1",
+            "HardHit": "3"
+        },
+        "James Outman": {
+            "Event": "4",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Andy Pages": {
+            "Event": "21",
+            "Barrels": "0",
+            "HardHit": "5"
+        }
+    },
+    "MIA": {
+        "Josh Bell": {
+            "Event": "16",
+            "Barrels": "2",
+            "HardHit": "6"
+        },
+        "Ali S\u00e1nchez": {
+            "Event": "5",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Bryan De La Cruz": {
+            "Event": "15",
+            "Barrels": "4",
+            "HardHit": "10"
+        },
+        "Emmanuel Rivera": {
+            "Event": "11",
+            "Barrels": "0",
+            "HardHit": "5"
+        },
+        "Jes\u00fas S\u00e1nchez": {
+            "Event": "17",
+            "Barrels": "4",
+            "HardHit": "8"
+        },
+        "Jazz Chisholm Jr.": {
+            "Event": "19",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Vidal Bruj\u00e1n": {
+            "Event": "15",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Nick Fortes": {
+            "Event": "14",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Dane Myers": {
+            "Event": "7",
+            "Barrels": "1",
+            "HardHit": "5"
+        },
+        "Xavier Edwards": {
+            "Event": "19",
+            "Barrels": "1",
+            "HardHit": "3"
+        },
+        "Jake Burger": {
+            "Event": "15",
+            "Barrels": "2",
+            "HardHit": "7"
+        },
+        "Jonah Bride": {
+            "Event": "3",
+            "Barrels": "0",
+            "HardHit": "0"
+        }
+    },
+    "MIL": {
+        "Christian Yelich": {
+            "Event": "19",
+            "Barrels": "6",
+            "HardHit": "13"
+        },
+        "Eric Haase": {
+            "Event": "5",
+            "Barrels": "1",
+            "HardHit": "2"
+        },
+        "Jake Bauers": {
+            "Event": "6",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Willy Adames": {
+            "Event": "15",
+            "Barrels": "2",
+            "HardHit": "6"
+        },
+        "Rhys Hoskins": {
+            "Event": "9",
+            "Barrels": "2",
+            "HardHit": "5"
+        },
+        "Andruw Monasterio": {
+            "Event": "15",
+            "Barrels": "0",
+            "HardHit": "5"
+        },
+        "Blake Perkins": {
+            "Event": "9",
+            "Barrels": "1",
+            "HardHit": "3"
+        },
+        "William Contreras": {
+            "Event": "16",
+            "Barrels": "1",
+            "HardHit": "6"
+        },
+        "Brice Turang": {
+            "Event": "23",
+            "Barrels": "0",
+            "HardHit": "6"
+        },
+        "Vinny Capra": {
+            "Event": "5",
+            "Barrels": "0",
+            "HardHit": "0"
+        },
+        "Garrett Mitchell": {
+            "Event": "11",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Jackson Chourio": {
+            "Event": "12",
+            "Barrels": "1",
+            "HardHit": "6"
+        },
+        "Sal Frelick": {
+            "Event": "14",
+            "Barrels": "0",
+            "HardHit": "4"
+        }
+    },
+    "MIN": {
+        "Carlos Santana": {
+            "Event": "13",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Christian V\u00e1zquez": {
+            "Event": "12",
+            "Barrels": "1",
+            "HardHit": "3"
+        },
+        "Max Kepler": {
+            "Event": "18",
+            "Barrels": "0",
+            "HardHit": "11"
+        },
+        "Byron Buxton": {
+            "Event": "13",
+            "Barrels": "3",
+            "HardHit": "9"
+        },
+        "Carlos Correa": {
+            "Event": "18",
+            "Barrels": "2",
+            "HardHit": "8"
+        },
+        "Manuel Margot": {
+            "Event": "12",
+            "Barrels": "2",
+            "HardHit": "4"
+        },
+        "Kyle Farmer": {
+            "Event": "4",
+            "Barrels": "1",
+            "HardHit": "2"
+        },
+        "Willi Castro": {
+            "Event": "19",
+            "Barrels": "1",
+            "HardHit": "6"
+        },
+        "Jose Miranda": {
+            "Event": "19",
+            "Barrels": "2",
+            "HardHit": "10"
+        },
+        "Trevor Larnach": {
+            "Event": "6",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Ryan Jeffers": {
+            "Event": "8",
+            "Barrels": "1",
+            "HardHit": "4"
+        },
+        "Austin Martin": {
+            "Event": "4",
+            "Barrels": "1",
+            "HardHit": "2"
+        },
+        "Brooks Lee": {
+            "Event": "18",
+            "Barrels": "2",
+            "HardHit": "6"
+        }
+    },
+    "NYM": {
+        "J.D. Martinez": {
+            "Event": "10",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Jose Iglesias": {
+            "Event": "18",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Ben Gamel": {
+            "Event": "3",
+            "Barrels": "1",
+            "HardHit": "2"
+        },
+        "Francisco Lindor": {
+            "Event": "21",
+            "Barrels": "5",
+            "HardHit": "10"
+        },
+        "Brandon Nimmo": {
+            "Event": "13",
+            "Barrels": "1",
+            "HardHit": "8"
+        },
+        "Tyrone Taylor": {
+            "Event": "11",
+            "Barrels": "2",
+            "HardHit": "3"
+        },
+        "Jeff McNeil": {
+            "Event": "9",
+            "Barrels": "1",
+            "HardHit": "5"
+        },
+        "Luis Torrens": {
+            "Event": "10",
+            "Barrels": "1",
+            "HardHit": "4"
+        },
+        "DJ Stewart": {
+            "Event": "6",
+            "Barrels": "0",
+            "HardHit": "0"
+        },
+        "Harrison Bader": {
+            "Event": "5",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Pete Alonso": {
+            "Event": "16",
+            "Barrels": "1",
+            "HardHit": "8"
+        },
+        "Mark Vientos": {
+            "Event": "11",
+            "Barrels": "1",
+            "HardHit": "5"
+        },
+        "Francisco Alvarez": {
+            "Event": "9",
+            "Barrels": "0",
+            "HardHit": "1"
+        }
+    },
+    "NYY": {
+        "DJ LeMahieu": {
+            "Event": "17",
+            "Barrels": "3",
+            "HardHit": "5"
+        },
+        "Aaron Judge": {
+            "Event": "17",
+            "Barrels": "2",
+            "HardHit": "7"
+        },
+        "Jose Trevino": {
+            "Event": "4",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Gleyber Torres": {
+            "Event": "12",
+            "Barrels": "2",
+            "HardHit": "4"
+        },
+        "Alex Verdugo": {
+            "Event": "20",
+            "Barrels": "1",
+            "HardHit": "7"
+        },
+        "Trent Grisham": {
+            "Event": "12",
+            "Barrels": "1",
+            "HardHit": "4"
+        },
+        "Juan Soto": {
+            "Event": "20",
+            "Barrels": "3",
+            "HardHit": "10"
+        },
+        "Oswaldo Cabrera": {
+            "Event": "11",
+            "Barrels": "0",
+            "HardHit": "5"
+        },
+        "Austin Wells": {
+            "Event": "13",
+            "Barrels": "1",
+            "HardHit": "2"
+        },
+        "Anthony Volpe": {
+            "Event": "22",
+            "Barrels": "1",
+            "HardHit": "6"
+        },
+        "Ben Rice": {
+            "Event": "16",
+            "Barrels": "5",
+            "HardHit": "6"
+        }
+    },
+    "OAK": {
+        "Miguel Andujar": {
+            "Event": "20",
+            "Barrels": "1",
+            "HardHit": "5"
+        },
+        "Tyler Nevin": {
+            "Event": "4",
+            "Barrels": "2",
+            "HardHit": "2"
+        },
+        "Daz Cameron": {
+            "Event": "3",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Armando Alvarez": {
+            "Event": "5",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Brent Rooker": {
+            "Event": "18",
+            "Barrels": "3",
+            "HardHit": "7"
+        },
+        "Lawrence Butler": {
+            "Event": "12",
+            "Barrels": "4",
+            "HardHit": "6"
+        },
+        "Max Schuemann": {
+            "Event": "13",
+            "Barrels": "1",
+            "HardHit": "5"
+        },
+        "Kyle McCann": {
+            "Event": "3",
+            "Barrels": "1",
+            "HardHit": "2"
+        },
+        "Shea Langeliers": {
+            "Event": "12",
+            "Barrels": "2",
+            "HardHit": "4"
+        },
+        "JJ Bleday": {
+            "Event": "18",
+            "Barrels": "1",
+            "HardHit": "8"
+        },
+        "Tyler Soderstrom": {
+            "Event": "17",
+            "Barrels": "1",
+            "HardHit": "6"
+        },
+        "Zack Gelof": {
+            "Event": "9",
+            "Barrels": "0",
+            "HardHit": "5"
+        },
+        "Brett Harris": {
+            "Event": "18",
+            "Barrels": "1",
+            "HardHit": "10"
+        }
+    },
+    "PHI": {
+        "Whit Merrifield": {
+            "Event": "13",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Nick Castellanos": {
+            "Event": "18",
+            "Barrels": "3",
+            "HardHit": "6"
+        },
+        "David Dahl": {
+            "Event": "1",
+            "Barrels": "0",
+            "HardHit": "0"
+        },
+        "Trea Turner": {
+            "Event": "19",
+            "Barrels": "5",
+            "HardHit": "10"
+        },
+        "Edmundo Sosa": {
+            "Event": "7",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Garrett Stubbs": {
+            "Event": "6",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Cristian Pache": {
+            "Event": "6",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Brandon Marsh": {
+            "Event": "7",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Kody Clemens": {
+            "Event": "11",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Alec Bohm": {
+            "Event": "18",
+            "Barrels": "2",
+            "HardHit": "9"
+        },
+        "Rafael March\u00e1n": {
+            "Event": "8",
+            "Barrels": "1",
+            "HardHit": "5"
+        },
+        "Johan Rojas": {
+            "Event": "17",
+            "Barrels": "0",
+            "HardHit": "5"
+        },
+        "Bryson Stott": {
+            "Event": "20",
+            "Barrels": "0",
+            "HardHit": "8"
+        }
+    },
+    "PIT": {
+        "Andrew McCutchen": {
+            "Event": "11",
+            "Barrels": "1",
+            "HardHit": "5"
+        },
+        "Yasmani Grandal": {
+            "Event": "9",
+            "Barrels": "2",
+            "HardHit": "5"
+        },
+        "Michael A. Taylor": {
+            "Event": "5",
+            "Barrels": "1",
+            "HardHit": "2"
+        },
+        "Rowdy Tellez": {
+            "Event": "15",
+            "Barrels": "2",
+            "HardHit": "6"
+        },
+        "Connor Joe": {
+            "Event": "10",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Ke'Bryan Hayes": {
+            "Event": "20",
+            "Barrels": "0",
+            "HardHit": "8"
+        },
+        "Bryan Reynolds": {
+            "Event": "22",
+            "Barrels": "4",
+            "HardHit": "11"
+        },
+        "Edward Olivares": {
+            "Event": "8",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Joshua Palacios": {
+            "Event": "6",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Joey Bart": {
+            "Event": "5",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Oneil Cruz": {
+            "Event": "13",
+            "Barrels": "3",
+            "HardHit": "8"
+        },
+        "Jack Suwinski": {
+            "Event": "11",
+            "Barrels": "4",
+            "HardHit": "6"
+        },
+        "Nick Gonzales": {
+            "Event": "17",
+            "Barrels": "3",
+            "HardHit": "5"
+        }
+    },
+    "SDP": {
+        "David Peralta": {
+            "Event": "12",
+            "Barrels": "1",
+            "HardHit": "3"
+        },
+        "Kyle Higashioka": {
+            "Event": "12",
+            "Barrels": "1",
+            "HardHit": "1"
+        },
+        "Donovan Solano": {
+            "Event": "19",
+            "Barrels": "2",
+            "HardHit": "7"
+        },
+        "Jurickson Profar": {
+            "Event": "17",
+            "Barrels": "4",
+            "HardHit": "10"
+        },
+        "Manny Machado": {
+            "Event": "18",
+            "Barrels": "2",
+            "HardHit": "6"
+        },
+        "Tyler Wade": {
+            "Event": "5",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Jake Cronenworth": {
+            "Event": "17",
+            "Barrels": "0",
+            "HardHit": "7"
+        },
+        "Luis Arraez": {
+            "Event": "23",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Bryce Johnson": {
+            "Event": "7",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Ha-Seong Kim": {
+            "Event": "17",
+            "Barrels": "2",
+            "HardHit": "12"
+        },
+        "Jackson Merrill": {
+            "Event": "16",
+            "Barrels": "1",
+            "HardHit": "10"
+        }
+    },
+    "SEA": {
+        "Jorge Polanco": {
+            "Event": "4",
+            "Barrels": "0",
+            "HardHit": "0"
+        },
+        "Mitch Haniger": {
+            "Event": "4",
+            "Barrels": "1",
+            "HardHit": "2"
+        },
+        "Mitch Garver": {
+            "Event": "12",
+            "Barrels": "2",
+            "HardHit": "7"
+        },
+        "J.P. Crawford": {
+            "Event": "17",
+            "Barrels": "2",
+            "HardHit": "5"
+        },
+        "Ty France": {
+            "Event": "16",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Dylan Moore": {
+            "Event": "8",
+            "Barrels": "0",
+            "HardHit": "0"
+        },
+        "Luke Raley": {
+            "Event": "15",
+            "Barrels": "2",
+            "HardHit": "8"
+        },
+        "Josh Rojas": {
+            "Event": "7",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Cal Raleigh": {
+            "Event": "12",
+            "Barrels": "2",
+            "HardHit": "8"
+        },
+        "Julio Rodr\u00edguez": {
+            "Event": "11",
+            "Barrels": "4",
+            "HardHit": "6"
+        },
+        "Dominic Canzone": {
+            "Event": "14",
+            "Barrels": "0",
+            "HardHit": "5"
+        }
+    },
+    "SFG": {
+        "Nick Ahmed": {
+            "Event": "14",
+            "Barrels": "1",
+            "HardHit": "2"
+        },
+        "Curt Casali": {
+            "Event": "2",
+            "Barrels": "0",
+            "HardHit": "0"
+        },
+        "Jorge Soler": {
+            "Event": "16",
+            "Barrels": "1",
+            "HardHit": "6"
+        },
+        "Mike Yastrzemski": {
+            "Event": "4",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Austin Slater": {
+            "Event": "5",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Michael Conforto": {
+            "Event": "10",
+            "Barrels": "2",
+            "HardHit": "5"
+        },
+        "Matt Chapman": {
+            "Event": "18",
+            "Barrels": "4",
+            "HardHit": "7"
+        },
+        "LaMonte Wade Jr.": {
+            "Event": "11",
+            "Barrels": "1",
+            "HardHit": "3"
+        },
+        "Heliot Ramos": {
+            "Event": "17",
+            "Barrels": "2",
+            "HardHit": "9"
+        },
+        "Tyler Fitzgerald": {
+            "Event": "4",
+            "Barrels": "0",
+            "HardHit": "0"
+        },
+        "Luis Matos": {
+            "Event": "7",
+            "Barrels": "1",
+            "HardHit": "3"
+        },
+        "Patrick Bailey": {
+            "Event": "10",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Brett Wisely": {
+            "Event": "14",
+            "Barrels": "0",
+            "HardHit": "4"
+        }
+    },
+    "STL": {
+        "Matt Carpenter": {
+            "Event": "2",
+            "Barrels": "0",
+            "HardHit": "0"
+        },
+        "Paul Goldschmidt": {
+            "Event": "22",
+            "Barrels": "1",
+            "HardHit": "10"
+        },
+        "Nolan Arenado": {
+            "Event": "24",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Willson Contreras": {
+            "Event": "18",
+            "Barrels": "4",
+            "HardHit": "11"
+        },
+        "Dylan Carlson": {
+            "Event": "10",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Jos\u00e9 Ferm\u00edn": {
+            "Event": "5",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Nolan Gorman": {
+            "Event": "12",
+            "Barrels": "3",
+            "HardHit": "4"
+        },
+        "Michael Siani": {
+            "Event": "12",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Brendan Donovan": {
+            "Event": "23",
+            "Barrels": "0",
+            "HardHit": "7"
+        },
+        "Pedro Pag\u00e9s": {
+            "Event": "10",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Masyn Winn": {
+            "Event": "25",
+            "Barrels": "0",
+            "HardHit": "9"
+        },
+        "Alec Burleson": {
+            "Event": "24",
+            "Barrels": "1",
+            "HardHit": "6"
+        }
+    },
+    "TBR": {
+        "Amed Rosario": {
+            "Event": "8",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Yandy D\u00edaz": {
+            "Event": "17",
+            "Barrels": "1",
+            "HardHit": "7"
+        },
+        "Alex Jackson": {
+            "Event": "4",
+            "Barrels": "0",
+            "HardHit": "0"
+        },
+        "Jose Siri": {
+            "Event": "11",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Brandon Lowe": {
+            "Event": "14",
+            "Barrels": "3",
+            "HardHit": "7"
+        },
+        "Randy Arozarena": {
+            "Event": "17",
+            "Barrels": "3",
+            "HardHit": "5"
+        },
+        "Josh Lowe": {
+            "Event": "11",
+            "Barrels": "1",
+            "HardHit": "3"
+        },
+        "Isaac Paredes": {
+            "Event": "17",
+            "Barrels": "2",
+            "HardHit": "6"
+        },
+        "Ben Rortvedt": {
+            "Event": "12",
+            "Barrels": "0",
+            "HardHit": "7"
+        },
+        "Taylor Walls": {
+            "Event": "10",
+            "Barrels": "1",
+            "HardHit": "2"
+        },
+        "Jos\u00e9 Caballero": {
+            "Event": "11",
+            "Barrels": "1",
+            "HardHit": "2"
+        },
+        "Richie Palacios": {
+            "Event": "13",
+            "Barrels": "0",
+            "HardHit": "5"
+        },
+        "Jonny DeLuca": {
+            "Event": "8",
+            "Barrels": "1",
+            "HardHit": "2"
+        }
+    },
+    "TEX": {
+        "Marcus Semien": {
+            "Event": "17",
+            "Barrels": "1",
+            "HardHit": "4"
+        },
+        "Corey Seager": {
+            "Event": "15",
+            "Barrels": "4",
+            "HardHit": "7"
+        },
+        "Travis Jankowski": {
+            "Event": "7",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Jonah Heim": {
+            "Event": "18",
+            "Barrels": "4",
+            "HardHit": "11"
+        },
+        "Derek Hill": {
+            "Event": "9",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Leody Taveras": {
+            "Event": "20",
+            "Barrels": "1",
+            "HardHit": "9"
+        },
+        "Adolis Garc\u00eda": {
+            "Event": "11",
+            "Barrels": "1",
+            "HardHit": "6"
+        },
+        "Andrew Knizner": {
+            "Event": "5",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Nathaniel Lowe": {
+            "Event": "14",
+            "Barrels": "1",
+            "HardHit": "7"
+        },
+        "Jonathan Ornelas": {
+            "Event": "8",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Josh Smith": {
+            "Event": "11",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Wyatt Langford": {
+            "Event": "15",
+            "Barrels": "0",
+            "HardHit": "7"
+        }
+    },
+    "TOR": {
+        "Justin Turner": {
+            "Event": "4",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Kevin Kiermaier": {
+            "Event": "8",
+            "Barrels": "2",
+            "HardHit": "2"
+        },
+        "George Springer": {
+            "Event": "14",
+            "Barrels": "3",
+            "HardHit": "6"
+        },
+        "Danny Jansen": {
+            "Event": "9",
+            "Barrels": "0",
+            "HardHit": "3"
+        },
+        "Vladimir Guerrero Jr.": {
+            "Event": "19",
+            "Barrels": "0",
+            "HardHit": "6"
+        },
+        "Bo Bichette": {
+            "Event": "13",
+            "Barrels": "1",
+            "HardHit": "6"
+        },
+        "Daulton Varsho": {
+            "Event": "11",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Ernie Clement": {
+            "Event": "17",
+            "Barrels": "0",
+            "HardHit": "6"
+        },
+        "Alejandro Kirk": {
+            "Event": "12",
+            "Barrels": "3",
+            "HardHit": "6"
+        },
+        "Davis Schneider": {
+            "Event": "7",
+            "Barrels": "1",
+            "HardHit": "5"
+        },
+        "Leo Jim\u00e9nez": {
+            "Event": "3",
+            "Barrels": "0",
+            "HardHit": "0"
+        },
+        "Addison Barger": {
+            "Event": "7",
+            "Barrels": "1",
+            "HardHit": "4"
+        },
+        "Spencer Horwitz": {
+            "Event": "17",
+            "Barrels": "1",
+            "HardHit": "4"
+        }
+    },
+    "WSN": {
+        "Ildemaro Vargas": {
+            "Event": "12",
+            "Barrels": "0",
+            "HardHit": "4"
+        },
+        "Jesse Winker": {
+            "Event": "16",
+            "Barrels": "2",
+            "HardHit": "8"
+        },
+        "Joey Meneses": {
+            "Event": "8",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Harold Ram\u00edrez": {
+            "Event": "6",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Lane Thomas": {
+            "Event": "19",
+            "Barrels": "2",
+            "HardHit": "9"
+        },
+        "Juan Yepez": {
+            "Event": "9",
+            "Barrels": "1",
+            "HardHit": "3"
+        },
+        "Nick Senzel": {
+            "Event": "9",
+            "Barrels": "0",
+            "HardHit": "1"
+        },
+        "Keibert Ruiz": {
+            "Event": "17",
+            "Barrels": "1",
+            "HardHit": "4"
+        },
+        "Riley Adams": {
+            "Event": "5",
+            "Barrels": "0",
+            "HardHit": "2"
+        },
+        "Luis Garc\u00eda Jr.": {
+            "Event": "16",
+            "Barrels": "3",
+            "HardHit": "10"
+        },
+        "CJ Abrams": {
+            "Event": "15",
+            "Barrels": "2",
+            "HardHit": "7"
+        },
+        "James Wood": {
+            "Event": "15",
+            "Barrels": "1",
+            "HardHit": "9"
+        },
+        "Jacob Young": {
+            "Event": "16",
+            "Barrels": "0",
+            "HardHit": "5"
+        },
+        "Trey Lipscomb": {
+            "Event": "7",
+            "Barrels": "0",
+            "HardHit": "3"
+        }
+    }
+}
