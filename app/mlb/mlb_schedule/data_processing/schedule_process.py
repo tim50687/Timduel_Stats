@@ -1,7 +1,7 @@
 import json
 from datetime import datetime, timezone
-from app.mlb.mlb_schedule.odds_api import fetch_events
-from app.mlb.mlb_schedule.schedule_api import MLBAPI
+from app.mlb.mlb_schedule.external_apis.odds_api import fetch_events
+from app.mlb.mlb_schedule.external_apis.schedule_api import MLBAPI
 import pytz
 import os
 

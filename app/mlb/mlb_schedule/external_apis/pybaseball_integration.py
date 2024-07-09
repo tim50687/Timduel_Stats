@@ -1,5 +1,5 @@
 import pybaseball
-from pybaseball import playerid_lookup, statcast_batter, statcast, batting_stats_range, statcast_batter, playerid_reverse_lookup, get_splits
+from pybaseball import statcast_batter, statcast_batter, playerid_reverse_lookup
 from datetime import datetime
 
 def fetch_batter_statcast_data(start_date, end_date, player_id):

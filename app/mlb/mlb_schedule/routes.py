@@ -1,11 +1,10 @@
 from flask import Blueprint, render_template, jsonify, request
-from app.mlb.mlb_schedule.schedule_api import MLBAPI
-from app.mlb.mlb_schedule.odds_api import fetch_homerun_odds
-from app.mlb.mlb_schedule.schedule_process import ScheduleProcessor
-from app.mlb.mlb_schedule.odds_process import OddsProcessor
-from app.mlb.mlb_schedule.stats_process import PlayerStatsProcessor
+from app.mlb.mlb_schedule.external_apis.schedule_api import MLBAPI
+from app.mlb.mlb_schedule.external_apis.odds_api import fetch_homerun_odds
+from app.mlb.mlb_schedule.data_processing.schedule_process import ScheduleProcessor
+from app.mlb.mlb_schedule.data_processing.odds_process import OddsProcessor
+from app.mlb.mlb_schedule.data_processing.stats_process import PlayerStatsProcessor
 from datetime import datetime  # Import datetime to handle date formatting
-import json
 
 # Define the Blueprint for the MLB schedule
 mlb_schedule_bp = Blueprint('mlb_schedule', __name__, template_folder='templates', static_folder='static')
@@ -93,7 +92,7 @@ def show_player_stats():
         
         # Get the complete player stats data
         complete_data = PlayerStatsProcessor.get_complete_data(statcast_file, stats_file)
-        
+
         # Filter the data for the selected teams
         team1_stats = complete_data.get(team1)
         team2_stats = complete_data.get(team2)

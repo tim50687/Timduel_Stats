@@ -1,7 +1,7 @@
 import requests
 from datetime import datetime, timedelta, timezone
-from .config import API_KEY, SPORT, REGIONS, MARKETS, ODDS_FORMAT, DATE_FORMAT
-from .datetime_helpers import get_utc_start_and_end
+from app.mlb.mlb_schedule.config import API_KEY, SPORT, REGIONS, MARKETS, ODDS_FORMAT, DATE_FORMAT
+from app.mlb.mlb_schedule.utils.datetime_helpers import get_utc_start_and_end
 
 def fetch_events():
     """
