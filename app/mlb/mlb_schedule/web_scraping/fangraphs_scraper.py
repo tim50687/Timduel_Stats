@@ -74,11 +74,13 @@ class FangraphsScraper:
             elif type == "barrel_hh":
                 name = columns[1].text.strip()
                 team = columns[2].text.strip()
+                event = columns[5].text.strip()
                 barrels = columns[9].text.strip()
                 hard_hit = columns[11].text.strip()
                 if team not in data:
                     data[team] = {}
                 data[team][name] = {
+                    'Event': event,
                     'Barrels': barrels,
                     'HardHit': hard_hit
                 }

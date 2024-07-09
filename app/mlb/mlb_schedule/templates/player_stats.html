@@ -17,6 +17,7 @@
           <thead>
             <tr>
               <th>Player</th>
+              <th>Event</th>
               <th>Barrels</th>
               <th>HardHit</th>
               <th>LD</th>
@@ -27,6 +28,7 @@
             {% for player, stats in team1.items() %}
             <tr>
               <td>{{ player }}</td>
+              <td>{{ stats["Event"] }}</td>
               <td>{{ stats["Barrels"] }}</td>
               <td>{{ stats["HardHit"] }}</td>
               <td>{{ stats["LD"] }}</td>
@@ -41,6 +43,7 @@
           <thead>
             <tr>
               <th>Player</th>
+              <th>Event</th>
               <th>Barrels</th>
               <th>HardHit</th>
               <th>LD</th>
@@ -51,6 +54,7 @@
             {% for player, stats in team2.items() %}
             <tr>
               <td>{{ player }}</td>
+              <td>{{ stats["Event"] }}</td>
               <td>{{ stats["Barrels"] }}</td>
               <td>{{ stats["HardHit"] }}</td>
               <td>{{ stats["LD"] }}</td>
