@@ -6,6 +6,9 @@ from app.mlb.mlb_schedule.data_processing.odds_process import OddsProcessor
 from app.mlb.mlb_schedule.data_processing.stats_process import PlayerStatsProcessor
 from datetime import datetime  # Import datetime to handle date formatting
 
+
+import pandas as pd # temporary
+
 # Define the Blueprint for the MLB schedule
 mlb_schedule_bp = Blueprint('mlb_schedule', __name__, template_folder='templates', static_folder='static')
 
@@ -99,7 +102,39 @@ def show_player_stats():
 
         # Get today's date and format it
         today_date = datetime.now().strftime("%A, %B %d, %Y")
+
+
+        ### Save to Excel   ### temporary
+        save_to_excel(team1_stats, team2_stats, team1, team2)
+
+        ###### 
+
+
         
         return render_template('player_stats.html', team1=team1_stats, team2=team2_stats, team1_name=team1, team2_name=team2, today_date=today_date)
+    
     except Exception as e:
         return render_template('error.html', message=str(e))
+    
+
+def save_to_excel(team1_stats, team2_stats, team1_name, team2_name, file_name="team_stats.xlsx"):
+    """
+    Save the team stats to an Excel file.
+
+    Args:
+        team1_stats (dict): The stats data for the first team.
+        team2_stats (dict): The stats data for the second team.
+        team1_name (str): The name of the first team.
+        team2_name (str): The name of the second team.
+        file_name (str): The name of the Excel file to save the data.
+    """
+    # Convert the dictionaries to pandas DataFrames
+    df_team1 = pd.DataFrame.from_dict(team1_stats, orient='index')
+    df_team2 = pd.DataFrame.from_dict(team2_stats, orient='index')
+
+    # Write the DataFrames to an Excel file
+    with pd.ExcelWriter(file_name, mode='a') as writer:
+        df_team1.to_excel(writer, sheet_name=team1_name)
+        df_team2.to_excel(writer, sheet_name=team2_name)
+    
+    print(f"Data saved to {file_name}")
