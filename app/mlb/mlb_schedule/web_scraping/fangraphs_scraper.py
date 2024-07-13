@@ -3,6 +3,7 @@ import json
 from datetime import datetime, timedelta
 import pytz
 import os
+from app.mlb.mlb_schedule.data_processing.stats_process import PlayerStatsProcessor
 # Selenium imports
 from selenium import webdriver
 from selenium import webdriver
@@ -64,6 +65,8 @@ class FangraphsScraper:
                 team = columns[2].text.strip()
                 ld = columns[16].text.strip()
                 fb = columns[18].text.strip()
+                if team not in PlayerStatsProcessor.team_names:
+                    continue
                 if team not in data:
                     data[team] = {}
                 data[team][name] = {
@@ -77,6 +80,8 @@ class FangraphsScraper:
                 event = columns[5].text.strip()
                 barrels = columns[9].text.strip()
                 hard_hit = columns[11].text.strip()
+                if team not in PlayerStatsProcessor.team_names:
+                    continue
                 if team not in data:
                     data[team] = {}
                 data[team][name] = {
@@ -176,7 +181,9 @@ class FangraphsScraper:
             str: The generated URL.
         """
         start_date, end_date = FangraphsScraper.get_past_six_days_dates()
+        print(start_date, end_date)
         if type == "fb":
+            print(f"{base_url}?pos=all&stats=bat&lg=all&season=2024&season1=2024&ind=0&team=0&pageitems=2000000000&qual=5&sortcol=1&sortdir=asc&type=23&month=1000&startdate={start_date}&enddate={end_date}")
             return f"{base_url}?pos=all&stats=bat&lg=all&season=2024&season1=2024&ind=0&team=0&pageitems=2000000000&qual=5&sortcol=1&sortdir=asc&type=23&month=1000&startdate={start_date}&enddate={end_date}"
         elif type == "barrel_hh":
             return f"{base_url}?pos=all&stats=bat&lg=all&season=2024&season1=2024&ind=0&team=0&pageitems=2000000000&qual=5&sortcol=1&sortdir=asc&type=24&month=1000&startdate={start_date}&enddate={end_date}"
@@ -186,11 +193,11 @@ class FangraphsScraper:
 if __name__ == "__main__":
     base_url_fb = "https://www.fangraphs.com/leaders/major-league"
     url_fb = FangraphsScraper.generate_url(base_url_fb, "fb")
-    data_fb = FangraphsScraper.get_or_fetch_data(url_fb, "fb", file_path="./data/fangraphs_fb_data.json")
+    data_fb = FangraphsScraper.get_or_fetch_data(url_fb, "fb", file_path="../../../../data/fangraphs_fb_data.json")
 
     base_url_barrel_hh = "https://www.fangraphs.com/leaders/major-league"
     url_barrel_hh = FangraphsScraper.generate_url(base_url_barrel_hh, "barrel_hh")
-    data_barrel_hh = FangraphsScraper.get_or_fetch_data(url_barrel_hh, "barrel_hh", file_path="./data/fangraphs_barrel_hh_data.json")
+    data_barrel_hh = FangraphsScraper.get_or_fetch_data(url_barrel_hh, "barrel_hh", file_path="../../../../data/fangraphs_barrel_hh_data.json")
 
 
 

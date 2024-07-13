@@ -105,7 +105,7 @@ def show_player_stats():
 
 
         ### Save to Excel   ### temporary
-        save_to_excel(team1_stats, team2_stats, team1, team2)
+        # save_to_excel(team1_stats, team2_stats, team1, team2)
 
         ###### 
 
