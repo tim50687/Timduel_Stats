@@ -12,26 +12,31 @@
         <p>{{today_date}}</p>
       </header>
       <main>
-        <table>
-          <thead>
-            <tr>
-              <th>Player</th>
-              <th>Fanduel</th>
-              <th>DraftKings</th>
-              <th>BetMGM</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for player in events['fanduel'].keys() %}
-            <tr>
-              <td>{{ player }}</td>
-              <td>{{ events['fanduel'].get(player, 'N/A')}}</td>
-              <td>{{ events['draftkings'].get(player, 'N/A')}}</td>
-              <td>{{ events['betmgm'].get(player, 'N/A')}}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+        {% for entry in events %}
+        <section>
+          <h2>Odds fetched at: {{ entry.timestamp }}</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>Fanduel</th>
+                <th>DraftKings</th>
+                <th>BetMGM</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for player in entry.odds_data['fanduel'].keys() %}
+              <tr>
+                <td>{{ player }}</td>
+                <td>{{ entry.odds_data['fanduel'].get(player, 'N/A') }}</td>
+                <td>{{ entry.odds_data['draftkings'].get(player, 'N/A') }}</td>
+                <td>{{ entry.odds_data['betmgm'].get(player, 'N/A') }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </section>
+        {% endfor %}
         <a href="{{ url_for('mlb_schedule.show_schedule') }}"
           >Go back to the schedule</a
         >

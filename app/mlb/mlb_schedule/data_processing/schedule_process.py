@@ -45,7 +45,7 @@ class ScheduleProcessor:
                 'home_team': game["teams"]["home"]["team"]["name"], 
                 'venue': game["venue"]["name"],
             }
-            # Extract game id and add to game_info
+            # Extract game id from api and add to game_info
             for event in events:
                 if event['home_team'].lower() == game_info['home_team'].lower():
                     game_info['id'] = event['id']

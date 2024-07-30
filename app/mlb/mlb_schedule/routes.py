@@ -4,6 +4,7 @@ from app.mlb.mlb_schedule.external_apis.odds_api import fetch_homerun_odds
 from app.mlb.mlb_schedule.data_processing.schedule_process import ScheduleProcessor
 from app.mlb.mlb_schedule.data_processing.odds_process import OddsProcessor
 from app.mlb.mlb_schedule.data_processing.stats_process import PlayerStatsProcessor
+from app.mlb.mlb_schedule.utils.odds_utils import fetch_and_save_homerun_odds, load_odds_from_json
 from datetime import datetime  # Import datetime to handle date formatting
 
 
@@ -51,20 +52,33 @@ def get_odds():
         Rendered HTML template for the odds page or JSON error message.
     """
     try:
-        # Get the game id from the request parameters
+        # Get the game id (api's game id) from the request parameters
         game_id = request.args.get('game_id')
         if not game_id:
             # Redirect to error page if game_id is not provided
             return render_template('error.html')
 
-        # Fetch the homerun odds using the game ID
-        odds_data = fetch_homerun_odds(game_id)
-        # Process the odds data to sort it by bookmaker
-        processed_odds_data = OddsProcessor.sort_homerun_odd_by_booker(odds_data)
-
+        # Load odds data from json file
+        odds_data = load_odds_from_json()
+        if odds_data is None:
+            return render_template('error.html')
+        
+        # Find all entries for the given game_id
+        game_odds_entries = [entry['data'][game_id] for entry in odds_data['entries'] if game_id in entry['data']]
+        if not game_odds_entries:
+            return render_template('error.html')
+        
+        # Process each entry
+        processed_odds_data = []
+        for entry in game_odds_entries:
+            processed_odds_data.append(OddsProcessor.sort_homerun_odd_by_booker(entry))
+            processed_odds_data.append({
+                'timestamp': entry['timestamp'], # Time that the odds were fetched
+                'odds_data': processed_odds_data
+            })
         # Get today's date and format it
         today_date = datetime.now().strftime("%A, %B %d, %Y")
-
+        print(processed_odds_data)
         return render_template('odds.html', events=processed_odds_data, today_date=today_date)
     except Exception as e:
         # Return a JSON error message if an exception occurs
