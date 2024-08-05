@@ -1,8 +1,8 @@
 from flask import Blueprint, render_template, jsonify, request
-from app.mlb.mlb_schedule.data_processing.odds_process import OddsProcessor
-from app.mlb.mlb_schedule.data_processing.stats_process import PlayerStatsProcessor
+from api.mlb.data_processing.odds_process import OddsProcessor
+from api.mlb.data_processing.stats_process import PlayerStatsProcessor
 from datetime import datetime  # Import datetime to handle date formatting
-from app.mlb.mlb_schedule.s3_utils import get_object
+from api.mlb.s3_utils import get_object
 import json
 
 # Define the Blueprint for the MLB schedule
