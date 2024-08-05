@@ -27,13 +27,15 @@ def show_schedule():
         # Get the schedule from s3 bucket
         s3_response = get_object(BUCKET_NAME, SCHEDULE_KEY).decode('utf-8')
         games = json.loads(s3_response)
+
+        # Get today's date and format it
+        today_date = datetime.now().strftime("%A, %B %d, %Y")
+
+        return render_template('schedule.html', schedule=games, today_date=today_date)
     except Exception as e:
         render_template('error.html', message=str(e))
 
-    # Get today's date and format it
-    today_date = datetime.now().strftime("%A, %B %d, %Y")
-
-    return render_template('schedule.html', schedule=games, today_date=today_date)
+    
 
 @mlb_schedule_bp.route('/odds', methods=['GET'])
 def get_odds():
