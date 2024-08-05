@@ -4,7 +4,6 @@ from app.mlb.mlb_schedule.data_processing.stats_process import PlayerStatsProces
 from datetime import datetime  # Import datetime to handle date formatting
 from app.mlb.mlb_schedule.s3_utils import get_object
 import json
-import pandas as pd # temporary
 
 # Define the Blueprint for the MLB schedule
 mlb_schedule_bp = Blueprint('mlb_schedule', __name__, template_folder='templates', static_folder='static')
