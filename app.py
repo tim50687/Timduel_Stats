@@ -8,7 +8,7 @@ sys.path.append(project_root)
 print(project_root)
 
 from flask import Flask
-from app.mlb.mlb_schedule.routes import mlb_schedule_bp
+from api.mlb.routes import mlb_schedule_bp
 
 
 def create_app():
