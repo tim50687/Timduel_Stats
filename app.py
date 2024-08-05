@@ -1,3 +1,10 @@
+import os
+import sys
+
+# Add the project directory to the sys.path
+project_root = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(project_root)
+
 from flask import Flask
 from app.mlb.mlb_schedule.routes import mlb_schedule_bp
 
