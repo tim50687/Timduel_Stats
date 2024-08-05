@@ -6,7 +6,6 @@ import os
 from app.mlb.mlb_schedule.data_processing.stats_process import PlayerStatsProcessor
 # Selenium imports
 from selenium import webdriver
-from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.support import expected_conditions as EC
@@ -29,7 +28,13 @@ class FangraphsScraper:
         # Use Selenium to fetch the data
         options = webdriver.ChromeOptions()
         options.add_argument("--headless")  # Run in headless mode
-        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
+        driver_path = ChromeDriverManager().install()
+        if driver_path:
+            driver_name = driver_path.split('/')[-1]
+            if driver_name!="chromedriver":
+                driver_path = "/".join(driver_path.split('/')[:-1]+["chromedriver"])
+                os.chmod(driver_path, 0o755)
+        driver = webdriver.Chrome(service=ChromeService(driver_path), options=options)
 
         driver.get(url)
         # Wait for the page to load

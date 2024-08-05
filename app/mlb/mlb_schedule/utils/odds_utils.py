@@ -5,7 +5,7 @@ from app.mlb.mlb_schedule.external_apis.odds_api import fetch_homerun_odds
 from app.mlb.mlb_schedule.external_apis.odds_api import fetch_events
 
 # TODO: Fix the path to the JSON file
-JSON_FILE_PATH = '../../../../data/odds_data.json'
+JSON_FILE_PATH = 'data/odds_data.json'
 
 def fetch_and_save_homerun_odds():
     """
@@ -62,6 +62,3 @@ def load_odds_from_json():
     
     return data['entries']
 
-if __name__ == "__main__":
-    fetch_and_save_homerun_odds()
-    print(load_odds_from_json())

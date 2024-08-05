@@ -1,0 +1,9 @@
+# .gitignore
+
+# Virtual environment
+venv/
+# json file
+*.json
+
+# pycache
+__pycache__/

@@ -38,13 +38,3 @@ def save_data_to_csv(data, filename):
     data.to_csv(filename, index=False)
 
 
-if __name__ == "__main__":
-    start_date = '2024-07-02'
-    end_date = '2024-07-06'
-
-    data = playerid_reverse_lookup([670174], key_type='mlbam')
-    save_data_to_csv(data, 'data.csv')
-    statcast_data = fetch_batter_statcast_data(start_date, end_date, 592450)
-
-
-    save_data_to_csv(statcast_data, 'statcast_data.csv')

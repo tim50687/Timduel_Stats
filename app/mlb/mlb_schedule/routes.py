@@ -1,38 +1,35 @@
 from flask import Blueprint, render_template, jsonify, request
-from app.mlb.mlb_schedule.external_apis.schedule_api import MLBAPI
-from app.mlb.mlb_schedule.external_apis.odds_api import fetch_homerun_odds
-from app.mlb.mlb_schedule.data_processing.schedule_process import ScheduleProcessor
 from app.mlb.mlb_schedule.data_processing.odds_process import OddsProcessor
 from app.mlb.mlb_schedule.data_processing.stats_process import PlayerStatsProcessor
-from app.mlb.mlb_schedule.utils.odds_utils import fetch_and_save_homerun_odds, load_odds_from_json
 from datetime import datetime  # Import datetime to handle date formatting
-
-
+from app.mlb.mlb_schedule.s3_utils import get_object
+import json
 import pandas as pd # temporary
 
 # Define the Blueprint for the MLB schedule
 mlb_schedule_bp = Blueprint('mlb_schedule', __name__, template_folder='templates', static_folder='static')
 
+BUCKET_NAME = 'timjimmymlbdata'
+SCHEDULE_KEY = 'mlb_schedule.json'
+ODDS_KEY = 'mlb_odds.json'
+STATCAST_KEY = 'fangraphs_barrel_hh_data.json'
+STATS_KEY = 'fangraphs_fb_data.json'
 
 @mlb_schedule_bp.route('/schedule', methods=['GET'])
 def show_schedule():
     """
     Route to display the MLB schedule.
 
-    This route fetches the schedule data using the MLBAPI class, processes the data using the
-    ScheduleProcessor class, saves the schedule, and then renders the schedule.html template.
-
+    This route fetches the schedule data from s3 bucket.
     Returns:
         Rendered HTML template for the schedule page.
     """
-     # Get the schedule data, either from file or API
-    data = ScheduleProcessor.get_or_fetch_schedule()
-
-    # Process the schedule data
-    games = ScheduleProcessor.extract_game_info(data)
-
-    # Save the schedule data
-    ScheduleProcessor.save_schedule(data)
+    try:
+        # Get the schedule from s3 bucket
+        s3_response = get_object(BUCKET_NAME, SCHEDULE_KEY).decode('utf-8')
+        games = json.loads(s3_response)
+    except Exception as e:
+        render_template('error.html', message=str(e))
 
     # Get today's date and format it
     today_date = datetime.now().strftime("%A, %B %d, %Y")
@@ -56,30 +53,39 @@ def get_odds():
         game_id = request.args.get('game_id')
         if not game_id:
             # Redirect to error page if game_id is not provided
+            print("No game_id provided")
             return render_template('error.html')
 
-        # Load odds data from json file
-        odds_data = load_odds_from_json()
+        # Load odds data from s3 bucket
+        s3_response = get_object(BUCKET_NAME, ODDS_KEY).decode('utf-8')
+        odds_data = json.loads(s3_response)['entries']
         if odds_data is None:
+            print("No odds data found")
             return render_template('error.html')
         
-        # Find all entries for the given game_id
-        game_odds_entries = [entry['data'][game_id] for entry in odds_data['entries'] if game_id in entry['data']]
+        game_odds_entries = []
+        # Gather odds from different times for the game
+        for entry in odds_data:
+            if game_id in entry['data']:
+                game_odds_entries.append(entry['data'][game_id])
+                # Set the timestamp for the current entry
+                game_odds_entries[-1]['timestamp'] = entry['timestamp']
         if not game_odds_entries:
             return render_template('error.html')
         
-        # Process each entry
-        processed_odds_data = []
+        # Process each entry (odds from different times)
+        processed_entries = []
         for entry in game_odds_entries:
-            processed_odds_data.append(OddsProcessor.sort_homerun_odd_by_booker(entry))
-            processed_odds_data.append({
+            processed_odds_data = OddsProcessor.sort_homerun_odd_by_booker(entry)
+            processed_entries.append({
                 'timestamp': entry['timestamp'], # Time that the odds were fetched
                 'odds_data': processed_odds_data
             })
+
         # Get today's date and format it
         today_date = datetime.now().strftime("%A, %B %d, %Y")
-        print(processed_odds_data)
-        return render_template('odds.html', events=processed_odds_data, today_date=today_date)
+
+        return render_template('odds.html', events=processed_entries, today_date=today_date)
     except Exception as e:
         # Return a JSON error message if an exception occurs
         return jsonify({'error': str(e)})
@@ -104,8 +110,10 @@ def show_player_stats():
             return render_template('error.html', message="Both team1 and team2 parameters are required.")
 
         # File paths for the JSON data
-        statcast_file = "data/fangraphs_barrel_hh_data.json"
-        stats_file = "data/fangraphs_fb_data.json"
+        statcast_s3_response = get_object(BUCKET_NAME, STATCAST_KEY).decode('utf-8')
+        stats_s3_response = get_object(BUCKET_NAME, STATS_KEY).decode('utf-8')
+        statcast_file = json.loads(statcast_s3_response)
+        stats_file = json.loads(stats_s3_response)
         
         # Get the complete player stats data
         complete_data = PlayerStatsProcessor.get_complete_data(statcast_file, stats_file)
@@ -117,38 +125,8 @@ def show_player_stats():
         # Get today's date and format it
         today_date = datetime.now().strftime("%A, %B %d, %Y")
 
-
-        ### Save to Excel   ### temporary
-        # save_to_excel(team1_stats, team2_stats, team1, team2)
-
-        ###### 
-
-
-        
         return render_template('player_stats.html', team1=team1_stats, team2=team2_stats, team1_name=team1, team2_name=team2, today_date=today_date)
     
     except Exception as e:
         return render_template('error.html', message=str(e))
     
-
-def save_to_excel(team1_stats, team2_stats, team1_name, team2_name, file_name="team_stats.xlsx"):
-    """
-    Save the team stats to an Excel file.
-
-    Args:
-        team1_stats (dict): The stats data for the first team.
-        team2_stats (dict): The stats data for the second team.
-        team1_name (str): The name of the first team.
-        team2_name (str): The name of the second team.
-        file_name (str): The name of the Excel file to save the data.
-    """
-    # Convert the dictionaries to pandas DataFrames
-    df_team1 = pd.DataFrame.from_dict(team1_stats, orient='index')
-    df_team2 = pd.DataFrame.from_dict(team2_stats, orient='index')
-
-    # Write the DataFrames to an Excel file
-    with pd.ExcelWriter(file_name, mode='a') as writer:
-        df_team1.to_excel(writer, sheet_name=team1_name)
-        df_team2.to_excel(writer, sheet_name=team2_name)
-    
-    print(f"Data saved to {file_name}")

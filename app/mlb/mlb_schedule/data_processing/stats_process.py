@@ -89,8 +89,8 @@ class PlayerStatsProcessor:
         Returns:
             dict: The combined player stats data.
         """
-        statcast_data = PlayerStatsProcessor.load_json(statcast_file)
-        stats_data = PlayerStatsProcessor.load_json(stats_file)
-        return PlayerStatsProcessor.combine_player_stats(statcast_data, stats_data)
+        # statcast_data = PlayerStatsProcessor.load_json(statcast_file)
+        # stats_data = PlayerStatsProcessor.load_json(stats_file)
+        return PlayerStatsProcessor.combine_player_stats(statcast_file, stats_file)
 
 
