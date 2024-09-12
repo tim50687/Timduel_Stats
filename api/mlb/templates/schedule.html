@@ -4,17 +4,151 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MLB Schedule</title>
+    <style>
+      /* General styling for the body */
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #e3f2fd; /* Baby sky blue background */
+        color: #333;
+      }
+
+      /* Container for the content */
+      .container {
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      /* Styling the header */
+      header {
+        text-align: center;
+        padding: 20px;
+        background-color: #81d4fa; /* Light sky blue */
+        color: white;
+        border-radius: 8px 8px 0 0;
+        margin-bottom: 30px;
+      }
+
+      header h1 {
+        font-size: 36px;
+        margin: 0;
+      }
+
+      .date {
+        font-size: 18px;
+        margin-top: 5px;
+        color: #9fabb5; /* Slightly lighter blue */
+      }
+
+      /* Styling for buttons in header */
+      .btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #0288d1; /* Stronger blue */
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #0277bd; /* Darker blue on hover */
+      }
+
+      /* Styling the main schedule table */
+      .schedule-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        font-size: 16px;
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #0288d1; /* Strong blue for header */
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      td {
+        color: #333;
+      }
+
+      tr:nth-child(even) {
+        background-color: #e1f5fe; /* Light blue for alternating rows */
+      }
+
+      tr:hover {
+        background-color: #b3e5fc; /* Hover effect with slightly darker blue */
+      }
+
+      /* Styling for action buttons */
+      .btn-info,
+      .btn-warning {
+        padding: 8px 16px;
+        font-size: 14px;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn-info {
+        background-color: #29b6f6; /* Lighter blue for Player Stats */
+      }
+
+      .btn-info:hover {
+        background-color: #0288d1; /* Darker blue on hover */
+      }
+
+      .btn-warning {
+        background-color: #ffb74d; /* Orange for Odds Movement */
+      }
+
+      .btn-warning:hover {
+        background-color: #ffa726; /* Darker orange on hover */
+      }
+
+      /* Responsive design for mobile */
+      @media (max-width: 768px) {
+        .schedule-table th,
+        .schedule-table td {
+          font-size: 14px;
+        }
+
+        header h1 {
+          font-size: 28px;
+        }
+
+        .btn {
+          padding: 8px 16px;
+          font-size: 14px;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <header>
         <h1>MLB Schedule</h1>
         <p class="date">{{ today_date }}</p>
-        <a
-          href="{{ url_for('mlb_schedule.show_hr_prediction') }}"
-          class="btn btn-success"
-          >Today's HR Predictions</a
-        >
+        <a href="{{ url_for('mlb_schedule.show_hr_prediction') }}" class="btn">
+          Today's HR Predictions
+        </a>
       </header>
       <main>
         <table class="schedule-table">
@@ -38,13 +172,15 @@
                 <a
                   href="{{ url_for('mlb_schedule.show_player_stats', team1=game['away_team'], team2=game['home_team']) }}"
                   class="btn btn-info"
-                  >Player Stats</a
                 >
+                  Player Stats
+                </a>
                 <a
                   href="{{ url_for('mlb_schedule.get_odds', game_id=game['id']) }}"
                   class="btn btn-warning"
-                  >Odds Movement</a
                 >
+                  Odds Movement
+                </a>
               </td>
             </tr>
             {% endfor %}
