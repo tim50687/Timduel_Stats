@@ -10,6 +10,11 @@
       <header>
         <h1>MLB Schedule</h1>
         <p class="date">{{ today_date }}</p>
+        <a
+          href="{{ url_for('mlb_schedule.hr_prediction') }}"
+          class="btn btn-success"
+          >Today's HR Predictions</a
+        >
       </header>
       <main>
         <table class="schedule-table">
