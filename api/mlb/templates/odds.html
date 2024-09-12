@@ -4,39 +4,153 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MLB Odds</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      h1,
+      h2 {
+        color: #333;
+        text-align: center;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        margin-top: 30px;
+      }
+
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 0;
+        border-radius: 8px 8px 0 0;
+      }
+
+      header p {
+        margin: 0;
+        text-align: center;
+        font-size: 16px;
+        color: white;
+      }
+
+      /* Scrollable table */
+      .table-container {
+        overflow-x: auto;
+        margin-top: 20px;
+        border: 1px solid #ddd;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 1000px; /* Ensures the table is scrollable */
+      }
+
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f2f2f2;
+        border-bottom: 2px solid #ddd;
+      }
+
+      td {
+        border-bottom: 1px solid #ddd;
+      }
+
+      /* First separator after 4 columns */
+      td:nth-child(4) {
+        border-right: 3px solid #4caf50; /* Green line after the 4th column */
+      }
+
+      /* Subsequent separators after every 3 columns */
+      td:nth-child(3n + 4) {
+        border-right: 3px solid #4caf50; /* Green line after every 3 columns */
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      tr:hover {
+        background-color: #f1f1f1;
+      }
+
+      a {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        text-align: center;
+        font-size: 16px;
+      }
+
+      a:hover {
+        background-color: #45a049;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+        color: #777;
+      }
+    </style>
   </head>
   <body>
-    <div>
+    <div class="container">
       <header>
         <h1>MLB Home Run Odds</h1>
         <p>{{today_date}}</p>
       </header>
       <main>
-        {% for entry in events %}
-        <section>
-          <h2>Odds fetched at: {{ entry.timestamp }}</h2>
+        <section class="table-container">
           <table>
             <thead>
               <tr>
                 <th>Player</th>
+                {% for entry in events %}
+                <th colspan="3">Odds fetched at: {{ entry.timestamp }}</th>
+                {% endfor %}
+              </tr>
+              <tr>
+                <th></th>
+                {% for entry in events %}
                 <th>Fanduel</th>
                 <th>DraftKings</th>
                 <th>BetMGM</th>
+                {% endfor %}
               </tr>
             </thead>
             <tbody>
-              {% for player in entry.odds_data['fanduel'].keys() %}
+              {% for player in events[0].odds_data['fanduel'].keys() %}
               <tr>
                 <td>{{ player }}</td>
+                {% for entry in events %}
                 <td>{{ entry.odds_data['fanduel'].get(player, 'N/A') }}</td>
                 <td>{{ entry.odds_data['draftkings'].get(player, 'N/A') }}</td>
                 <td>{{ entry.odds_data['betmgm'].get(player, 'N/A') }}</td>
+                {% endfor %}
               </tr>
               {% endfor %}
             </tbody>
           </table>
         </section>
-        {% endfor %}
         <a href="{{ url_for('mlb_schedule.show_schedule') }}"
           >Go back to the schedule</a
         >
