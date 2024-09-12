@@ -62,12 +62,18 @@
         background-color: #0277bd; /* Darker blue on hover */
       }
 
+      /* Add a scrollable container around the table */
+      .table-container {
+        overflow-x: auto;
+      }
+
       /* Styling the main schedule table */
       .schedule-table {
         width: 100%;
         border-collapse: collapse;
         margin-top: 20px;
         font-size: 16px;
+        min-width: 600px; /* Ensure table fits on larger screens */
       }
 
       th,
@@ -157,41 +163,43 @@
         </a>
       </header>
       <main>
-        <table class="schedule-table">
-          <thead>
-            <tr>
-              <th>Time</th>
-              <th>Away Team</th>
-              <th>Home Team</th>
-              <th>Venue</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for game in schedule %}
-            <tr>
-              <td>{{ game['time'] }}</td>
-              <td>{{ game['away_team'] }}</td>
-              <td>{{ game['home_team'] }}</td>
-              <td>{{ game['venue'] }}</td>
-              <td>
-                <a
-                  href="{{ url_for('mlb_schedule.show_player_stats', team1=game['away_team'], team2=game['home_team']) }}"
-                  class="btn btn-info"
-                >
-                  Player Stats
-                </a>
-                <a
-                  href="{{ url_for('mlb_schedule.get_odds', game_id=game['id']) }}"
-                  class="btn btn-warning"
-                >
-                  Odds Movement
-                </a>
-              </td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+        <div class="table-container">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Away Team</th>
+                <th>Home Team</th>
+                <th>Venue</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for game in schedule %}
+              <tr>
+                <td>{{ game['time'] }}</td>
+                <td>{{ game['away_team'] }}</td>
+                <td>{{ game['home_team'] }}</td>
+                <td>{{ game['venue'] }}</td>
+                <td>
+                  <a
+                    href="{{ url_for('mlb_schedule.show_player_stats', team1=game['away_team'], team2=game['home_team']) }}"
+                    class="btn btn-info"
+                  >
+                    Player Stats
+                  </a>
+                  <a
+                    href="{{ url_for('mlb_schedule.get_odds', game_id=game['id']) }}"
+                    class="btn btn-warning"
+                  >
+                    Odds Movement
+                  </a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
       </main>
     </div>
   </body>
