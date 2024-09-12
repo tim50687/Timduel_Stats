@@ -131,3 +131,38 @@ def show_player_stats():
     except Exception as e:
         return render_template('error.html', message=str(e))
     
+@mlb_schedule_bp.route('/hr_prediction', methods=['GET'])
+def show_hr_prediction():
+    """
+    Route to display the home run prediction for a player.
+    
+    This route fetches the player stats from the provided JSON files and displays the home run prediction.
+    
+    Returns:
+        Rendered HTML template for the home run prediction page.
+    """
+    try:
+        # Define the key for the home run prediction data in S3
+        HR_PREDICTION_KEY = 'hr_prediction_data.json'
+
+        # Get prediction data from the S3 bucket
+        s3_response = get_object(BUCKET_NAME, HR_PREDICTION_KEY).decode('utf-8')
+        prediction_data = json.loads(s3_response)
+
+        # Extract relevant fields (batter_id, predicted_home_runs, and team)
+        hr_predictions = []
+        for record in prediction_data:
+            hr_predictions.append({
+                'batter_id': record['batter_id'],
+                'predicted_home_runs': record['predicted_homerun'],
+                'team': record['team']
+            })
+
+        # Get today's date and format it
+        today_date = datetime.now().strftime("%A, %B %d, %Y")
+
+        # Render the hr_prediction.html template with the prediction data
+        return render_template('hr_prediction.html', predictions=hr_predictions, today_date=today_date)
+    
+    except Exception as e:
+        return render_template('error.html', message=str(e))
