@@ -4,7 +4,8 @@ from api.mlb.data_processing.stats_process import PlayerStatsProcessor
 from datetime import datetime  # Import datetime to handle date formatting
 from api.mlb.s3_utils import get_object
 import json
-
+from io import StringIO
+import csv
 # Define the Blueprint for the MLB schedule
 mlb_schedule_bp = Blueprint('mlb_schedule', __name__, template_folder='templates', static_folder='static')
 
@@ -13,6 +14,7 @@ SCHEDULE_KEY = 'mlb_schedule.json'
 ODDS_KEY = 'mlb_odds.json'
 STATCAST_KEY = 'fangraphs_barrel_hh_data.json'
 STATS_KEY = 'fangraphs_fb_data.json'
+HR_PREDICTION_KEY = 'predicted_homeruns2.csv'
 
 @mlb_schedule_bp.route('/schedule', methods=['GET'])
 def show_schedule():
@@ -33,7 +35,7 @@ def show_schedule():
 
         return render_template('schedule.html', schedule=games, today_date=today_date)
     except Exception as e:
-        render_template('error.html', message=str(e))
+        return render_template('error.html', message=str(e))
 
     
 
@@ -131,27 +133,28 @@ def show_player_stats():
     except Exception as e:
         return render_template('error.html', message=str(e))
     
-@mlb_schedule_bp.route('/hr_prediction', methods=['GET'])
+@mlb_schedule_bp.route('/hr_prediction', methods=['GET'])  
 def show_hr_prediction():
     """
     Route to display the home run prediction for a player.
     
-    This route fetches the player stats from the provided JSON files and displays the home run prediction.
+    This route fetches the player stats from the provided CSV file and displays the home run prediction.
     
     Returns:
         Rendered HTML template for the home run prediction page.
     """
     try:
-        # Define the key for the home run prediction data in S3
-        HR_PREDICTION_KEY = 'hr_prediction_data.json'
 
         # Get prediction data from the S3 bucket
         s3_response = get_object(BUCKET_NAME, HR_PREDICTION_KEY).decode('utf-8')
-        prediction_data = json.loads(s3_response)
+
+        # Use StringIO to read the CSV data into a format that the csv module can handle
+        csv_file = StringIO(s3_response)
+        reader = csv.DictReader(csv_file)
 
         # Extract relevant fields (batter_id, predicted_home_runs, and team)
         hr_predictions = []
-        for record in prediction_data:
+        for record in reader:
             hr_predictions.append({
                 'batter_id': record['batter_id'],
                 'predicted_home_runs': record['predicted_homerun'],
