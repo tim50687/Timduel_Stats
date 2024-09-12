@@ -62,18 +62,12 @@
         background-color: #0277bd; /* Darker blue on hover */
       }
 
-      /* Add a scrollable container around the table */
-      .table-container {
-        overflow-x: auto;
-      }
-
       /* Styling the main schedule table */
       .schedule-table {
         width: 100%;
         border-collapse: collapse;
         margin-top: 20px;
         font-size: 16px;
-        min-width: 600px; /* Ensure table fits on larger screens */
       }
 
       th,
@@ -131,24 +125,66 @@
 
       /* Responsive design for mobile */
       @media (max-width: 768px) {
-        /* Ensure table fits within mobile view by allowing horizontal scrolling */
-        .table-container {
-          overflow-x: auto;
-        }
-
+        .schedule-table,
+        .schedule-table thead,
+        .schedule-table tbody,
         .schedule-table th,
+        .schedule-table td,
+        .schedule-table tr {
+          display: block;
+        }
+
+        /* Hide the table headers */
+        .schedule-table thead tr {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+        }
+
+        .schedule-table tr {
+          border: 1px solid #ddd;
+          margin-bottom: 10px;
+        }
+
         .schedule-table td {
-          font-size: 14px;
-          white-space: nowrap; /* Prevent table text from wrapping on small screens */
+          border: none;
+          border-bottom: 1px solid #ddd;
+          position: relative;
+          padding-left: 50%;
+          text-align: left;
+          white-space: normal;
         }
 
-        header h1 {
-          font-size: 28px;
+        .schedule-table td:before {
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          transform: translateY(-50%);
+          white-space: nowrap;
+          font-weight: bold;
         }
 
+        /* Labels for each cell when table is viewed on mobile */
+        .schedule-table td:nth-of-type(1):before {
+          content: "Time";
+        }
+        .schedule-table td:nth-of-type(2):before {
+          content: "Away Team";
+        }
+        .schedule-table td:nth-of-type(3):before {
+          content: "Home Team";
+        }
+        .schedule-table td:nth-of-type(4):before {
+          content: "Venue";
+        }
+        .schedule-table td:nth-of-type(5):before {
+          content: "Actions";
+        }
+
+        /* Adjust button sizes for mobile */
         .btn {
-          padding: 8px 16px;
           font-size: 14px;
+          padding: 8px 16px;
         }
       }
     </style>
@@ -163,43 +199,41 @@
         </a>
       </header>
       <main>
-        <div class="table-container">
-          <table class="schedule-table">
-            <thead>
-              <tr>
-                <th>Time</th>
-                <th>Away Team</th>
-                <th>Home Team</th>
-                <th>Venue</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for game in schedule %}
-              <tr>
-                <td>{{ game['time'] }}</td>
-                <td>{{ game['away_team'] }}</td>
-                <td>{{ game['home_team'] }}</td>
-                <td>{{ game['venue'] }}</td>
-                <td>
-                  <a
-                    href="{{ url_for('mlb_schedule.show_player_stats', team1=game['away_team'], team2=game['home_team']) }}"
-                    class="btn btn-info"
-                  >
-                    Player Stats
-                  </a>
-                  <a
-                    href="{{ url_for('mlb_schedule.get_odds', game_id=game['id']) }}"
-                    class="btn btn-warning"
-                  >
-                    Odds Movement
-                  </a>
-                </td>
-              </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-        </div>
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Away Team</th>
+              <th>Home Team</th>
+              <th>Venue</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for game in schedule %}
+            <tr>
+              <td>{{ game['time'] }}</td>
+              <td>{{ game['away_team'] }}</td>
+              <td>{{ game['home_team'] }}</td>
+              <td>{{ game['venue'] }}</td>
+              <td>
+                <a
+                  href="{{ url_for('mlb_schedule.show_player_stats', team1=game['away_team'], team2=game['home_team']) }}"
+                  class="btn btn-info"
+                >
+                  Player Stats
+                </a>
+                <a
+                  href="{{ url_for('mlb_schedule.get_odds', game_id=game['id']) }}"
+                  class="btn btn-warning"
+                >
+                  Odds Movement
+                </a>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
       </main>
     </div>
   </body>
