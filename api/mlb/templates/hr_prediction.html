@@ -11,12 +11,14 @@
         padding: 0;
         background-color: #f4f4f4;
       }
+
       h1 {
         text-align: center;
         padding: 20px;
         background-color: #45aae4;
         color: white;
       }
+
       .container {
         width: 80%;
         margin: 0 auto;
@@ -25,35 +27,79 @@
         background-color: white;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       }
+
       table {
         width: 100%;
         border-collapse: collapse;
         margin-bottom: 20px;
       }
+
       table,
       th,
       td {
         border: 1px solid #ddd;
       }
+
       th,
       td {
         padding: 12px;
         text-align: left;
       }
+
       th {
         background-color: #f2f2f2;
       }
+
       tr:nth-child(even) {
         background-color: #f9f9f9;
       }
+
       tr:hover {
         background-color: #f1f1f1;
       }
+
+      /* Style for buttons */
+      .btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #45aae4;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        text-align: center;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #5db0dd;
+      }
+
       .footer {
         text-align: center;
         margin-top: 20px;
         font-size: 14px;
         color: #777;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .container {
+          width: 100%;
+          padding: 10px;
+        }
+
+        table,
+        th,
+        td {
+          font-size: 14px;
+        }
+
+        .btn {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
       }
     </style>
   </head>
@@ -79,6 +125,11 @@
           {% endfor %}
         </tbody>
       </table>
+
+      <!-- Button to go back to schedule -->
+      <a href="{{ url_for('mlb_schedule.show_schedule') }}" class="btn"
+        >Go Back to Schedule</a
+      >
     </div>
   </body>
 </html>

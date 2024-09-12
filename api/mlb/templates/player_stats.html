@@ -51,11 +51,16 @@
         font-size: 28px;
       }
 
+      /* Scrollable table container */
+      .table-container {
+        overflow-x: auto;
+        margin-bottom: 40px;
+      }
+
       table {
         width: 100%;
         border-collapse: collapse;
         margin-top: 20px;
-        margin-bottom: 40px;
       }
 
       th,
@@ -109,6 +114,30 @@
         font-size: 14px;
         color: #777;
       }
+
+      /* Responsive design for mobile */
+      @media (max-width: 768px) {
+        .container {
+          padding: 15px;
+        }
+
+        table {
+          font-size: 14px;
+        }
+
+        header h1 {
+          font-size: 28px;
+        }
+
+        a {
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+
+        main h2 {
+          font-size: 24px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -119,56 +148,65 @@
       </header>
       <main>
         <h2>Team: {{ team1_name }}</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Player</th>
-              <th>Event</th>
-              <th>Barrels</th>
-              <th>HardHit</th>
-              <th>LD</th>
-              <th>FB</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for player, stats in team1.items() %}
-            <tr>
-              <td>{{ player }}</td>
-              <td>{{ stats["Event"] }}</td>
-              <td>{{ stats["Barrels"] }}</td>
-              <td>{{ stats["HardHit"] }}</td>
-              <td>{{ stats["LD"] }}</td>
-              <td>{{ stats["FB"] }}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>Event</th>
+                <th>Barrels</th>
+                <th>HardHit</th>
+                <th>LD</th>
+                <th>FB</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for player, stats in team1.items() %}
+              <tr>
+                <td>{{ player }}</td>
+                <td>{{ stats["Event"] }}</td>
+                <td>{{ stats["Barrels"] }}</td>
+                <td>{{ stats["HardHit"] }}</td>
+                <td>{{ stats["LD"] }}</td>
+                <td>{{ stats["FB"] }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
 
         <h2>Team: {{ team2_name }}</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Player</th>
-              <th>Event</th>
-              <th>Barrels</th>
-              <th>HardHit</th>
-              <th>LD</th>
-              <th>FB</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for player, stats in team2.items() %}
-            <tr>
-              <td>{{ player }}</td>
-              <td>{{ stats["Event"] }}</td>
-              <td>{{ stats["Barrels"] }}</td>
-              <td>{{ stats["HardHit"] }}</td>
-              <td>{{ stats["LD"] }}</td>
-              <td>{{ stats["FB"] }}</td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>Event</th>
+                <th>Barrels</th>
+                <th>HardHit</th>
+                <th>LD</th>
+                <th>FB</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for player, stats in team2.items() %}
+              <tr>
+                <td>{{ player }}</td>
+                <td>{{ stats["Event"] }}</td>
+                <td>{{ stats["Barrels"] }}</td>
+                <td>{{ stats["HardHit"] }}</td>
+                <td>{{ stats["LD"] }}</td>
+                <td>{{ stats["FB"] }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Button to go back to schedule -->
+        <a href="{{ url_for('mlb_schedule.show_schedule') }}"
+          >Go Back to Schedule</a
+        >
       </main>
     </div>
   </body>

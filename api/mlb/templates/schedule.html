@@ -125,9 +125,15 @@
 
       /* Responsive design for mobile */
       @media (max-width: 768px) {
+        /* Ensure table fits within mobile view by allowing horizontal scrolling */
+        .table-container {
+          overflow-x: auto;
+        }
+
         .schedule-table th,
         .schedule-table td {
           font-size: 14px;
+          white-space: nowrap; /* Prevent table text from wrapping on small screens */
         }
 
         header h1 {
