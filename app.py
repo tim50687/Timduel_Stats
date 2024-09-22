@@ -9,7 +9,7 @@ print(project_root)
 
 from flask import Flask
 from api.mlb.routes import mlb_schedule_bp
-from api.home_routes import home_bp
+from home_routes import home_bp
 
 def create_app():
     app = Flask(__name__)

@@ -1,0 +1,15 @@
+{
+  "name": "timduel_stats",
+  "version": "1.0.0",
+  "description": "Hey, programmer! Are you an `NBA enthusiast`? If you know Python, have a Google account, and know your way around the command line, we've got a cool hack for you! This project automates the process of scraping NBA game schedule information and adding it to your Google Calendar, saving you time and keeping you updated on your favorite NBA games.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.12"
+  }
+}

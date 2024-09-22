@@ -16,7 +16,7 @@ STATCAST_KEY = 'fangraphs_barrel_hh_data.json'
 STATS_KEY = 'fangraphs_fb_data.json'
 HR_PREDICTION_KEY = 'predicted_homeruns2.csv'
 
-@mlb_schedule_bp.route('/schedule', methods=['GET'])
+@mlb_schedule_bp.route('/', methods=['GET'])
 def show_schedule():
     """
     Route to display the MLB schedule.
