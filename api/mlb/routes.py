@@ -16,7 +16,7 @@ STATCAST_KEY = 'fangraphs_barrel_hh_data.json'
 STATS_KEY = 'fangraphs_fb_data.json'
 HR_PREDICTION_KEY = 'predicted_homeruns2.csv'
 
-@mlb_schedule_bp.route('/schedule', methods=['GET'])
+@mlb_schedule_bp.route('/mlb/schedule', methods=['GET'])
 def show_schedule():
     """
     Route to display the MLB schedule.
@@ -39,7 +39,7 @@ def show_schedule():
 
     
 
-@mlb_schedule_bp.route('/odds', methods=['GET'])
+@mlb_schedule_bp.route('/mlb/odds', methods=['GET'])
 def get_odds():
     """
     Route to display the homerun odds for a specific game.
@@ -94,7 +94,7 @@ def get_odds():
         return jsonify({'error': str(e)})
     
 
-@mlb_schedule_bp.route('/player_stats', methods=['GET'])
+@mlb_schedule_bp.route('/mlb/player_stats', methods=['GET'])
 def show_player_stats():
     """
     Route to display player stats for two teams.
@@ -133,7 +133,7 @@ def show_player_stats():
     except Exception as e:
         return render_template('error.html', message=str(e))
     
-@mlb_schedule_bp.route('/hr_prediction', methods=['GET'])  
+@mlb_schedule_bp.route('/mlb/hr_prediction', methods=['GET'])  
 def show_hr_prediction():
     """
     Route to display the home run prediction for a player.
