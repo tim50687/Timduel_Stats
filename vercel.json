@@ -1,6 +1,5 @@
 {
   "version": 2,
   "builds": [{ "src": "app.py", "use": "@vercel/python" }],
-  "routes": [{ "src": "/(.*)", "dest": "app.py" }],
-  "buildCommand": "npx tailwindcss -i ./static/css/input.css -o ./static/css/output.css --minify"
+  "routes": [{ "src": "/(.*)", "dest": "app.py" }]
 }
