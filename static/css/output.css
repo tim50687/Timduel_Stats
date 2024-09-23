@@ -755,6 +755,10 @@ video {
   --tw-bg-opacity: 0.5;
 }
 
+.bg-opacity-90 {
+  --tw-bg-opacity: 0.9;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -860,10 +864,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.opacity-95 {
-  opacity: 0.95;
 }
 
 .shadow-md {
