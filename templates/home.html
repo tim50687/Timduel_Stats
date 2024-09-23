@@ -24,7 +24,7 @@
           Timduel
         </div>
 
-        <ul class="flex space-x-6 text-white text-lg">
+        <ul class="hidden md:flex space-x-6 text-white text-lg">
           <li><a href="/mlb" class="hover:underline font-bold">MLB</a></li>
           <li><a href="/nba" class="hover:underline font-bold">NBA</a></li>
           <li><a href="/nfl" class="hover:underline font-bold">NFL</a></li>
@@ -39,6 +39,15 @@
             Join Discord
           </a>
         </div>
+      </div>
+
+      <!-- On mobile: stack MLB, NBA, NFL -->
+      <div class="md:hidden mt-4">
+        <ul class="flex space-x-4 justify-between text-white text-lg">
+          <li><a href="/mlb" class="hover:underline font-bold">MLB</a></li>
+          <li><a href="/nba" class="hover:underline font-bold">NBA</a></li>
+          <li><a href="/nfl" class="hover:underline font-bold">NFL</a></li>
+        </ul>
       </div>
     </nav>
 
@@ -60,7 +69,7 @@
         class="relative block text-white text-center p-0 w-96 h-8/12 rounded-lg overflow-hidden transition-all"
       >
         <div
-          class="absolute top-4 left-4 text-2xl font-bold text-white z-10 bg-black bg-opacity-50 px-2 py-1 rounded-lg"
+          class="absolute top-1 left-1 md:top-4 md:left-4 text-lg md:text-2xl font-bold text-white z-10 bg-black bg-opacity-50 px-2 py-1 rounded-lg"
         >
           MLB
         </div>
@@ -75,7 +84,7 @@
         class="relative block text-white text-center p-0 w-96 h-8/12 rounded-lg overflow-hidden transition-all"
       >
         <div
-          class="absolute top-4 left-4 text-2xl font-bold text-white z-10 bg-black bg-opacity-50 px-2 py-1 rounded-lg"
+          class="absolute top-1 left-1 md:top-4 md:left-4 text-lg md:text-2xl font-bold text-white z-10 bg-black bg-opacity-50 px-2 py-1 rounded-lg"
         >
           NFL
         </div>
@@ -90,7 +99,7 @@
         class="relative block text-white text-center p-0 w-96 h-8/12 rounded-lg overflow-hidden transition-all"
       >
         <div
-          class="absolute top-4 left-4 text-2xl font-bold text-white z-10 bg-black bg-opacity-50 px-2 py-1 rounded-lg"
+          class="absolute top-1 left-1 md:top-4 md:left-4 text-lg md:text-2xl font-bold text-white z-10 bg-black bg-opacity-50 px-2 py-1 rounded-lg"
         >
           NBA
         </div>
