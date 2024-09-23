@@ -16,99 +16,114 @@
     <title>Home Page</title>
   </head>
   <body class="bg-white text-gray-900 font-oswald">
-    <nav class="bg-blue-500 p-4 shadow-md">
-      <div class="container mx-auto flex justify-between items-center">
-        <div
-          class="text-white text-4xl font-anton font-extrabold tracking-wide"
-        >
-          Timduel
-        </div>
-
-        <ul class="hidden md:flex space-x-6 text-white text-lg">
-          <li><a href="/mlb" class="hover:underline font-bold">MLB</a></li>
-          <li><a href="/#" class="hover:underline font-bold">NFL</a></li>
-          <li><a href="/#" class="hover:underline font-bold">NBA</a></li>
-        </ul>
-
-        <div>
-          <a
-            href="https://discord.gg/CAANVsQ5"
-            target="_blank"
-            class="bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors duration-300 ease-in-out font-bold"
+    <div>
+      <nav class="bg-blue-500 p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+          <div
+            class="text-white text-4xl font-anton font-extrabold tracking-wide"
           >
-            Join Discord
-          </a>
+            Timduel
+          </div>
+
+          <ul class="hidden md:flex space-x-6 text-white text-lg">
+            <li><a href="/mlb" class="hover:underline font-bold">MLB</a></li>
+            <li><a href="/mlb" class="hover:underline font-bold">NFL</a></li>
+            <li><a href="/mlb" class="hover:underline font-bold">NBA</a></li>
+          </ul>
+
+          <div>
+            <a
+              href="https://discord.gg/CAANVsQ5"
+              target="_blank"
+              class="bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors duration-300 ease-in-out font-bold"
+            >
+              Join Discord
+            </a>
+          </div>
         </div>
-      </div>
 
-      <!-- On mobile: stack MLB, NBA, NFL -->
-      <div class="md:hidden mt-4">
-        <ul class="flex space-x-4 justify-between text-white text-lg">
-          <li><a href="/mlb" class="hover:underline font-bold">MLB</a></li>
-          <li><a href="/#" class="hover:underline font-bold">NBA</a></li>
-          <li><a href="/#" class="hover:underline font-bold">NFL</a></li>
-        </ul>
-      </div>
-    </nav>
+        <!-- On mobile: stack MLB, NBA, NFL -->
+        <div class="md:hidden mt-4">
+          <ul class="flex space-x-4 justify-between text-white text-lg">
+            <li><a href="/mlb" class="hover:underline font-bold">MLB</a></li>
+            <li><a href="/#" class="hover:underline font-bold">NBA</a></li>
+            <li><a href="/#" class="hover:underline font-bold">NFL</a></li>
+          </ul>
+        </div>
+      </nav>
 
-    <h1 class="text-6xl font-anton text-center text-blue-600 mt-16 mb-8">
-      Welcome to Timduel
-    </h1>
+      <h1 class="text-6xl font-anton text-center text-blue-600 mt-16 mb-8">
+        Welcome to Timduel
+      </h1>
 
-    <p class="text-2xl font-semibold text-gray-800 text-center mb-4">
-      <span class="text-black-600">We are here to win!</span>
-    </p>
+      <p class="text-2xl font-semibold text-gray-800 text-center mb-4">
+        <span class="text-black-600">We are here to win!</span>
+      </p>
 
-    <p class="text-lg text-gray-700 text-center mb-10">
-      Explore our predictions and data analysis for every major sport.
-    </p>
+      <p class="text-lg text-gray-700 text-center mb-10">
+        Explore our predictions and data analysis for every major sport.
+      </p>
 
-    <nav class="flex justify-center space-x-4 mt-8">
-      <a
-        href="/mlb"
-        class="relative block text-white text-center p-0 w-96 h-8/12 rounded-lg overflow-hidden transition-all"
-      >
-        <div
-          class="absolute top-1 left-1 md:top-4 md:left-4 text-lg md:text-2xl font-bold text-white z-10 bg-black bg-opacity-50 px-2 py-1 rounded-lg"
+      <nav class="flex justify-center space-x-4 mt-8">
+        <a
+          href="/mlb"
+          class="relative block text-white text-center p-0 w-96 h-8/12 rounded-lg overflow-hidden transition-all"
         >
-          MLB
-        </div>
+          <div
+            class="absolute top-1 left-1 md:top-4 md:left-4 text-lg md:text-2xl font-bold text-white z-10 bg-black bg-opacity-50 px-2 py-1 rounded-lg"
+          >
+            MLB
+          </div>
+          <img
+            src="/static/images/Shohei.jpeg"
+            alt="Shohei"
+            class="w-full h-full object-cover rounded-lg transition-transform duration-300 hover:scale-105 hover:brightness-110"
+          />
+        </a>
+        <a
+          href="/mlb"
+          class="relative block text-white text-center p-0 w-96 h-8/12 rounded-lg overflow-hidden transition-all"
+        >
+          <div
+            class="absolute top-1 left-1 md:top-4 md:left-4 text-lg md:text-2xl font-bold text-white z-10 bg-black bg-opacity-50 px-2 py-1 rounded-lg"
+          >
+            NFL
+          </div>
+          <img
+            src="/static/images/Tom.jpeg"
+            alt="Tom"
+            class="w-full h-full object-cover rounded-lg transition-transform duration-300 hover:scale-105 hover:brightness-110"
+          />
+        </a>
+        <a
+          href="/mlb"
+          class="relative block text-white text-center p-0 w-96 h-8/12 rounded-lg overflow-hidden transition-all"
+        >
+          <div
+            class="absolute top-1 left-1 md:top-4 md:left-4 text-lg md:text-2xl font-bold text-white z-10 bg-black bg-opacity-50 px-2 py-1 rounded-lg"
+          >
+            NBA
+          </div>
+          <img
+            src="/static/images/Kyrie.jpeg"
+            alt="Kyrie"
+            class="w-full h-full object-cover rounded-lg transition-transform duration-300 hover:scale-105 hover:brightness-110"
+          />
+        </a>
+      </nav>
+    </div>
+
+    <footer
+      class="bg-blue-500 text-white text-center py-3 mt-12 flex justify-center items-center space-x-2"
+    >
+      <p>&copy; 2024 Tim. Check out my projects on</p>
+      <a href="https://github.com/tim50687" target="_blank">
         <img
-          src="/static/images/Shohei.jpeg"
-          alt="Shohei"
-          class="w-full h-full object-cover rounded-lg transition-transform duration-300 hover:scale-105 hover:brightness-110"
+          src="/static/images/github-mark.png"
+          alt="GitHub"
+          class="w-6 h-6 hover:scale-110 hover:opacity-60 transition-all duration-300"
         />
       </a>
-      <a
-        href="#"
-        class="relative block text-white text-center p-0 w-96 h-8/12 rounded-lg overflow-hidden transition-all"
-      >
-        <div
-          class="absolute top-1 left-1 md:top-4 md:left-4 text-lg md:text-2xl font-bold text-white z-10 bg-black bg-opacity-50 px-2 py-1 rounded-lg"
-        >
-          NFL
-        </div>
-        <img
-          src="/static/images/Tom.jpeg"
-          alt="Tom"
-          class="w-full h-full object-cover rounded-lg transition-transform duration-300 hover:scale-105 hover:brightness-110"
-        />
-      </a>
-      <a
-        href="#"
-        class="relative block text-white text-center p-0 w-96 h-8/12 rounded-lg overflow-hidden transition-all"
-      >
-        <div
-          class="absolute top-1 left-1 md:top-4 md:left-4 text-lg md:text-2xl font-bold text-white z-10 bg-black bg-opacity-50 px-2 py-1 rounded-lg"
-        >
-          NBA
-        </div>
-        <img
-          src="/static/images/Kyrie.jpeg"
-          alt="Kyrie"
-          class="w-full h-full object-cover rounded-lg transition-transform duration-300 hover:scale-105 hover:brightness-110"
-        />
-      </a>
-    </nav>
+    </footer>
   </body>
 </html>
