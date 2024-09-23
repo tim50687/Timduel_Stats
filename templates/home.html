@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Include Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <!-- Include external resources like css -->
     <link
       href="{{ url_for('static', filename='css/output.css') }}"
@@ -10,38 +15,91 @@
     />
     <title>Home Page</title>
   </head>
-  <body class="bg-gray-100 text-gray-900">
-    <nav class="bg-blue-600 p-4 shadow-md">
+  <body class="bg-white text-gray-900 font-oswald">
+    <nav class="bg-blue-500 p-4 shadow-md">
       <div class="container mx-auto flex justify-between items-center">
-        <div class="text-white text-2xl font-bold">Timduel</div>
+        <div
+          class="text-white text-4xl font-anton font-extrabold tracking-wide"
+        >
+          Timduel
+        </div>
 
         <ul class="flex space-x-6 text-white text-lg">
-          <li><a href="/mlb" class="hover:underline">MLB</a></li>
-          <li><a href="/nba" class="hover:underline">NBA</a></li>
-          <li><a href="/nfl" class="hover:underline">NFL</a></li>
+          <li><a href="/mlb" class="hover:underline font-bold">MLB</a></li>
+          <li><a href="/nba" class="hover:underline font-bold">NBA</a></li>
+          <li><a href="/nfl" class="hover:underline font-bold">NFL</a></li>
         </ul>
 
         <div>
           <a
             href="https://discord.gg/CAANVsQ5"
             target="_blank"
-            class="bg-white text-blue-600 py-2 px-4 rounded hover:bg-gray-200"
+            class="bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors duration-300 ease-in-out font-bold"
           >
             Join Discord
           </a>
         </div>
       </div>
     </nav>
-    <h1>Welcome to the Sports Home Page</h1>
-    <p>Here, you can explore MLB, NBA, NFL, and more!</p>
 
-    <nav>
-      <ul>
-        <li><a href="/mlb">MLB</a></li>
-        <li><a href="/nba">NBA</a></li>
-        <li><a href="/nfl">NFL</a></li>
-        <!-- Add more sports links here -->
-      </ul>
+    <h1 class="text-6xl font-anton text-center text-blue-600 mt-16 mb-8">
+      Welcome to Timduel
+    </h1>
+
+    <p class="text-2xl font-semibold text-gray-800 text-center mb-4">
+      <span class="text-black-600">We are here to win!</span>
+    </p>
+
+    <p class="text-lg text-gray-700 text-center mb-10">
+      Explore our predictions and data analysis for every major sport.
+    </p>
+
+    <nav class="flex justify-center space-x-4 mt-8">
+      <a
+        href="/mlb"
+        class="relative block text-white text-center p-0 w-96 h-8/12 rounded-lg overflow-hidden transition-all"
+      >
+        <div
+          class="absolute top-4 left-4 text-2xl font-bold text-white z-10 bg-black bg-opacity-50 px-2 py-1 rounded-lg"
+        >
+          MLB
+        </div>
+        <img
+          src="/static/images/Shohei.jpeg"
+          alt="Shohei"
+          class="w-full h-full object-cover rounded-lg transition-transform duration-300 hover:scale-105 hover:brightness-110"
+        />
+      </a>
+      <a
+        href="#"
+        class="relative block text-white text-center p-0 w-96 h-8/12 rounded-lg overflow-hidden transition-all"
+      >
+        <div
+          class="absolute top-4 left-4 text-2xl font-bold text-white z-10 bg-black bg-opacity-50 px-2 py-1 rounded-lg"
+        >
+          NFL
+        </div>
+        <img
+          src="/static/images/Tom.jpeg"
+          alt="Tom"
+          class="w-full h-full object-cover rounded-lg transition-transform duration-300 hover:scale-105 hover:brightness-110"
+        />
+      </a>
+      <a
+        href="#"
+        class="relative block text-white text-center p-0 w-96 h-8/12 rounded-lg overflow-hidden transition-all"
+      >
+        <div
+          class="absolute top-4 left-4 text-2xl font-bold text-white z-10 bg-black bg-opacity-50 px-2 py-1 rounded-lg"
+        >
+          NBA
+        </div>
+        <img
+          src="/static/images/Kyrie.jpeg"
+          alt="Kyrie"
+          class="w-full h-full object-cover rounded-lg transition-transform duration-300 hover:scale-105 hover:brightness-110"
+        />
+      </a>
     </nav>
   </body>
 </html>

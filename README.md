@@ -31,3 +31,9 @@
 - **/player_stats** - Displays player stats for two selected teams.
 - **/hr_prediction** - Shows home run predictions for players.
 
+### Image Attribution
+
+- **Images**: The images used in this application are sourced from Pinterest. The original images can be found at:
+  - [Kyrie Irving](https://www.pinterest.com/pin/39054721765075714/)
+  - [Tom Brady](https://www.pinterest.com/pin/54535845471401635/)
+  - [Shohei Ohtani](https://www.pinterest.com/pin/86272149105009925/)
