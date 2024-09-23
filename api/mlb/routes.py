@@ -45,7 +45,7 @@ def show_schedule():
             games = json.loads(s3_response)
 
             # Store the result in Redis
-            redis_client.setex('mlb_schedule', 3600, json.dumps(games))
+            redis_client.setex('mlb_schedule', 300, json.dumps(games))
             print("Cache miss: Fetched schedule from S3 and stored in Redis")
 
         today_date = datetime.now().strftime("%A, %B %d, %Y")
@@ -97,8 +97,8 @@ def get_odds():
                     game_odds_entries.append(entry['data'][game_id])
                     # Set the timestamp for the current entry
                     game_odds_entries[-1]['timestamp'] = entry['timestamp']
-            # Cache the processed odds data in Redis for 1 hour (3600 seconds)
-            redis_client.setex(f'game_odds_{game_id}', 3600, json.dumps(game_odds_entries))
+            
+            redis_client.setex(f'game_odds_{game_id}', 300, json.dumps(game_odds_entries))
 
         if not game_odds_entries:
             return render_template('error.html')
@@ -173,7 +173,7 @@ def show_player_stats():
             }
 
             # Cache the player stats in Redis for 1 hour
-            redis_client.setex(cache_key, 3600, json.dumps(player_stats))
+            redis_client.setex(cache_key, 300, json.dumps(player_stats))
 
         # Get today's date and format it
         today_date = datetime.now().strftime("%A, %B %d, %Y")
@@ -227,7 +227,7 @@ def show_hr_prediction():
                 })
 
             # Cache the predictions in Redis for 1 hour
-            redis_client.setex(cache_key, 3600, json.dumps(hr_predictions))
+            redis_client.setex(cache_key, 300, json.dumps(hr_predictions))
 
         # Get today's date and format it
         today_date = datetime.now().strftime("%A, %B %d, %Y")
