@@ -7,6 +7,7 @@ import json
 from io import StringIO
 import csv
 import redis
+from operator import itemgetter
 # Define the Blueprint for the MLB schedule
 mlb_schedule_bp = Blueprint('mlb_schedule', __name__, template_folder='templates', static_folder='static')
 
@@ -229,11 +230,14 @@ def show_hr_prediction():
             # Cache the predictions in Redis for 1 hour
             redis_client.setex(cache_key, 300, json.dumps(hr_predictions))
 
+        # Sort predictions by team before passing them to the template
+        hr_predictions_sorted = sorted(hr_predictions, key=itemgetter('team'))
+
         # Get today's date and format it
         today_date = datetime.now().strftime("%A, %B %d, %Y")
 
         # Render the hr_prediction.html template with the prediction data
-        return render_template('hr_prediction.html', predictions=hr_predictions, today_date=today_date)
+        return render_template('hr_prediction.html', predictions=hr_predictions_sorted, today_date=today_date)
     
     except Exception as e:
         return render_template('error.html', message=str(e))

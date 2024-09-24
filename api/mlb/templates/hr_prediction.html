@@ -111,7 +111,6 @@
         <thead>
           <tr>
             <th>Batter Name</th>
-            <th>Predicted Home Runs</th>
             <th>Team</th>
           </tr>
         </thead>
@@ -119,7 +118,6 @@
           {% for prediction in predictions %}
           <tr>
             <td>{{ prediction.batter_id }}</td>
-            <td>{{ prediction.predicted_home_runs }}</td>
             <td>{{ prediction.team }}</td>
           </tr>
           {% endfor %}
