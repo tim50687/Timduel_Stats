@@ -4,238 +4,131 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MLB Schedule</title>
-    <style>
-      /* General styling for the body */
-      body {
-        font-family: "Roboto", sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #e3f2fd; /* Baby sky blue background */
-        color: #333;
-      }
-
-      /* Container for the content */
-      .container {
-        max-width: 1200px;
-        margin: 30px auto;
-        padding: 20px;
-        background-color: white;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-      }
-
-      /* Styling the header */
-      header {
-        text-align: center;
-        padding: 20px;
-        background-color: #81d4fa; /* Light sky blue */
-        color: white;
-        border-radius: 8px 8px 0 0;
-        margin-bottom: 30px;
-      }
-
-      header h1 {
-        font-size: 36px;
-        margin: 0;
-      }
-
-      .date {
-        font-size: 18px;
-        margin-top: 5px;
-        color: #9fabb5; /* Slightly lighter blue */
-      }
-
-      /* Styling for buttons in header */
-      .btn {
-        display: inline-block;
-        margin-top: 15px;
-        padding: 10px 20px;
-        background-color: #0288d1; /* Stronger blue */
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        font-size: 16px;
-        transition: background-color 0.3s ease;
-      }
-
-      .btn:hover {
-        background-color: #0277bd; /* Darker blue on hover */
-      }
-
-      /* Styling the main schedule table */
-      .schedule-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-        font-size: 16px;
-      }
-
-      th,
-      td {
-        padding: 12px 15px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-      }
-
-      th {
-        background-color: #0288d1; /* Strong blue for header */
-        color: white;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-      }
-
-      td {
-        color: #333;
-      }
-
-      tr:nth-child(even) {
-        background-color: #e1f5fe; /* Light blue for alternating rows */
-      }
-
-      tr:hover {
-        background-color: #b3e5fc; /* Hover effect with slightly darker blue */
-      }
-
-      /* Styling for action buttons */
-      .btn-info,
-      .btn-warning {
-        padding: 8px 16px;
-        font-size: 14px;
-        color: white;
-        text-decoration: none;
-        border-radius: 4px;
-        transition: background-color 0.3s ease;
-      }
-
-      .btn-info {
-        background-color: #29b6f6; /* Lighter blue for Player Stats */
-      }
-
-      .btn-info:hover {
-        background-color: #0288d1; /* Darker blue on hover */
-      }
-
-      .btn-warning {
-        background-color: #ffb74d; /* Orange for Odds Movement */
-      }
-
-      .btn-warning:hover {
-        background-color: #ffa726; /* Darker orange on hover */
-      }
-
-      /* Responsive design for mobile */
-      @media (max-width: 768px) {
-        .schedule-table,
-        .schedule-table thead,
-        .schedule-table tbody,
-        .schedule-table th,
-        .schedule-table td,
-        .schedule-table tr {
-          display: block;
-        }
-
-        /* Hide the table headers */
-        .schedule-table thead tr {
-          position: absolute;
-          top: -9999px;
-          left: -9999px;
-        }
-
-        .schedule-table tr {
-          border: 1px solid #ddd;
-          margin-bottom: 10px;
-        }
-
-        .schedule-table td {
-          border: none;
-          border-bottom: 1px solid #ddd;
-          position: relative;
-          padding-left: 50%;
-          text-align: left;
-          white-space: normal;
-        }
-
-        .schedule-table td:before {
-          position: absolute;
-          top: 50%;
-          left: 10px;
-          transform: translateY(-50%);
-          white-space: nowrap;
-          font-weight: bold;
-        }
-
-        /* Labels for each cell when table is viewed on mobile */
-        .schedule-table td:nth-of-type(1):before {
-          content: "Time";
-        }
-        .schedule-table td:nth-of-type(2):before {
-          content: "Away Team";
-        }
-        .schedule-table td:nth-of-type(3):before {
-          content: "Home Team";
-        }
-        .schedule-table td:nth-of-type(4):before {
-          content: "Venue";
-        }
-        .schedule-table td:nth-of-type(5):before {
-          content: "Actions";
-        }
-
-        /* Adjust button sizes for mobile */
-        .btn {
-          font-size: 14px;
-          padding: 8px 16px;
-        }
-      }
-    </style>
+    <link href="../../../static/mlb/css/output.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <h1>MLB Schedule</h1>
-        <p class="date">{{ today_date }}</p>
-        <a href="{{ url_for('mlb_schedule.show_hr_prediction') }}" class="btn">
-          Today's HR Predictions
-        </a>
-        <a href="/" class="btn" style="margin-left: 10px"> Back to Home </a>
-      </header>
-      <main>
-        <table class="schedule-table">
-          <thead>
-            <tr>
-              <th>Time</th>
-              <th>Away Team</th>
-              <th>Home Team</th>
-              <th>Venue</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for game in schedule %}
-            <tr>
-              <td>{{ game['time'] }}</td>
-              <td>{{ game['away_team'] }}</td>
-              <td>{{ game['home_team'] }}</td>
-              <td>{{ game['venue'] }}</td>
-              <td>
-                <a
-                  href="{{ url_for('mlb_schedule.show_player_stats', team1=game['away_team'], team2=game['home_team']) }}"
-                  class="btn btn-info"
+    <header>
+      <nav class="bg-blue-500 p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+          <div
+            class="text-white text-4xl font-anton font-extrabold tracking-wide"
+          >
+            <a href="/"> Timduel </a>
+          </div>
+
+          <ul class="hidden md:flex space-x-6 text-white text-lg">
+            <li><a href="/mlb" class="hover:underline font-bold">MLB</a></li>
+            <li><a href="/mlb" class="hover:underline font-bold">NFL</a></li>
+            <li><a href="/mlb" class="hover:underline font-bold">NBA</a></li>
+          </ul>
+
+          <div>
+            <a
+              href="https://discord.gg/CAANVsQ5"
+              target="_blank"
+              class="bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors duration-300 ease-in-out font-bold"
+            >
+              Join Discord
+            </a>
+          </div>
+        </div>
+
+        <!-- On mobile: stack MLB, NBA, NFL -->
+        <div class="md:hidden mt-4">
+          <ul class="flex space-x-4 justify-between text-white text-lg">
+            <li><a href="/mlb" class="hover:underline font-bold">MLB</a></li>
+            <li><a href="/#" class="hover:underline font-bold">NBA</a></li>
+            <li><a href="/#" class="hover:underline font-bold">NFL</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div>
+      <main class="w-full max-w-5xl mx-auto px-4 py-8 md:px-4 md:py-8">
+        <section
+          class="bg-blue-400 overflow-hidden w-full rounded-lg shadow-xl"
+        >
+          <div class="text-center m-5">
+            <h1
+              class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 mb-2"
+            >
+              MLB Schedule
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-700 mb-5">
+              {{ today_date }}
+            </p>
+            <a
+              href="{{ url_for('mlb_schedule.show_hr_prediction') }}"
+              class="bg-green-500 text-white font-bold py-3 px-6 rounded-full hover:bg-green-600 shadow-lg transition duration-300 ease-in-out"
+            >
+              Today's HR Predictions
+            </a>
+          </div>
+
+          <!-- Wrap the table in a scrollable container for smaller screens -->
+          <div class="overflow-x-auto">
+            <table class="w-full table-auto min-w-full block sm:table pt-8">
+              <thead>
+                <tr class="bg-gray-200 text-gray-700">
+                  <th class="py-2 px-4 sm:py-4 sm:px-6 text-center">Time</th>
+                  <th class="py-2 px-4 sm:py-4 sm:px-6 text-center">
+                    Away Team
+                  </th>
+                  <th class="py-2 px-4 sm:py-4 sm:px-6 text-center">
+                    Home Team
+                  </th>
+                  <th class="py-2 px-4 sm:py-4 sm:px-6 text-center">Venue</th>
+                  <th class="py-2 px-4 sm:py-4 sm:px-6 text-center">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for game in schedule %}
+                <tr
+                  class="bg-white hover:bg-gray-100 transition-colors duration-200 border-b"
                 >
-                  Player Stats
-                </a>
-                <a
-                  href="{{ url_for('mlb_schedule.get_odds', game_id=game['id']) }}"
-                  class="btn btn-warning"
-                >
-                  Odds Movement
-                </a>
-              </td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
+                  <td class="py-2 px-4 text-center">{{ game['time'] }}</td>
+                  <td class="py-2 px-4 text-center">{{ game['away_team'] }}</td>
+                  <td class="py-2 px-4 text-center">{{ game['home_team'] }}</td>
+                  <td class="py-2 px-4 text-center">{{ game['venue'] }}</td>
+                  <td class="py-2 px-4 text-center">
+                    <div
+                      class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 justify-center"
+                    >
+                      <a
+                        href="{{ url_for('mlb_schedule.show_player_stats', team1=game['away_team'], team2=game['home_team']) }}"
+                        class="bg-blue-400 hover:brightness-125 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300"
+                      >
+                        Player Stats
+                      </a>
+                      <a
+                        href="{{ url_for('mlb_schedule.get_odds', game_id=game['id']) }}"
+                        class="bg-blue-400 hover:brightness-125 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300"
+                      >
+                        Odds Movement
+                      </a>
+                    </div>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </section>
       </main>
+
+      <footer
+        class="bg-blue-500 bg-opacity-90 text-white text-center w-full fixed bottom-0 left-0 py-1 flex justify-center items-center space-x-2"
+      >
+        <p>&copy; 2024 Tim. Check out my projects on</p>
+        <a href="https://github.com/tim50687" target="_blank">
+          <img
+            src="/static/images/github-mark.png"
+            alt="GitHub"
+            class="w-6 h-6 hover:scale-110 hover:opacity-60 transition-all duration-300"
+          />
+        </a>
+      </footer>
     </div>
   </body>
 </html>
