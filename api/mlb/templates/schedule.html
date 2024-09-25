@@ -47,11 +47,11 @@
     <div>
       <main class="w-full max-w-5xl mx-auto px-4 py-8 md:px-4 md:py-8">
         <section
-          class="bg-blue-400 overflow-hidden w-full rounded-lg shadow-xl"
+          class="bg-blue-500 brightness-105 overflow-hidden w-full rounded-lg shadow-xl"
         >
-          <div class="text-center m-5">
+          <div class="text-center m-5 brightness-100">
             <h1
-              class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 mb-2"
+              class="text-3xl sm:text-4xl brightness-105 md:text-5xl font-extrabold text-gray-800 mb-2"
             >
               MLB Schedule
             </h1>
@@ -60,14 +60,14 @@
             </p>
             <a
               href="{{ url_for('mlb_schedule.show_hr_prediction') }}"
-              class="bg-green-500 text-white font-bold py-3 px-6 rounded-full hover:bg-green-600 shadow-lg transition duration-300 ease-in-out"
+              class="bg-green-500 brightness-105 text-white font-bold py-3 px-6 rounded-full hover:bg-green-600 shadow-lg transition duration-300 ease-in-out"
             >
               Today's HR Predictions
             </a>
           </div>
 
           <!-- Wrap the table in a scrollable container for smaller screens -->
-          <div class="overflow-x-auto">
+          <div class="overflow-x-auto bg-white">
             <table class="w-full table-auto min-w-full block sm:table pt-8">
               <thead>
                 <tr class="bg-gray-200 text-gray-700">
@@ -97,13 +97,13 @@
                     >
                       <a
                         href="{{ url_for('mlb_schedule.show_player_stats', team1=game['away_team'], team2=game['home_team']) }}"
-                        class="bg-blue-400 hover:brightness-125 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300"
+                        class="bg-blue-500 hover:brightness-125 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300"
                       >
                         Player Stats
                       </a>
                       <a
                         href="{{ url_for('mlb_schedule.get_odds', game_id=game['id']) }}"
-                        class="bg-blue-400 hover:brightness-125 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300"
+                        class="bg-blue-500 hover:brightness-125 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300"
                       >
                         Odds Movement
                       </a>
