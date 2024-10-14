@@ -57,69 +57,69 @@ def show_schedule():
 
     
 
-@mlb_schedule_bp.route('/odds', methods=['GET'])
-def get_odds():
-    """
-    Route to display the homerun odds for a specific game using Redis caching.
-    """
-    try:
-        # Get the game id (api's game id) from the request parameters
-        game_id = request.args.get('game_id')
-        if not game_id:
-            # Redirect to error page if game_id is not provided
-            print("No game_id provided")
-            return render_template('error.html')
+# @mlb_schedule_bp.route('/odds', methods=['GET'])
+# def get_odds():
+#     """
+#     Route to display the homerun odds for a specific game using Redis caching.
+#     """
+#     try:
+#         # Get the game id (api's game id) from the request parameters
+#         game_id = request.args.get('game_id')
+#         if not game_id:
+#             # Redirect to error page if game_id is not provided
+#             print("No game_id provided")
+#             return render_template('error.html')
         
-        # Initialize Redis client
-        redis_client = redis.StrictRedis(
-            host='redis-11688.c62.us-east-1-4.ec2.redns.redis-cloud.com',  
-            port=11688,  
-            password='8Iuw40BVrJ8JcX6Z2sXOfpZhWxEFj3cz',  
-            db=0
-            )
-        # Try to get the odds from Redis cache
-        cached_odds = redis_client.get(f'game_odds_{game_id}')
-        if cached_odds:
-            # If found in cache, load from Redis and return it
-            print("Cache hit: Returning odds from Redis")
-            game_odds_entries = json.loads(cached_odds)
-        else:
-            # Load odds data from s3 bucket
-            s3_response = get_object(BUCKET_NAME, ODDS_KEY).decode('utf-8')
-            odds_data = json.loads(s3_response)['entries']
-            if odds_data is None:
-                print("No odds data found")
-                return render_template('error.html')
+#         # Initialize Redis client
+#         redis_client = redis.StrictRedis(
+#             host='redis-11688.c62.us-east-1-4.ec2.redns.redis-cloud.com',  
+#             port=11688,  
+#             password='8Iuw40BVrJ8JcX6Z2sXOfpZhWxEFj3cz',  
+#             db=0
+#             )
+#         # Try to get the odds from Redis cache
+#         cached_odds = redis_client.get(f'game_odds_{game_id}')
+#         if cached_odds:
+#             # If found in cache, load from Redis and return it
+#             print("Cache hit: Returning odds from Redis")
+#             game_odds_entries = json.loads(cached_odds)
+#         else:
+#             # Load odds data from s3 bucket
+#             s3_response = get_object(BUCKET_NAME, ODDS_KEY).decode('utf-8')
+#             odds_data = json.loads(s3_response)['entries']
+#             if odds_data is None:
+#                 print("No odds data found")
+#                 return render_template('error.html')
             
-            game_odds_entries = []
-            # Gather odds from different times for the game
-            for entry in odds_data:
-                if game_id in entry['data']:
-                    game_odds_entries.append(entry['data'][game_id])
-                    # Set the timestamp for the current entry
-                    game_odds_entries[-1]['timestamp'] = entry['timestamp']
+#             game_odds_entries = []
+#             # Gather odds from different times for the game
+#             for entry in odds_data:
+#                 if game_id in entry['data']:
+#                     game_odds_entries.append(entry['data'][game_id])
+#                     # Set the timestamp for the current entry
+#                     game_odds_entries[-1]['timestamp'] = entry['timestamp']
             
-            redis_client.setex(f'game_odds_{game_id}', 300, json.dumps(game_odds_entries))
+#             redis_client.setex(f'game_odds_{game_id}', 300, json.dumps(game_odds_entries))
 
-        if not game_odds_entries:
-            return render_template('error.html')
+#         if not game_odds_entries:
+#             return render_template('error.html')
         
-        # Process each entry (odds from different times)
-        processed_entries = []
-        for entry in game_odds_entries:
-            processed_odds_data = OddsProcessor.sort_homerun_odd_by_booker(entry)
-            processed_entries.append({
-                'timestamp': entry['timestamp'], # Time that the odds were fetched
-                'odds_data': processed_odds_data
-            })
+#         # Process each entry (odds from different times)
+#         processed_entries = []
+#         for entry in game_odds_entries:
+#             processed_odds_data = OddsProcessor.sort_homerun_odd_by_booker(entry)
+#             processed_entries.append({
+#                 'timestamp': entry['timestamp'], # Time that the odds were fetched
+#                 'odds_data': processed_odds_data
+#             })
 
-        # Get today's date and format it
-        today_date = datetime.now().strftime("%A, %B %d, %Y")
+#         # Get today's date and format it
+#         today_date = datetime.now().strftime("%A, %B %d, %Y")
 
-        return render_template('odds.html', events=processed_entries, today_date=today_date)
-    except Exception as e:
-        # Return a JSON error message if an exception occurs
-        return jsonify({'error': str(e)})
+#         return render_template('odds.html', events=processed_entries, today_date=today_date)
+#     except Exception as e:
+#         # Return a JSON error message if an exception occurs
+#         return jsonify({'error': str(e)})
     
 
 @mlb_schedule_bp.route('/player_stats', methods=['GET'])
